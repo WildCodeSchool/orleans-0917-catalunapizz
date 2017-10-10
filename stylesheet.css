@@ -1,7 +1,3 @@
-body {
-  font-size: 50px;
-}
-
 .baudi {
 padding-top: 100px;
 }
@@ -106,6 +102,8 @@ h1 {
   background: url("ressources/images/underline.png") center bottom;
   background-size: 100% 100%;
   font-family: "Dancing Script", cursive;
+	margin-bottom: 100px;
+	text-align: center;
 }
 
 /* carousel */
@@ -116,4 +114,39 @@ h1 {
 
 .item > img{
   width: 100%;
+}
+
+/*Maxence*/
+
+@font-face
+{
+	font-family: "hotpizz";
+	src: url('assets/hotpizza.ttf');
+}
+
+h1
+{
+	font-family: "hotpizz";
+}
+
+
+h4
+{
+	font-family: "hotpizz";
+}
+
+h5
+{
+	font-family: "hotpizz";
+}
+
+.media-body
+{
+	text-align: center;
+}
+
+.composition
+{
+	margin-bottom: 60px;
+	margin-top: 60px;
 }
