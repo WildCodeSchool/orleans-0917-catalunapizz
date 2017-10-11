@@ -4,6 +4,7 @@ require 'header.php';
 </header>
 <div class="baudi">
   <!-- start carousel -->
+  <div class="carouselFixed">
   <div class="container-fluid">
     <div class="row">
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -39,6 +40,7 @@ require 'header.php';
       <span class="sr-only">Next</span>
     </a>
   </div>
+</div>
 </div>
 </div>
 <!-- end carousel -->
