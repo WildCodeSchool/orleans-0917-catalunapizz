@@ -150,3 +150,39 @@ h5
 	margin-bottom: 60px;
 	margin-top: 60px;
 }
+
+/*Fabrice*/
+
+footer {
+  background-color: #8A0808;
+  margin-top: 30px;
+}
+
+ .footer_list li {
+  list-style-type: none;
+  color: white;
+  margin:15px;
+  font-family: "Cormorant+Garamond", cursive;
+  font-size: 1.2em;
+}
+
+.footer_list li a {
+  color: white;
+}
+
+.facebook {
+
+    color: #fff;
+    background-color: #3b5998;
+    border-color: #3b5998;
+    font-size: 0.9em;
+    font-weight: bold;
+    padding-top: 0px;
+
+}
+
+.f-facebook {
+
+    font-size: 1.2em;
+
+}
