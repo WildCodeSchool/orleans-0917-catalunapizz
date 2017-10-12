@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Cataluna Pizz'</title>
+  <title>Cataluña Pizz'</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="ressources/bootstrap-3.3.7-dist/css/bootstrap.min.css">
@@ -20,7 +20,7 @@
         <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" href="#"><span><img class="logo" src="ressources/images/logo_retouchaide.png" ></span>
-        Cataluna Pizz'</a>
+        Cataluña Pizz'</a>
     </div>
     <div class="collapse navbar-collapse navbar-right" id="myNavbar">
       <ul class="nav navbar-nav">
