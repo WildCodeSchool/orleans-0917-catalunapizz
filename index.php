@@ -2,7 +2,8 @@
 require 'header.php';
 ?>
 </header>
-<div class="baudi">
+  <div class="spacer">
+  </div>
   <!-- start carousel -->
   <div class="carouselFixed">
   <div class="container-fluid">
@@ -29,21 +30,13 @@ require 'header.php';
         <img src="http://www.ternascodearagon.es/wp-content/uploads/2015/11/Bocadillo-TA-Bandera-Irlandesa.jpg" alt="New york">
       </div>
     </div>
-
-    <!-- Left and right controls -->
-    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right"></span>
-      <span class="sr-only">Next</span>
-    </a>
   </div>
 </div>
 </div>
 </div>
 <!-- end carousel -->
+
+<div class="baudi">
 <div class="titles">
 <h1>Mon histoire</h1>
 </div>
@@ -76,7 +69,7 @@ require 'header.php';
 <footer>
   <?php
       include 'footer.php';
-  ?>    
+  ?>
 </footer>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
