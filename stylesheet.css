@@ -1,42 +1,43 @@
 .baudi {
-padding-top: 100px;
+margin-top: 100vh;
+position: absolute;
+z-index: 1;
+background: white;
 }
 
 /*navbar start*/
 
 .navbar {
-    border-radius: 0;
-    height: 100px;
-    border: none;
-    position: fixed;
-    width: 100%;
-    z-index: 10;
+  border-radius: 0;
+  height: 100px;
+  border: none;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
 }
 
-.navbar-nav > li > a {
-    padding-top: 35px;
-    font-family: "Dancing Script", cursive;
+.navbar-nav>li>a {
+  padding-top: 35px;
+  font-family: "Dancing Script", cursive;
 }
-
 
 .navbar-inverse {
   background-color: rgba(255, 255, 255, 0.9);
 }
 
-.navbar-inverse .navbar-nav > li > a {
-    color: black;
-    font-size: 50px;
-    background-color: transparent;
+.navbar-inverse .navbar-nav>li>a {
+  color: black;
+  font-size: 50px;
+  background-color: transparent;
 }
 
-.navbar-inverse .navbar-nav > li > a:focus, .navbar-inverse .navbar-nav > li > a:hover {
-    color: #747475;
+.navbar-inverse .navbar-nav>li>a:focus, .navbar-inverse .navbar-nav>li>a:hover {
+  color: #747475;
 }
 
 .navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover {
-    background-color: rgba(255, 255, 255, 0);
+  background-color: rgba(255, 255, 255, 0);
 }
-
 
 .logo {
   height: 100%;
@@ -44,28 +45,28 @@ padding-top: 100px;
 }
 
 .navbar-brand {
-    float: left;
-    height: 100px;
-    padding: 0;
-    padding-left: 15px;
-    font-size: 50px;
-    font-family: "Dancing Script", cursive;
+  float: left;
+  height: 100px;
+  padding: 0;
+  padding-left: 15px;
+  font-size: 50px;
+  font-family: "Dancing Script", cursive;
 }
 
 .navbar-inverse .navbar-brand {
-    color: black;
+  color: black;
 }
 
 .navbar-inverse .navbar-brand:focus, .navbar-inverse .navbar-brand:hover {
-    color: black;
+  color: black;
 }
 
-.nav > li > a {
-    padding-left: 5vw;
+.nav>li>a {
+  padding-left: 5vw;
 }
 
 .navbar-inverse .navbar-toggle .icon-bar {
-    background-color: black;
+  background-color: black;
 }
 
 .icon-bar {
@@ -73,18 +74,18 @@ padding-top: 100px;
 }
 
 .navbar-inverse .navbar-toggle {
-    border-color: #333;
-    margin-top: 30px;
+  border-color: #333;
+  margin-top: 30px;
 }
 
 .navbar-inverse .navbar-collapse, .navbar-form {
-    background-color: transparent;
+  background-color: transparent;
 }
 
 .navbar-collapse {
-    border-top: none;
-    text-align: center;
-    padding-bottom: 35px;
+  border-top: none;
+  text-align: center;
+  padding-bottom: 35px;
 }
 
 @media only screen and (max-width:930px) {
@@ -100,21 +101,23 @@ padding-top: 100px;
 @media only screen and (max-width:767px) {
   .navbar-inverse .navbar-collapse, .navbar-form {
     background-color: rgba(255, 255, 255, 0.9);
+  }
 }
-}
+
 /*navbar end*/
 
 .titles {
   text-align: center;
 }
+
 h1 {
   display: inline-block;
   background: url("ressources/images/underline.png") center bottom;
   background-size: 100% 100%;
   font-family: "Dancing Script", cursive;
-	margin-bottom: 50px;
+  margin-bottom: 50px;
   margin-top: 50px;
-	text-align: center;
+  text-align: center;
   font-size: 50px;
 }
 
@@ -126,16 +129,19 @@ h1 {
 p {
   font-size: 24px;
 }
+
 /* carousel */
 
-/*.carouselFixed {
+.carouselFixed {
   position: fixed;
-}*/
-.item {
-    height: calc(100vh - 100px);
 }
 
-.item > img{
+.item {
+  height: 100vh;
+  width: 100vw;
+}
+
+.item>img {
   width: 100%;
   visibility: hidden;
 }
@@ -154,34 +160,31 @@ p {
   background: url("http://www.ternascodearagon.es/wp-content/uploads/2015/11/Bocadillo-TA-Bandera-Irlandesa.jpg") center no-repeat;
   background-size: cover;
 }
+
+/*carousel end*/
+
 /*Maxence*/
 
-@font-face
-{
-	font-family: "hotpizz";
-	src: url('assets/hotpizza.ttf');
+@font-face {
+  font-family: "hotpizz";
+  src: url('assets/hotpizza.ttf');
 }
 
-
-h4
-{
-	font-family: "Dancing Script";
+h4 {
+  font-family: "Dancing Script";
 }
 
-h5
-{
-	font-family: "Dancing Script";
+h5 {
+  font-family: "Dancing Script";
 }
 
-.media-body
-{
-	text-align: center;
+.media-body {
+  text-align: center;
 }
 
-.composition
-{
-	margin-bottom: 60px;
-	margin-top: 60px;
+.composition {
+  margin-bottom: 60px;
+  margin-top: 60px;
 }
 
 /*Fabrice*/
@@ -191,10 +194,10 @@ footer {
   margin-top: 30px;
 }
 
- .footer_list li {
+.footer_list li {
   list-style-type: none;
   color: white;
-  margin:15px;
+  margin: 15px;
   font-family: "Cormorant+Garamond", cursive;
   font-size: 1.2em;
 }
@@ -204,18 +207,14 @@ footer {
 }
 
 .facebook {
-
-    color: #fff;
-    background-color: #3b5998;
-    border-color: #3b5998;
-    font-size: 0.9em;
-    font-weight: bold;
-    padding-top: 0px;
-
+  color: #fff;
+  background-color: #3b5998;
+  border-color: #3b5998;
+  font-size: 0.9em;
+  font-weight: bold;
+  padding-top: 0px;
 }
 
 .f-facebook {
-
-    font-size: 1.2em;
-
+  font-size: 1.2em;
 }
