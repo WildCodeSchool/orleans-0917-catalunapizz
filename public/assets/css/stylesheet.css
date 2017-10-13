@@ -112,7 +112,7 @@ background: white;
 
 h1 {
   display: inline-block;
-  background: url("ressources/images/underline.png") center bottom;
+  background: url("../images/underline.png") center bottom;
   background-size: 100% 100%;
   font-family: "Dancing Script", cursive;
   margin-bottom: 50px;
@@ -167,7 +167,7 @@ p {
 
 @font-face {
   font-family: "hotpizz";
-  src: url('assets/hotpizza.ttf');
+  src: url('../fonts/hotpizza.ttf');
 }
 
 h4 {
