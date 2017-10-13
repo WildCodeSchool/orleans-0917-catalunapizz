@@ -1,0 +1,232 @@
+.baudi {
+margin-top: 100vh;
+position: absolute;
+z-index: 1;
+background: white;
+}
+
+/*navbar start*/
+
+.navbar {
+  border-radius: 0;
+  height: 100px;
+  border: none;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+}
+
+.navbar-nav>li>a {
+  padding-top: 35px;
+  font-family: "Dancing Script", cursive;
+}
+
+.navbar-inverse {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.navbar-inverse .navbar-nav>li>a {
+  color: black;
+  font-size: 50px;
+  background-color: transparent;
+}
+
+.navbar-inverse .navbar-nav>li>a:focus, .navbar-inverse .navbar-nav>li>a:hover {
+  color: #747475;
+}
+
+.navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.logo {
+  height: 100%;
+  width: auto;
+}
+
+.navbar-brand {
+  float: left;
+  height: 100px;
+  padding: 0;
+  padding-left: 15px;
+  font-size: 50px;
+  font-family: "Dancing Script", cursive;
+}
+
+.navbar-inverse .navbar-brand {
+  color: black;
+}
+
+.navbar-inverse .navbar-brand:focus, .navbar-inverse .navbar-brand:hover {
+  color: black;
+}
+
+.nav>li>a {
+  padding-left: 5vw;
+}
+
+.navbar-inverse .navbar-toggle .icon-bar {
+  background-color: black;
+}
+
+.icon-bar {
+  margin: 3px;
+}
+
+.navbar-inverse .navbar-toggle {
+  border-color: #333;
+  margin-top: 30px;
+}
+
+.navbar-inverse .navbar-collapse, .navbar-form {
+  background-color: transparent;
+}
+
+.navbar-collapse {
+  border-top: none;
+  text-align: center;
+  padding-bottom: 35px;
+}
+
+@media only screen and (max-width:930px) {
+  .logo {
+    display: none;
+  }
+  .navbar-brand {
+    padding-top: 35px;
+    font-size: 40px;
+  }
+}
+
+@media only screen and (max-width:767px) {
+  .navbar-inverse .navbar-collapse, .navbar-form {
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+}
+
+/*navbar end*/
+
+.titles {
+  text-align: center;
+}
+
+h1 {
+  display: inline-block;
+  background: url("../images/underline.png") center bottom;
+  background-size: 100% 100%;
+  font-family: "Dancing Script", cursive;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  text-align: center;
+  font-size: 50px;
+}
+
+.aboutUs {
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
+
+p {
+  font-size: 24px;
+}
+
+/* carousel */
+
+.carouselFixed {
+  position: fixed;
+}
+
+.item {
+  height: 100vh;
+  width: 100vw;
+}
+
+.item>img {
+  width: 100%;
+  visibility: hidden;
+}
+
+.item1 {
+  background: url("https://i.ytimg.com/vi/1X6OAucemtE/maxresdefault.jpg") center no-repeat;
+  background-size: cover;
+}
+
+.item2 {
+  background: url("https://www.tampabayfoodtruckrally.com/uploads/images/Food_Truck_Photos/Engine_53_Pizza.jpg") center no-repeat;
+  background-size: cover;
+}
+
+.item3 {
+  background: url("http://www.ternascodearagon.es/wp-content/uploads/2015/11/Bocadillo-TA-Bandera-Irlandesa.jpg") center no-repeat;
+  background-size: cover;
+}
+
+/*carousel end*/
+
+/*Maxence*/
+
+@font-face {
+  font-family: "hotpizz";
+  src: url('../fonts/hotpizza.ttf');
+}
+
+h4 {
+  font-family: "Dancing Script";
+}
+
+h5 {
+  font-family: "Dancing Script";
+}
+
+.media-body {
+  text-align: center;
+}
+
+.composition {
+  margin-bottom: 60px;
+  margin-top: 60px;
+}
+
+/*Fabrice*/
+
+footer {
+  background-image: radial-gradient(circle at top left, white, #D7DF01);
+  margin-top: 120px;
+}
+
+.footer_list li {
+  list-style-type: none;
+  color: black;
+  font-weight: bold;
+  margin:15px;
+  font-family: "Cormorant+Garamond", cursive;
+  font-size: 1.2em;
+}
+
+.footer_list li a {
+  color: black;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-decoration: none;
+
+}
+
+.footer_list li a:hover {
+  color: #D7DF01;
+  border-bottom: 3px solid #D7DF01;
+
+}
+
+
+.facebook {
+    color: #fff;
+    background-color: #3b5998;
+    border-color: #3b5998;
+    font-size: 0.9em;
+    font-weight: bold;
+    padding-top: 5px;
+}
+
+.f-facebook {
+  font-size: 1.2em;
+}
