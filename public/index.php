@@ -6,6 +6,7 @@ use Cataluna\Controller\MenuController;
 require '../vendor/autoload.php';
 require '../connect.php';
 
+
 // ROUTER
 if (!empty($_GET['route'])) {
     if ($_GET['route'] === 'carte') {

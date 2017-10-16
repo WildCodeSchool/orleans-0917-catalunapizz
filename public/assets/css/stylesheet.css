@@ -190,21 +190,21 @@ h5 {
 /*Fabrice*/
 
 footer {
-  background-image: radial-gradient(circle at top left, white, #D7DF01);
+  background-color: black;
   margin-top: 120px;
 }
 
 .footer_list li {
   list-style-type: none;
-  color: black;
+  color: white;
   font-weight: bold;
-  margin:15px;
+  margin: 15px;
   font-family: "Cormorant+Garamond", cursive;
   font-size: 1.2em;
 }
 
 .footer_list li a {
-  color: black;
+  color: white;
   font-size: 1.2em;
   font-weight: bold;
   text-decoration: none;
@@ -228,5 +228,17 @@ footer {
 }
 
 .f-facebook {
-  font-size: 1.2em;
+    font-size: 1.2em;
+}
+
+.facebook-bloc {
+  top: 40px;
+}
+
+.mention-bloc {
+  top: 50px;
+}
+
+.contact-bloc {
+  top: 20px;
 }
