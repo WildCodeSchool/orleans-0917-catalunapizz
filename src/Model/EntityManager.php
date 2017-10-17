@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: sylvain
- * Date: 13/10/17
- * Time: 10:11
- */
 
 namespace Cataluna\Model;
 
