@@ -16,5 +16,6 @@ class HomeController extends Controller
           'home'=>$home[0]
         ]);
 
+
     }
 }
