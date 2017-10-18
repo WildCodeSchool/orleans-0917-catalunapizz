@@ -8,7 +8,9 @@ class Pizza
     private $id;
     private $title;
     private $ingredients;
-    private $price;
+    private $price_1;
+    private $price_2;
+    private $category_id;
 
     /**
      * @return mixed
@@ -20,12 +22,11 @@ class Pizza
 
     /**
      * @param mixed $id
-     * @return Pizza
+     * @return AboutUs
      */
     public function setId($id)
     {
         $this->id = $id;
-
         return $this;
     }
 
@@ -39,12 +40,11 @@ class Pizza
 
     /**
      * @param mixed $title
-     * @return Pizza
+     * @return AboutUs
      */
     public function setTitle($title)
     {
         $this->title = $title;
-
         return $this;
     }
 
@@ -58,33 +58,68 @@ class Pizza
 
     /**
      * @param mixed $ingredients
-     * @return Pizza
+     * @return AboutUs
      */
     public function setIngredients($ingredients)
     {
         $this->ingredients = $ingredients;
-
         return $this;
     }
 
     /**
      * @return mixed
      */
-    public function getPrice()
+    public function getPrice1()
     {
-        return $this->price;
+        return $this->price_1;
     }
 
     /**
-     * @param mixed $price
-     * @return Pizza
+     * @param mixed $price_1
+     * @return AboutUs
      */
-    public function setPrice($price)
+    public function setPrice1($price_1)
     {
-        $this->price = $price;
-
+        $this->price_1 = $price_1;
         return $this;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getPrice2()
+    {
+        return $this->price_2;
+    }
+
+    /**
+     * @param mixed $price_2
+     * @return AboutUs
+     */
+    public function setPrice2($price_2)
+    {
+        $this->price_2 = $price_2;
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCategoryId()
+    {
+        return $this->category_id;
+    }
+
+    /**
+     * @param mixed $category_id
+     * @return AboutUs
+     */
+    public function setCategoryId($category_id)
+    {
+        $this->category_id = $category_id;
+        return $this;
+    }
+
 
 
 
