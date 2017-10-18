@@ -2,6 +2,7 @@
 
 use Cataluna\Controller\HomeController;
 use Cataluna\Controller\MenuController;
+use Cataluna\Controller\LocationController;
 
 require '../vendor/autoload.php';
 require '../connect.php';

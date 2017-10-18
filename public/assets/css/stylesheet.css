@@ -242,3 +242,10 @@ footer {
 .contact-bloc {
   top: 20px;
 }
+
+/*calendar page on locations*/
+
+.page {
+  height: 250px;
+  border: solid black 1px;
+}
