@@ -1,9 +1,10 @@
 .baudi {
-margin-top: 100vh;
-position: absolute;
-z-index: 1;
-background: white;
+  margin-top: 100vh;
+  position: absolute;
+  background: white;
+  z-index: 1;
 }
+
 
 /*navbar start*/
 
@@ -187,6 +188,25 @@ h5 {
   text-align: center;
 }
 
+.img-tomato {
+  position: absolute;
+  top: 32%;
+  right: 10%;
+}
+
+.img-olives {
+  position: absolute;
+  top: 5%;
+  left: 10%;
+}
+
+.img-news {
+  max-width: 800px;
+  max-height: 600px;
+}
+
+
+
 .composition {
   margin-bottom: 60px;
   margin-top: 60px;
@@ -196,7 +216,7 @@ h5 {
 
 footer {
   background-color: black;
- 
+  margin-top: 120px;
 }
 
 .footer_list li {
@@ -241,7 +261,7 @@ footer {
 }
 
 .mention-bloc {
-  top: 50px;
+  padding-top: 50px;
 }
 
 .contact-bloc {
