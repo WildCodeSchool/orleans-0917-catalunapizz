@@ -115,7 +115,7 @@
 h1 {
   display: inline-block;
   background: url("../images/underline.png") center bottom;
-  background-size: 100% 100%;
+  background-size: 100% 300%;
   font-family: "Dancing Script", cursive;
   margin-bottom: 50px;
   margin-top: 50px;
@@ -197,6 +197,18 @@ h5 {
 .img-olives {
   position: absolute;
   top: 5%;
+  left: 10%;
+}
+
+.img-peppers {
+  position: absolute;
+  top: 5%;
+  right: 10%;
+}
+
+.img-onions {
+  position: absolute;
+  top: 32%;
   left: 10%;
 }
 
