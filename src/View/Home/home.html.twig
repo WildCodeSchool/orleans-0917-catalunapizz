@@ -1,4 +1,5 @@
-{% include 'header.html.twig' %}
+{% extends 'base.html.twig' %}
+{% block body %}
 <div class="spacer">
 </div>
 <!-- start carousel -->
@@ -20,7 +21,7 @@
                     </div>
 
                     <div class="item item2">
-                        <img src="https://www.tampabayfoodtruckrally.com/uploads/images/Food_Truck_Photos/Engine_53_Pizza.jpg"
+                        <img src="../images/proprios.JPG"
                              alt="Chicago">
                     </div>
 
@@ -74,11 +75,6 @@
                     </div>
                 </div>
             </div>
+            </div>
     </section>
-        {% include 'footer.html.twig' %}
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="assets/js/parallax.js"></script>
-</div>
-</body>
-</html>
+{% endblock %}
