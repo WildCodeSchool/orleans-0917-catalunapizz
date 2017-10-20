@@ -96,16 +96,6 @@
     }
 }
 
-@media only screen and (max-width:767px) {
-    .navbar-inverse .navbar-collapse, .navbar-form {
-        background-color: rgba(255, 255, 255, 0.9);
-    }
-    .truckDraw {
-        display: none;
-    }
-}
-
-
 .titles {
     text-align: center;
     margin-bottom: 70px;
@@ -292,6 +282,7 @@ footer {
     box-shadow: 10px 10px 5px -6px rgba(0, 0, 0, 0.75);
     font-family: "Handlee", cursive;
     background: #ED000B;
+    margin-bottom: 15px;
 }
 
 .pageHead {
@@ -360,5 +351,18 @@ footer {
     .titles {
         text-align: center;
         margin-bottom: 10px;
+    }
+}
+
+@media only screen and (max-width:767px) {
+    .navbar-inverse .navbar-collapse, .navbar-form {
+        background-color: rgba(255, 255, 255, 0.9);
+    }
+    .truckDraw {
+        display: none;
+    }
+    .page {
+        width: 85%;
+        margin-left: 6.5%;
     }
 }
