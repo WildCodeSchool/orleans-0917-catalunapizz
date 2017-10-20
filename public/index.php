@@ -3,6 +3,7 @@
 use Cataluna\Controller\HomeController;
 use Cataluna\Controller\MenuController;
 use Cataluna\Controller\LocationController;
+use Cataluna\Controller\AdminController;
 
 require '../vendor/autoload.php';
 require '../connect.php';
@@ -19,7 +20,13 @@ if (!empty($_GET['route'])) {
         // charge page des lieux
         $controller = new LocationController();
         echo $controller->showAction();
+
+    } elseif ($_GET['route'] === 'add') {
+        // charge la page d'ajout
+        $controller = new AdminController();
+        echo $controller->addAction();
     }
+
 } else {
     // charge homepage
     $controller = new HomeController();
