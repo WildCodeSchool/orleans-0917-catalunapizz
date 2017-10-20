@@ -1,11 +1,9 @@
 .baudi {
     margin-top: 100vh;
     position: absolute;
-    z-index: 1;
     background: white;
+    z-index: 1;
 }
-
-/*navbar start*/
 
 .navbar {
     border-radius: 0;
@@ -16,7 +14,7 @@
     z-index: 10;
 }
 
-.navbar-nav>li>a {
+.navbar-nav > li > a {
     padding-top: 35px;
     font-family: "Dancing Script", cursive;
 }
@@ -25,13 +23,13 @@
     background-color: rgba(255, 255, 255, 0.9);
 }
 
-.navbar-inverse .navbar-nav>li>a {
+.navbar-inverse .navbar-nav > li > a {
     color: black;
     font-size: 50px;
     background-color: transparent;
 }
 
-.navbar-inverse .navbar-nav>li>a:focus, .navbar-inverse .navbar-nav>li>a:hover {
+.navbar-inverse .navbar-nav > li > a:focus, .navbar-inverse .navbar-nav > li > a:hover {
     color: #747475;
 }
 
@@ -61,7 +59,7 @@
     color: black;
 }
 
-.nav>li>a {
+.nav > li > a {
     padding-left: 5vw;
 }
 
@@ -107,7 +105,6 @@
     }
 }
 
-/*navbar end*/
 
 .titles {
     text-align: center;
@@ -117,9 +114,10 @@
 h1 {
     display: inline-block;
     background: url("../images/underline.png") center bottom;
-    background-size: 100% 100%;
+    background-size: 100% 300%;
     font-family: "Dancing Script", cursive;
     margin-bottom: 50px;
+    padding-bottom: 10px;
     margin-top: 50px;
     text-align: center;
     font-size: 50px;
@@ -134,8 +132,6 @@ p {
     font-size: 24px;
 }
 
-/* carousel */
-
 .carouselFixed {
     position: fixed;
 }
@@ -145,7 +141,7 @@ p {
     width: 100vw;
 }
 
-.item>img {
+.item > img {
     width: 100%;
     visibility: hidden;
 }
@@ -165,35 +161,71 @@ p {
     background-size: cover;
 }
 
-/*carousel end*/
-
-/*Maxence*/
-
 @font-face {
     font-family: "hotpizz";
     src: url('../fonts/hotpizza.ttf');
 }
 
-h4 {
-    font-family: "Dancing Script", cursive;
-    font-size: 3.5em;
+.news {
+    margin-top: 100px;
 }
 
-h5 {
+.news-title {
     font-family: "Dancing Script", cursive;
-    font-size: 2.8em;
+    font-size: 4em;
+    margin-bottom: 70px;
+}
+
+.news-ingredients {
+    font-family: "Playfair Display", cursive;
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+.news-description {
+    font-family: "Playfair Display", cursive;
+    font-size: 2em;
+    margin-bottom: 30px;
 }
 
 .media-body {
     text-align: center;
 }
 
+.img-tomato {
+    position: absolute;
+    top: 32%;
+    right: 10%;
+}
+
+.img-olives {
+    position: absolute;
+    top: 5%;
+    left: 10%;
+}
+
+.img-peppers {
+    position: absolute;
+    top: 5%;
+    right: 10%;
+}
+
+.img-onions {
+    position: absolute;
+    top: 32%;
+    left: 10%;
+}
+
+.img-news {
+    max-width: 990px;
+    max-height: 600px;
+    margin-top: 100px;
+}
+
 .composition {
     margin-bottom: 60px;
     margin-top: 60px;
 }
-
-/*Fabrice*/
 
 footer {
     background-color: black;
@@ -239,14 +271,12 @@ footer {
 }
 
 .mention-bloc {
-    top: 50px;
+    padding-top: 50px;
 }
 
 .contact-bloc {
     top: 30px;
 }
-
-/*locations*/
 
 .locationsContent {
     padding-top: 100px;
@@ -297,5 +327,38 @@ footer {
     .page {
         width: 40%;
         margin-left: 6.5%;
+    }
+}
+
+@media only screen and (max-width: 990px) {
+    .img-tomato {
+        display: none;
+    }
+
+    .img-olives {
+        display: none;
+    }
+
+    .img-peppers {
+        display: none;
+    }
+
+    .img-onions {
+        display: none;
+    }
+
+    .img-news {
+        max-width: 800px;
+        max-height: 600px;
+        margin-top: 0px;
+    }
+
+    .news {
+        margin-top: 0px;
+    }
+
+    .titles {
+        text-align: center;
+        margin-bottom: 10px;
     }
 }
