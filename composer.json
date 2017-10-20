@@ -1,0 +1,17 @@
+{
+    "name": "sylvain/orleans-0917-catalunapizz",
+    "require": {
+        "twig/twig": "^2.4"
+    },
+    "authors": [
+        {
+            "name": "Sylvain Blondeau",
+            "email": "sylvain@wildcodeschool.fr"
+        }
+    ],
+    "autoload" : {
+        "psr-4": {
+            "Cataluna\\" : "src/"
+        }
+    }
+}
