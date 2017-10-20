@@ -28,7 +28,6 @@ class MenuController extends Controller
             $pizzaCategories[] = ['pizza'=>$pizza, 'category'=>$category];
         }
 
-        var_dump($_POST);
         // appel de la vue
         return $this->twig->render('Menu/show.html.twig', [
             'pizzaCategories'=>$pizzaCategories ,
