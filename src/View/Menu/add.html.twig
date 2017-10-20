@@ -1,0 +1,39 @@
+{% if errors %}
+    <ul class="alert alert-danger">
+        {% for error in errors %}
+            <li>{{ error }}</li>
+        {% endfor %}
+    </ul>
+{% endif %}
+<form action="index.php?route=carte" method="post">
+
+    <fieldset class="form-group">
+        <legend>Rentrer le nom de la pizza</legend>
+        <label for="title">Pizza</label>
+        <input type="text" class="form-control" name="title" id="title"
+               placeholder="Entrer le nom de la pizza" value="{{ pizza.title }}"/>
+        <label for="ingredients">Ingrédients</label>
+        <textarea class="form-control" name="ingredients" id="ingredients"
+               placeholder="Entrer les ingrédients" value="{{ pizza.ingredients }}"></textarea>
+        <label for="price_1">Prix taille standard</label>
+        <input type="text" class="form-control" name="price_1" id="price_1"
+               placeholder="Entrer le prix" value="{{ pizza.price_1 }}"/>
+        <label for="price_2">Prix grande standard</label>
+        <input type="text" class="form-control" name="price_2" id="price_2"
+               placeholder="Entrer le prix" value="{{ pizza.price_2 }}"/>
+    </fieldset>
+
+    <fieldset class="form-group">
+        <label for="category">Category</label>
+        <select name="category" id="category" class="form-control">
+            {% for category in categories %}
+                <option {{ pizza.category_id == category.id ? 'selected' }} value="{{ category.id }}">{{ category.name }}</option>
+            {% endfor %}
+        </select>
+    </fieldset>
+
+    <button type="submit" class="btn btn-success">
+
+        <span class="glyphicon glyphicon-plus"></span>Ajouter pizza
+    </button>
+</form> 
