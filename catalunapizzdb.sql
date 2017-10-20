@@ -32,7 +32,7 @@ DROP TABLE IF EXISTS `about_us`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `about_us` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `about-us` text,
+  `about_us` text,
   `news_title` varchar(45) DEFAULT NULL,
   `news` text,
   `news_picture` text,
@@ -48,7 +48,7 @@ CREATE TABLE `about_us` (
 
 LOCK TABLES `about_us` WRITE;
 /*!40000 ALTER TABLE `about_us` DISABLE KEYS */;
-INSERT INTO `about_us` VALUES (1,'',NULL,NULL,NULL,'catalunapizz@gmail.com','06-51-75-79-20');
+INSERT INTO `about_us` VALUES (1,'Nous vous proposons des produits frais et 100% espagnol chaque jours.Le chorizo et le jambon sont certifié Serano. La préparation de notre poulet et de notre pâte fine est effectuée de manière artisalale.Notre hygiène irréprochable et la qualité de nos produit vous confère des pizzas de très haut niveau.','La Flamenco','Sauce tomate, pomme de terre, Jambon Serrano, oeuf, piment d\'Espelette, fromage.','assets/images/flamenco.png','catalunapizz@gmail.com','06-51-75-79-20');
 /*!40000 ALTER TABLE `about_us` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -219,4 +219,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-10-18 11:34:58
+-- Dump completed on 2017-10-20 14:22:57
