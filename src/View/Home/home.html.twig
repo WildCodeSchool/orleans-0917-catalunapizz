@@ -60,16 +60,15 @@
             <div class="row">
                 <div class="media">
                     <div class="col-md-offset-1 col-md-4 img-news">
-                        <img class="media-object img-responsive news-img" src="assets/images/pizz.jpg"
+                        <img class="media-object img-responsive news-img" src={{ home.NewsPicture }}
                              alt="Image">
                     </div>
                     <div class="media-body">
                         <div class="col-md-offset-2 col-md-8">
-                            <div class="media-heading news-title">Les bocadillos</div>
+                            <div class="media-heading news-title">{{ home.NewsTitle }}</div>
                             <div class="composition">
                                 <div class="news-ingredients">Ingrédients</div>
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                {{ home.News }}
                             </div>
                             <div class="caption">
                                 <div class="news-description">Description</div>

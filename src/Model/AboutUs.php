@@ -6,7 +6,9 @@ class AboutUs
 {
     private $id;
     private $aboutUs;
+    private $news_title;
     private $news;
+    private $news_picture;
     private $mail;
     private $tel;
 
@@ -38,6 +40,19 @@ class AboutUs
         return $this;
     }
 
+    public function getNewsTitle()
+    {
+        return $this->news_title;
+    }
+
+
+    public function setNewsTitle($news_title)
+    {
+        $this->news = $news_title;
+
+        return $this;
+    }
+
 
     public function getNews()
     {
@@ -48,6 +63,19 @@ class AboutUs
     public function setNews($news)
     {
         $this->news = $news;
+
+        return $this;
+    }
+
+    public function getNewsPicture()
+    {
+        return $this->news_picture;
+    }
+
+
+    public function setNewsPicture($news_picture)
+    {
+        $this->news = $news_picture;
 
         return $this;
     }
