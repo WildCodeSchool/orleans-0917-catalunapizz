@@ -1,20 +1,22 @@
 {% extends 'base.html.twig' %}
 {% block body %}
 
-<h1>La carte</h1>
+    <h1>La carte</h1>
 
-<h2>Nos pizzas</h2>
-<ul>
-    {% for pizza in pizzas %}
-        <li>{{ pizza.title }} : <small>{{ pizza.ingredients }}</small> <span class="label label-info">{{ pizza.price }}</span></li>
-    {% endfor %}
-</ul>
+    <h2>Nos pizzas</h2>
+    <ul>
+        {% for pizza in pizzas %}
+            <li>{{ pizza.title }} :
+                <small>{{ pizza.ingredients }}</small>
+                <span class="label label-info">{{ pizza.price }}</span></li>
+        {% endfor %}
+    </ul>
 
-<h2>Nos Boissons</h2>
-<ul>
-    {% for drink in drinks %}
-        <li>{{ drink }}</li>
-    {% endfor %}
-</ul>
+    <h2>Nos Boissons</h2>
+    <ul>
+        {% for drink in drinks %}
+            <li>{{ drink }}</li>
+        {% endfor %}
+    </ul>
 
 {% endblock %}

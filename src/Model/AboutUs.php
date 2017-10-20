@@ -58,7 +58,7 @@ class AboutUs
         return $this->mail;
     }
 
-    
+
     public function setMail($mail)
     {
         $this->mail = $mail;
@@ -68,14 +68,14 @@ class AboutUs
 
     public function getTel()
     {
-      return $this->tel;
+        return $this->tel;
     }
 
     public function setTel($tel)
     {
-    $this->tel = $tel;
+        $this->tel = $tel;
 
-    return $this;
+        return $this;
     }
 
 }

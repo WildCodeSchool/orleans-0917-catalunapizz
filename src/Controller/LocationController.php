@@ -13,19 +13,19 @@ use Cataluna\Model\AboutUsManager;
 
 class LocationController extends Controller
 {
-  public function showAction()
-  {
-      // appels éventuels aux données des modèles
-       $locationManager = new LocationManager();
-       $locations = $locationManager->findAll();
-       $aboutUsManager = new AboutUsManager();
-       $home = $aboutUsManager->findAll();
-      // appel de la vue
-      return $this->twig->render('Locations/locations.html.twig', [
-          'location'=>$locations,
-          'home'=>$home[0],
-      ]);
+    public function showAction()
+    {
+        // appels éventuels aux données des modèles
+        $locationManager = new LocationManager();
+        $locations = $locationManager->findAll();
+        $aboutUsManager = new AboutUsManager();
+        $home = $aboutUsManager->findAll();
+        // appel de la vue
+        return $this->twig->render('Locations/locations.html.twig', [
+            'location' => $locations,
+            'home' => $home[0],
+        ]);
 
 
-  }
+    }
 }
