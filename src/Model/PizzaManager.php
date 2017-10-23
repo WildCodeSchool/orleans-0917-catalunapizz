@@ -47,4 +47,13 @@ class PizzaManager extends EntityManager
         $statement->bindValue('category', $pizza->getCategoryId(), \PDO::PARAM_INT);
         $statement->execute();
     }
+
+    public function delete(int $id)
+    {
+        $query = "DELETE FROM pizza 
+                  WHERE id = :id";
+        $statement = $this->pdo->prepare($query);
+        $statement->bindValue('id', $id, \PDO::PARAM_INT);
+        $statement->execute();
+    }
 }

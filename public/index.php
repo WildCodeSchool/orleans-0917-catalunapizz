@@ -21,10 +21,14 @@ if (!empty($_GET['route'])) {
         $controller = new LocationController();
         echo $controller->showAction();
 
-    } elseif ($_GET['route'] === 'add') {
+    } elseif ($_GET['route'] === 'addPizza') {
         // charge la page d'ajout
         $controller = new AdminController();
         echo $controller->addAction();
+    }
+    elseif ($_GET['route'] === 'delPizza') {
+        $controller = new AdminController();
+        echo $controller->deleteAction();
     }
 
 } else {
