@@ -65,4 +65,35 @@ class AdminController extends Controller
         ]);
 
     }
+
+    public function deleteAction()
+    {
+
+        // appels éventuels aux données des modèles
+         $menuManager = new PizzaManager();
+         $pizzas = $menuManager->findAll();
+         $aboutUsManager = new AboutUsManager();
+         $home = $aboutUsManager->findAll();
+         $categoryManager = new CategoryManager();
+
+        foreach($pizzas as $pizza) {
+            $category = $categoryManager->find($pizza->getCategoryId());
+            $pizzaCategories[] = ['pizza'=>$pizza, 'category'=>$category];
+        }
+
+        if (!empty($_POST)){
+
+            $deleteManager = new PizzaManager();
+            $deleteManager->delete($_POST['id']);
+
+            header('Location:index.php?route=carte');
+
+
+        }
+          return $this->twig->render('Menu/delete.html.twig', [
+            'pizzaCategories'=>$pizzaCategories ,
+            'home'=>$home[0],
+        ]);
+
+    }
 }

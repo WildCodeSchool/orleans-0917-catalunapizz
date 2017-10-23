@@ -5,10 +5,10 @@
 
     <h2>Nos pizzas</h2>
     <ul>
-        {% for pizza in pizzas %}
-            <li>{{ pizza.title }} :
-                <small>{{ pizza.ingredients }}</small>
-                <span class="label label-info">{{ pizza.price }}</span></li>
+        {% for pizzaCategory in pizzaCategories %}
+            <li>{{ pizzaCategory.pizza.title }} :
+                <small>{{ pizzaCategory.category.name }} {{ pizzaCategory.pizza.ingredients }}</small>
+                <span class="label label-info">{{ pizzaCategory.pizza.price1 }} {{ pizzaCategory.pizza.price2 }}</span></li>
         {% endfor %}
     </ul>
 
