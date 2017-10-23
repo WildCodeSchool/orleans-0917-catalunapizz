@@ -5,7 +5,9 @@ namespace Cataluna\Model;
 class AboutUs
 {
     private $id;
-    private $aboutUs;
+    private $about_us;
+    private $news_picture;
+    private $news_title;
     private $news;
     private $mail;
     private $tel;
@@ -27,13 +29,39 @@ class AboutUs
 
     public function getAboutUs()
     {
-        return $this->aboutUs;
+        return $this->about_us;
     }
 
 
-    public function setAboutUs($aboutUs)
+    public function setAboutUs($about_us)
     {
-        $this->aboutUs = $aboutUs;
+        $this->about_us = $about_us;
+
+        return $this;
+    }
+
+    public function getNewsPicture()
+    {
+        return $this->news_picture;
+    }
+
+
+    public function setNewsPicture($news_picture)
+    {
+        $this->news_picture = $news_picture;
+
+        return $this;
+    }
+
+    public function getNewsTitle()
+    {
+        return $this->news_title;
+    }
+
+
+    public function setNewsTitle($news_title)
+    {
+        $this->news_title = $news_title;
 
         return $this;
     }
