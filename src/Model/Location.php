@@ -40,13 +40,13 @@ class Location
     }
 
 
-    public function getLocation_AM()
+    public function getLocationAM()
     {
         return $this->location_AM;
     }
 
 
-    public function setLocation_AM($location_AM)
+    public function setLocationAM($location_AM)
     {
         $this->location_AM = $location_AM;
 
@@ -54,25 +54,25 @@ class Location
     }
 
 
-    public function getHour_AM()
+    public function getHourAM()
     {
         return $this->hour_AM;
     }
 
-    public function setHour_AM($hour_AM)
+    public function setHourAM($hour_AM)
     {
         $this->hour_AM = $hour_AM;
 
         return $this;
     }
 
-    public function getLocation_PM()
+    public function getLocationPM()
     {
       return $this->location_PM;
     }
 
 
-    public function setLocation_PM($location_PM)
+    public function setLocationPM($location_PM)
     {
         $this->location_PM = $location_PM;
 
@@ -80,12 +80,12 @@ class Location
     }
 
 
-    public function getHour_PM()
+    public function getHourPM()
     {
         return $this->hour_PM;
     }
 
-    public function setHour_PM($hour_PM)
+    public function setHourPM($hour_PM)
     {
         $this->hour_PM = $hour_PM;
 
