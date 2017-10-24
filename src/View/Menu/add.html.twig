@@ -1,3 +1,5 @@
+{% extends 'base.html.twig' %}
+{% block body %}
 {% if errors %}
     <ul class="alert alert-danger">
         {% for error in errors %}
@@ -5,9 +7,8 @@
         {% endfor %}
     </ul>
 {% endif %}
-<form action="index.php?route=add" method="post">
-{% extends 'base.html.twig' %}
-{% block body %}
+<form action="index.php?route=addPizza" method="post">
+
 <div class="container">
     <div class="row>"
         <div class="panel panel-default">

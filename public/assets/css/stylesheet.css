@@ -110,7 +110,7 @@ h1 {
     padding-bottom: 10px;
     margin-top: 50px;
     text-align: center;
-    font-size: 50px;
+    font-size: 60px;
 }
 
 .aboutUs {
@@ -162,13 +162,13 @@ p {
 
 .news-title {
     font-family: "Dancing Script", cursive;
-    font-size: 4em;
+    font-size: 5em;
     margin-bottom: 70px;
 }
 
 .news-ingredients {
     font-family: "Playfair Display", cursive;
-    font-size: 2em;
+    font-size: 3em;
     margin-bottom: 30px;
 }
 
@@ -209,6 +209,10 @@ p {
 .img-news {
     max-width: 990px;
     max-height: 600px;
+    margin-top: 50px;
+}
+
+.bloc-news {
     margin-top: 100px;
 }
 
@@ -219,7 +223,7 @@ p {
 
 footer {
     background-color: black;
-    margin-top: 120px;
+    margin-top: 150px;
 }
 
 .footer_list li {
@@ -365,4 +369,8 @@ footer {
         width: 85%;
         margin-left: 6.5%;
     }
+}
+
+.panel-body {
+    margin-top: 100px;
 }
