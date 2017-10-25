@@ -4,6 +4,7 @@ use Cataluna\Controller\HomeController;
 use Cataluna\Controller\MenuController;
 use Cataluna\Controller\LocationController;
 use Cataluna\Controller\AdminController;
+use Cataluna\Controller\AdminHomeController;
 
 require '../vendor/autoload.php';
 require '../connect.php';
@@ -30,6 +31,11 @@ if (!empty($_GET['route'])) {
         $controller = new AdminController();
         echo $controller->deleteAction();
     }
+    elseif ($_GET['route'] === 'updateHome') {
+        $controller = new AdminHomeController();
+        echo $controller->updateAction();
+    }
+
 
 } else {
     // charge homepage
