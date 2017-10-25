@@ -156,27 +156,20 @@ p {
     src: url('../fonts/hotpizza.ttf');
 }
 
-.news {
-    margin-top: 100px;
-}
 
 .news-title {
     font-family: "Dancing Script", cursive;
-    font-size: 5em;
+    font-size: 100px;
     margin-bottom: 70px;
 }
 
-.news-ingredients {
+.news {
     font-family: "Playfair Display", cursive;
-    font-size: 3em;
+    font-size: 20px;
     margin-bottom: 30px;
+    margin-top: 60px;
 }
 
-.news-description {
-    font-family: "Playfair Display", cursive;
-    font-size: 2em;
-    margin-bottom: 30px;
-}
 
 .media-body {
     text-align: center;
