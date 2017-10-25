@@ -14,20 +14,28 @@
                     <form action="index.php?route=updateHome" method="post">
                         <h1>Mettre à jour ma page d'Accueil</h1>
                         <fieldset class="form-group">
+
                             <legend>Rentrer les modifications à apporter</legend>
+
                             <label for="nos produits">Nos Produits</label>
                             <textarea class="form-control" name="about_us" id="about_us">{{ aboutUs.AboutUs }}</textarea>
+
                             <label for="titre nouveauté">Titre de la nouveauté</label>
                             <input class="form-control" name="news_title" id="news_title" value="{{ aboutUs.NewsTitle }}"/>
+
                             <label for="nouveauté">Description de la nouveauté</label>
-                            <textarea class="form-control" name="news" id="news">{{ aboutUs.News }}</textarea>
+                            <textarea class="form-control" name="news" id="summernote">{{ aboutUs.News }}</textarea>
+
                             <label for="image nouveauté">Image de la nouveauté</label>
                             <input type="text" class="form-control" name="news_picture" id="news_picture"
                                    value="{{ aboutUs.NewsPicture }}"/>
+
                             <label for="mail">Mail</label>
                             <input type="text" class="form-control" name="mail" id="mail" value="{{ aboutUs.Mail }}"/>
+
                             <label for="tel">Téléphone</label>
                             <input type="text" class="form-control" name="tel" id="tel" value="{{ aboutUs.Tel }}"/>
+
                         </fieldset>
 
                         <button type="submit" class="btn btn-success">

@@ -50,14 +50,14 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="media">
-                    <div class="col-md-6 img-news">
+                    <div class="col-md-offset-1 col-md-5 img-news">
                         <img class="media-object img-responsive" src={{ home.NewsPicture }}
                              alt="Image">
                     </div>
                     <div class="media-body">
                         <div class="col-md-offset-2 col-md-6 bloc-news">
                             <div class="media-heading news-title">{{ home.NewsTitle }}</div>
-                            <div class="news">{{ home.News }}</div>
+                            <div class="news">{{ home.News|raw}}</div>
                             <div class="caption">
 
                         </div>
