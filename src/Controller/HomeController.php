@@ -16,7 +16,7 @@ class HomeController extends Controller
         $pizza = $pizzaManager->findAll();
         // appel de la vue
         return $this->twig->render('Home/home.html.twig', [
-            'home' => $home[0],
+            'home' => $home,
             'pizza'=> $pizza[16],
         ]);
 
