@@ -64,7 +64,7 @@ class AdminHomeController extends Controller
         }
 
 
-        return $this->twig->render('Home/updateHome.html.twig', [
+        return $this->twig->render('Admin/updateHome.html.twig', [
             'errors' => $errors,
             'aboutUs' => $aboutUs,
         ]);
