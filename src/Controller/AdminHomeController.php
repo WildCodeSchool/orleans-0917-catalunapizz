@@ -20,7 +20,9 @@ class AdminHomeController extends Controller
 
         if (!empty($_POST)) {
 // traitement des erreurs éventuelles
+            $aboutUs->setAboutUsTitle($_POST['about_us_title']);
             $aboutUs->setAboutUs($_POST['about_us']);
+            $aboutUs->setBlocNewsTitle($_POST['bloc_news_title']);
             $aboutUs->setNewsTitle($_POST['news_title']);
             $aboutUs->setNewsPicture($_POST['news_picture']);
             $aboutUs->setNews($_POST['news']);
@@ -28,8 +30,16 @@ class AdminHomeController extends Controller
             $aboutUs->setTel($_POST['tel']);
 
 
+            if (empty($_POST['about_us_title'])) {
+                $errors[] = 'Remplissez le champs Titre de la présentation';
+            }
+
             if (empty($_POST['about_us'])) {
                 $errors[] = 'Remplissez le champs Nos produits';
+            }
+
+            if (empty($_POST['bloc_news_title'])) {
+                $errors[] = 'Remplissez le champs Titre de l\' évènement';
             }
 
             if (empty($_POST['news_title'])) {
