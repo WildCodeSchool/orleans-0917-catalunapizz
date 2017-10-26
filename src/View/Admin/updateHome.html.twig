@@ -1,4 +1,5 @@
 {% extends 'base.html.twig' %}
+{% block title %}Admin-Cataluña Pizz'{% endblock %}
 {% block body %}
     <div class="container">
         <div class="row>">
@@ -17,8 +18,14 @@
 
                             <legend>Rentrer les modifications à apporter</legend>
 
+                            <label for="titre présentation">Titre de la présentation</label>
+                            <input class="form-control" name="about_us_title" id="about_us_title" value="{{ aboutUs.AboutUsTitle }}"/>
+
                             <label for="nos produits">Nos Produits</label>
                             <textarea class="form-control" name="about_us" id="about_us">{{ aboutUs.AboutUs }}</textarea>
+
+                            <label for="titre évènement">Titre de l'évènement</label>
+                            <input class="form-control" name="bloc_news_title" id="bloc_news_title" value="{{ aboutUs.BlocNewsTitle }}"/>
 
                             <label for="titre nouveauté">Titre de la nouveauté</label>
                             <input class="form-control" name="news_title" id="news_title" value="{{ aboutUs.NewsTitle }}"/>

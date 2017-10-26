@@ -5,8 +5,10 @@ namespace Cataluna\Model;
 class AboutUs
 {
     private $id;
+    private $about_us_title;
     private $about_us;
     private $news_picture;
+    private $bloc_news_title;
     private $news_title;
     private $news;
     private $mail;
@@ -22,6 +24,18 @@ class AboutUs
     public function setId($id)
     {
         $this->id = $id;
+
+        return $this;
+    }
+
+    public function getAboutUsTitle()
+    {
+        return $this->about_us_title;
+    }
+
+    public function setAboutUsTitle($about_us_title)
+    {
+        $this->about_us_title = $about_us_title;
 
         return $this;
     }
@@ -49,6 +63,18 @@ class AboutUs
     public function setNewsPicture($news_picture)
     {
         $this->news_picture = $news_picture;
+
+        return $this;
+    }
+
+    public function getBlocNewsTitle()
+    {
+        return $this->bloc_news_title;
+    }
+
+    public function setBlocNewsTitle($bloc_news_title)
+    {
+        $this->bloc_news_title = $bloc_news_title;
 
         return $this;
     }
