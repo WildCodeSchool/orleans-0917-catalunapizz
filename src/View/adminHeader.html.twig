@@ -1,0 +1,44 @@
+<nav class="navbar navbar-reverse navbar-fixed-top navbarAdmin">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand adminBrand" href="?route=adminHome">Admin</a>
+        </div>
+        <div class="collapse navbar-collapse adminLinks" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="?route=updateHome">Accueil</a>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Carte
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="?route=addPizza">Ajouter</a>
+                        </li>
+                        <li>
+                            <a href="#">Mettre à jour</a>
+                        </li>
+                        <li>
+                            <a href="?route=delPizza">Supprimer</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="?route=">Lieux</a>
+                </li>
+                <li>
+                    <a href="?route=">Evénements</a>
+                </li>
+                <li>
+                    <a href="?route=">Photos</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

@@ -302,8 +302,36 @@ footer {
 }
 
 .truckDraw {
-    max-height: 150px;
+    max-height: 100px;
     width: auto;
+}
+
+.adminBrand {
+    padding-top: 40px;
+    padding-left: 15px;
+}
+
+.adminbg {
+    height: calc(100vh - 100px);
+    width: 100%;
+    background: url("https://i.ytimg.com/vi/_t-U3eQeQIc/maxresdefault.jpg") center;
+    background-size: cover;
+    margin-top: 100px;
+}
+
+.adminLinks {
+    font-family: serif;
+    font-size: 30px;
+    background: white;
+}
+
+.icon-bar {
+    background: black;
+}
+
+.navbar-toggle {
+    margin-top: 30px;
+    border: 1px solid black;
 }
 
 @media only screen and (max-width: 990px) {
