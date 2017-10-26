@@ -58,7 +58,7 @@ class AdminController extends Controller
         $categoryManager = new CategoryManager();
         $categories = $categoryManager->findAll();
 
-        return $this->twig->render('Menu/add.html.twig', [
+        return $this->twig->render('Admin/addMenu.html.twig', [
             'errors' => $errors,
             'categories' => $categories,
             'pizza' => $pizza,
@@ -90,7 +90,7 @@ class AdminController extends Controller
 
 
         }
-          return $this->twig->render('Menu/delete.html.twig', [
+          return $this->twig->render('Admin/deleteMenu.html.twig', [
             'pizzaCategories'=>$pizzaCategories ,
             'home'=>$home[0],
         ]);
