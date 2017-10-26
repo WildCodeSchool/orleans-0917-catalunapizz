@@ -163,11 +163,8 @@ p {
     margin-bottom: 70px;
 }
 
-.news {
-    font-family: "Playfair Display", cursive;
-    font-size: 20px;
-    margin-bottom: 30px;
-    margin-top: 60px;
+.news * {
+    font-family: "Dancing Script", cursive;
 }
 
 

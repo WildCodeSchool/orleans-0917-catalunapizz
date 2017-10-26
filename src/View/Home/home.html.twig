@@ -1,4 +1,5 @@
 {% extends 'base.html.twig' %}
+{% block title %}Accueil-Cataluña Pizz'{% endblock %}
 {% block body %}
 
 <div class="carouselFixed">
@@ -31,14 +32,14 @@
 
 <div class="baudi">
     <div class="titles">
-        <h1>Nos produits</h1>
+        <h1>{{ home.AboutUsTitle }}</h1>
     </div>
     <div class=" aboutUs">
         <p> {{ home.AboutUs }}
         </p>
     </div>
     <div class="titles">
-        <h1>Nouveautés</h1>
+        <h1>{{ home.BlocNewsTitle }}</h1>
     </div>
     <div>
         <img src="assets/images/tomato.png" class="img-tomato"/>
@@ -58,12 +59,10 @@
                         <div class="col-md-offset-2 col-md-6 bloc-news">
                             <div class="media-heading news-title">{{ home.NewsTitle }}</div>
                             <div class="news">{{ home.News|raw}}</div>
-                            <div class="caption">
-
-                        </div>
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     </section>
 
