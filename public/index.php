@@ -30,6 +30,10 @@ if (!empty($_GET['route'])) {
         $controller = new AdminController();
         echo $controller->deleteAction();
     }
+    elseif ($_GET['route'] === 'updatePizza') {
+        $controller = new Admincontroller();
+        echo $controller->updateAction();
+    }
 
 } else {
     // charge homepage

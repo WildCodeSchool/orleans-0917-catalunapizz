@@ -96,4 +96,22 @@ class AdminController extends Controller
         ]);
 
     }
+
+    public function updateAction()
+    {
+
+        if (!empty($_POST['id'])) {
+
+            $updateManager = new PizzaManager();
+            $updateManager->find($_POST['id']);
+            header('Location:index.php?route=carte');
+        }
+
+            $categoryManager = new CategoryManager();
+            $categories = $categoryManager->findAll();
+
+        return $this->twig->render('Menu/update.html.twig', [
+            'categories' => $categories,
+        ]);
+    }
 }
