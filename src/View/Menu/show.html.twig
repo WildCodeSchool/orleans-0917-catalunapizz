@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+{% block title %}Carte-Cataluña Pizz'{% endblock %}
+{% block body %}
+
+    <h1>La carte</h1>
+
+    <h2>Nos pizzas</h2>
+    <ul>
+        {% for pizzaCategory in pizzaCategories %}
+            <li>{{ pizzaCategory.pizza.title }} :
+                <small>{{ pizzaCategory.category.name }} {{ pizzaCategory.pizza.ingredients }}</small>
+                <span class="label label-info">{{ pizzaCategory.pizza.price1 }} {{ pizzaCategory.pizza.price2 }}</span></li>
+        {% endfor %}
+    </ul>
+
+    <h2>Nos Boissons</h2>
+    <ul>
+        {% for drink in drinks %}
+            <li>{{ drink }}</li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}

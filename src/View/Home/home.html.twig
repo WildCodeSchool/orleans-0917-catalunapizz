@@ -1,0 +1,69 @@
+{% extends 'base.html.twig' %}
+{% block title %}Accueil-Cataluña Pizz'{% endblock %}
+{% block body %}
+
+<div class="carouselFixed">
+    <div class="container-fluid">
+        <div class="row">
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                </ol>
+
+                <div class="carousel-inner">
+                    <div class="item active item1">
+                        <img src="../images/pizzaZoom.JPG" alt="Photo de pizza">
+                    </div>
+                        <div class="item item2">
+                            <img src="../images/camion.JPG" alt="Photo de camion">
+                        </div>
+
+                        <div class="item item3">
+                            <img src="../images/pizzaPlanche.JPG" alt="Photo de pizza sortie du four">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="baudi">
+    <div class="titles">
+        <h1>{{ home.AboutUsTitle }}</h1>
+    </div>
+    <div class=" aboutUs">
+        <p> {{ home.AboutUs }}
+        </p>
+    </div>
+    <div class="titles">
+        <h1>{{ home.BlocNewsTitle }}</h1>
+    </div>
+    <div>
+        <img src="assets/images/tomato.png" class="img-tomato"/>
+        <img src="assets/images/olives.png" class="img-olives"/>
+        <img src="assets/images/poivrons.png" class="img-peppers"/>
+        <img src="assets/images/oignons.png" class="img-onions"/>
+    </div>
+    <section class="news">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="media">
+                    <div class="col-md-offset-1 col-md-5 img-news">
+                        <img class="media-object img-responsive" src={{ home.NewsPicture }}
+                             alt="Image">
+                    </div>
+                    <div class="media-body">
+                        <div class="col-md-offset-2 col-md-6 bloc-news">
+                            <div class="media-heading news-title">{{ home.NewsTitle }}</div>
+                            <div class="news">{{ home.News|raw}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    {% endblock %}

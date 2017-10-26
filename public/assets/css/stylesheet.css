@@ -1,0 +1,366 @@
+.baudi {
+    margin-top: 100vh;
+    position: absolute;
+    background: white;
+    z-index: 1;
+}
+
+.navbar {
+    border-radius: 0;
+    height: 100px;
+    border: none;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+
+.navbar-nav > li > a {
+    padding-top: 35px;
+    font-family: "Dancing Script", cursive;
+}
+
+.navbar-inverse {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: black;
+    font-size: 50px;
+    background-color: transparent;
+}
+
+.navbar-inverse .navbar-nav > li > a:focus, .navbar-inverse .navbar-nav > li > a:hover {
+    color: #747475;
+}
+
+.navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover {
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.logo {
+    height: 100%;
+    width: auto;
+}
+
+.navbar-brand {
+    float: left;
+    height: 100px;
+    padding: 0;
+    padding-left: 15px;
+    font-size: 50px;
+    font-family: "Dancing Script", cursive;
+}
+
+.navbar-inverse .navbar-brand {
+    color: black;
+}
+
+.navbar-inverse .navbar-brand:focus, .navbar-inverse .navbar-brand:hover {
+    color: black;
+}
+
+.nav > li > a {
+    padding-left: 5vw;
+}
+
+.navbar-inverse .navbar-toggle .icon-bar {
+    background-color: black;
+}
+
+.icon-bar {
+    margin: 3px;
+}
+
+.navbar-inverse .navbar-toggle {
+    border-color: #333;
+    margin-top: 30px;
+}
+
+.navbar-inverse .navbar-collapse, .navbar-form {
+    background-color: transparent;
+}
+
+.navbar-collapse {
+    border-top: none;
+    text-align: center;
+    padding-bottom: 35px;
+}
+
+@media only screen and (max-width:940px) {
+    .logo {
+        display: none;
+    }
+    .navbar-brand {
+        padding-top: 35px;
+        font-size: 40px;
+    }
+}
+
+.titles {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+h1 {
+    display: inline-block;
+    background: url("../images/underline.png") center bottom;
+    background-size: 100% 300%;
+    font-family: "Dancing Script", cursive;
+    margin-bottom: 50px;
+    padding-bottom: 10px;
+    margin-top: 50px;
+    text-align: center;
+    font-size: 60px;
+}
+
+.aboutUs {
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
+
+p {
+    font-size: 24px;
+}
+
+.carouselFixed {
+    position: fixed;
+}
+
+.item {
+    height: 100vh;
+    width: 100vw;
+}
+
+.item > img {
+    width: 100%;
+    visibility: hidden;
+}
+
+.item1 {
+    background: url("../images/pizzaZoom.JPG") center no-repeat;
+    background-size: cover;
+}
+
+.item2 {
+    background: url("../images/camion.JPG") center no-repeat;
+    background-size: cover;
+}
+
+.item3 {
+    background: url("../images/pizzaPlanche.JPG") center top no-repeat;
+    background-size: cover;
+}
+
+@font-face {
+    font-family: "hotpizz";
+    src: url('../fonts/hotpizza.ttf');
+}
+
+
+.news-title {
+    font-family: "Dancing Script", cursive;
+    font-size: 75px;
+    margin-bottom: 70px;
+}
+
+.news * {
+    font-family: "Dancing Script", cursive;
+}
+
+
+.media-body {
+    text-align: center;
+}
+
+.img-tomato {
+    position: absolute;
+    top: 32%;
+    right: 10%;
+}
+
+.img-olives {
+    position: absolute;
+    top: 5%;
+    left: 10%;
+}
+
+.img-peppers {
+    position: absolute;
+    top: 5%;
+    right: 10%;
+}
+
+.img-onions {
+    position: absolute;
+    top: 32%;
+    left: 10%;
+}
+
+.img-news {
+    max-width: 990px;
+    max-height: 600px;
+    margin-top: 50px;
+}
+
+.bloc-news {
+    margin-top: 100px;
+}
+
+.composition {
+    margin-bottom: 60px;
+    margin-top: 60px;
+}
+
+footer {
+    background-color: black;
+    margin-top: 150px;
+}
+
+.footer_list li {
+    list-style-type: none;
+    color: white;
+    font-weight: bold;
+    margin: 15px;
+    font-family: "Cormorant+Garamond", cursive;
+    font-size: 1.2em;
+}
+
+.footer_list li a {
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.footer_list li a:hover {
+    color: #D7DF01;
+    border-bottom: 3px solid #D7DF01;
+}
+
+.facebook {
+    color: #fff;
+    background-color: #3b5998;
+    border-color: #3b5998;
+    font-size: 0.9em;
+    font-weight: bold;
+    padding-top: 5px;
+}
+
+.f-facebook {
+    font-size: 1.2em;
+}
+
+.facebook-bloc {
+    top: 40px;
+}
+
+.mention-bloc {
+    padding-top: 50px;
+}
+
+.contact-bloc {
+    top: 30px;
+}
+
+.locationsContent {
+    padding-top: 100px;
+    overflow-x: hidden;
+}
+
+.page {
+    position: relative;
+    height: 450px;
+    width: 20%;
+    margin-left: 4%;
+    border: solid black 1px;
+    box-shadow: 10px 10px 5px -6px rgba(0, 0, 0, 0.75);
+    font-family: "Handlee", cursive;
+    background: #ED000B;
+    margin-bottom: 15px;
+}
+
+.pageHead {
+    position: absolute;
+    height: 15%;
+    width: 98%;
+    margin: 1%;
+    text-align: center;
+    border-bottom: solid black 5px;
+    padding-top: 5px;
+    font-size: 36px;
+    left: 0;
+    color: white;
+}
+
+.pageBody {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 85%;
+    width: 100%;
+    padding: 5%;
+    background: white;
+    font-size: 20px;
+}
+
+.truckDraw {
+    max-height: 150px;
+    width: auto;
+}
+
+@media only screen and (max-width:1000px) {
+    .page {
+        width: 40%;
+        margin-left: 6.5%;
+    }
+}
+
+@media only screen and (max-width: 990px) {
+    .img-tomato {
+        display: none;
+    }
+
+    .img-olives {
+        display: none;
+    }
+
+    .img-peppers {
+        display: none;
+    }
+
+    .img-onions {
+        display: none;
+    }
+
+    .img-news {
+        max-width: 800px;
+        max-height: 600px;
+        margin-top: 0px;
+    }
+
+    .news {
+        margin-top: 0px;
+    }
+
+    .titles {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+}
+
+@media only screen and (max-width:767px) {
+    .navbar-inverse .navbar-collapse, .navbar-form {
+        background-color: rgba(255, 255, 255, 0.9);
+    }
+    .truckDraw {
+        display: none;
+    }
+    .page {
+        width: 85%;
+        margin-left: 6.5%;
+    }
+}
+
+.panel-body {
+    margin-top: 100px;
+}
