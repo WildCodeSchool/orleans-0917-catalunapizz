@@ -2,18 +2,18 @@
 
 // Create the Transport
 $transport = (new Swift_SmtpTransport('smtp.gmail.com', 465, 'ssl'))
-->setUsername('your username')
-->setPassword('your password')
+->setUsername('catalunapizzmail@gmail.com')
+->setPassword('w1ld3er!!')
 ;
 
 // Create the Mailer using your created Transport
 $mailer = new Swift_Mailer($transport);
 
 // Create a message
-$message = (new Swift_Message('Wonderful Subject'))
-->setFrom(['john@doe.com' => 'John Doe'])
-->setTo(['receiver@domain.org', 'other@domain.org' => 'A name'])
-->setBody('Here is the message itself')
+$message = (new Swift_Message($subject))
+->setFrom([$mail => $name])
+->setTo(['f.gabrielcalixte@gmail.com'])
+->setBody($message)
 ;
 
 // Send the message

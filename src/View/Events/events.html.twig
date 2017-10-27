@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+{% block title %}Events-Cataluña Pizz'{% endblock %}
+{% block body %}
+    <div class="container">
+        <div class="row>">
+            <div class="panel">
+                <div class="panel-body">
+                    {% if errors %}
+                        <ul class="alert alert-danger">
+                            {% for error in errors %}
+                                <li>{{ error }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                    <form action="" method="post">
+                        <h1>Contactez nous</h1>
+                        <fieldset class="form-group">
+
+                            <label for="nom">Nom</label>
+                            <input class="form-control" name="name" id="nom" placeholder="Votre nom"/>
+
+                            <label for="mail">Mail</label>
+                            <input class="form-control" name="mail" id="mail" placeholder="Votre mail"/>
+
+                            <label for="sujet">Sujet</label>
+                            <input class="form-control" name="subject" id="sujet" placeholder="Votre sujet"/>
+
+                            <label for="message">Message</label>
+                            <textarea class="form-control" name="message" id="message" placeholder="Votre message"></textarea>
+
+                        </fieldset>
+
+                        <button type="submit" class="btn btn-success">
+                            <span class="glyphicon glyphicon-envelope"></span> Envoyer
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
