@@ -2,3 +2,4 @@
 connect.php
 .idea
 catalunapizzdb.sql
+src/View/Admin/.htpasswd

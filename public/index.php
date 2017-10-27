@@ -4,6 +4,7 @@ use Cataluna\Controller\HomeController;
 use Cataluna\Controller\MenuController;
 use Cataluna\Controller\LocationController;
 use Cataluna\Controller\AdminController;
+use Cataluna\Controller\UpdateHomeController;
 use Cataluna\Controller\AdminHomeController;
 use Cataluna\Controller\EventController;
 
@@ -38,10 +39,13 @@ if (!empty($_GET['route'])) {
         echo $controller->deleteAction();
     }
     elseif ($_GET['route'] === 'updateHome') {
-        $controller = new AdminHomeController();
+        $controller = new UpdateHomeController();
         echo $controller->updateAction();
     }
-
+    elseif ($_GET['route'] === 'adminHome') {
+        $controller = new AdminHomeController();
+        echo $controller->showAction();
+    }
 
 } else {
     // charge homepage
