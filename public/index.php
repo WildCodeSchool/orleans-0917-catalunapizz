@@ -25,9 +25,9 @@ if (!empty($_GET['route'])) {
         echo $controller->showAction();
 
     } elseif ($_GET['route'] === 'evenements') {
-        // charge page des lieux
+        // charge page des evenement
         $controller = new EventController();
-        echo $controller->mailAction();
+        echo $controller->showAction();
 
     } elseif ($_GET['route'] === 'addPizza') {
         // charge la page d'ajout

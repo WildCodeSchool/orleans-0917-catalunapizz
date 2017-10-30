@@ -10,28 +10,24 @@ use Swift_Message;
 
 class EventController extends Controller
 {
-    /*public function showAction()
-    {
-        // appel de la vue
-        return $this->twig->render('Events/events.html.twig');
-    }*/
 
     /**
      * gestion de l'envoi du mail
      */
-    public function mailAction()
+    public function showAction()
     {
-// récupérer $_POST et traiter
+
         $errors = [];
 
+        //findall events
+
         if (!empty($_POST)) {
-// traitement des erreurs éventuelles
+
 
             $name=$_POST['name'];
             $mail=$_POST['mail'];
             $subject=$_POST['subject'];
             $message=$_POST['message'];
-
 
 
             if (empty($_POST['name'])) {
@@ -42,6 +38,10 @@ class EventController extends Controller
                 $errors[] = 'Remplissez le champs Mail';
             }
 
+            if (preg_match ('/\b[\w.-]+@[\w.-]{2,}\.[a-z]{2,5}\b/', $_POST['mail'])!= true) {
+                $errors[] = 'L\'adresse mail n\'est pas valide';
+            }
+
             if (empty($_POST['subject'])) {
                 $errors[] = 'Remplissez le  champs Sujet';
             }
@@ -50,29 +50,24 @@ class EventController extends Controller
                 $errors[] = 'Remplissez le champs Message';
             }
 
-
-
             if (empty($errors)) {
 
-                $transport = (new Swift_SmtpTransport('smtp.gmail.com', 465, 'ssl'))
-                    ->setUsername(USER)
-                    ->setPassword(PASS)
-                ;
+                $transport = (new Swift_SmtpTransport(MAILHOST, MAILPORT, MAILSECURITY))
+                    ->setUsername(MAILUSER)
+                    ->setPassword(MAILPASS);
 
                 $mailer = new Swift_Mailer($transport);
 
                 $message = (new Swift_Message($subject))
                     ->setFrom([$mail => $name])
-                    ->setTo([MAIL])
-                    ->setBody($message)
-                ;
+                    ->setTo([MAILDESTINATION])
+                    ->setBody($message);
 
-                $result = $mailer->send($message);
+                $mailer->send($message);
+                //header location
 
             }
         }
-
-
 
         return $this->twig->render('Events/events.html.twig', [
             'errors' => $errors
@@ -80,4 +75,8 @@ class EventController extends Controller
 
 
     }
+
+
+
+
 }
