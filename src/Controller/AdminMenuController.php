@@ -9,7 +9,7 @@ use Cataluna\Model\AboutUsManager;
 use Cataluna\Model\Category;
 use Cataluna\Model\CategoryManager;
 
-class AdminController extends Controller
+class AdminMenuController extends Controller
 {
     /**
     * ajoute des données au modèle
@@ -18,7 +18,7 @@ class AdminController extends Controller
     {
         // récupérer $_POST et traiter
         $errors = [];
-        // creation d'un objet person vide
+        // creation d'un objet pizza vide
         $pizza = new Pizza();
 
         if (!empty($_POST)) {
@@ -66,6 +66,9 @@ class AdminController extends Controller
 
     }
 
+    /**
+     * @return string
+     */
     public function deleteAction()
     {
 
@@ -96,4 +99,54 @@ class AdminController extends Controller
         ]);
 
     }
+
+    public function updateAction()
+    {
+        $errors = [];
+        // creation d'un objet pizza vide
+  
+        $pizzaManager = new PizzaManager();
+        $pizza = $pizzaManager->find($_POST['id']);
+        if (!empty($_POST['updating'])) {
+            // traitement des erreurs éventuelles
+            $pizza->setTitle($_POST['title']);
+            $pizza->setIngredients($_POST['ingredients']);
+            $pizza->setPrice1($_POST['price_1']);
+            $pizza->setPrice2($_POST['price_2']);
+            $pizza->setCategoryId($_POST['category']);
+
+
+            if (empty($_POST['title'])) {
+                $errors[] = 'Title is required';
+            }
+
+            if (empty($_POST['ingredients'])) {
+                $errors[] = 'Ingredients is required';
+            }
+
+            if (empty($_POST['price_1'])) {
+                $errors[] = 'Price is required';
+            }
+
+            if (empty($_POST['category'])) {
+                $errors[] = 'Category is required';
+            }
+
+            // si pas d'erreur, insert en bdd
+            if (empty($errors)) {
+                $pizzaManager->update($pizza);
+                header('Location:index.php?route=carte');
+            }
+        }
+
+        $categoryManager = new CategoryManager();
+        $categories = $categoryManager->findAll();
+
+        return $this->twig->render('Admin/updateMenu.html.twig', [
+            'errors' => $errors,
+            'categories' => $categories,
+            'pizza' => $pizza,
+        ]);
+    }
+
 }

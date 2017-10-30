@@ -56,4 +56,18 @@ class PizzaManager extends EntityManager
         $statement->bindValue('id', $id, \PDO::PARAM_INT);
         $statement->execute();
     }
+
+    public function update(Pizza $pizza)
+    {
+        $query = "UPDATE pizza SET title=:title, ingredients=:ingredients, price_1=:price_1, price_2=:price_2, category_id=:category 
+                  WHERE id=:id";
+        $statement = $this->pdo->prepare($query);
+        $statement->bindValue('title', $pizza->getTitle(), \PDO::PARAM_STR);
+        $statement->bindValue('ingredients', $pizza->getIngredients(), \PDO::PARAM_STR);
+        $statement->bindValue('price_1', $pizza->getPrice1(), \PDO::PARAM_INT);
+        $statement->bindValue('price_2', $pizza->getPrice2(), \PDO::PARAM_INT);
+        $statement->bindValue('category', $pizza->getCategoryId(), \PDO::PARAM_INT);
+        $statement->bindValue('id', $pizza->getId(), \PDO::PARAM_INT);
+        $statement->execute();
+    }
 }
