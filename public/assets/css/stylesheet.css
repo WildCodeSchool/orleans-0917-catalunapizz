@@ -110,7 +110,7 @@ h1 {
     font-family: "ScribblerSerif", cursive;
     margin-top: 50px;
     text-align: center;
-    font-size: 200px;
+    font-size: calc(30px + 8vw);
 }
 
 .aboutUs {
