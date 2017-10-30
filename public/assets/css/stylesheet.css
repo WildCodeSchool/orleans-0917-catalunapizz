@@ -361,3 +361,8 @@ footer {
 .panel-body {
     margin-top: 100px;
 }
+
+.fields {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}

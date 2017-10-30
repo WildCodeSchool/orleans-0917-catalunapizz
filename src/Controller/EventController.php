@@ -2,6 +2,11 @@
 
 namespace Cataluna\Controller;
 
+use Swift_SmtpTransport;
+use Swift_Mailer;
+use Swift_Message;
+
+
 
 class EventController extends Controller
 {
@@ -47,10 +52,22 @@ class EventController extends Controller
 
 
 
-// si pas d'erreur, met à jour la bdd
             if (empty($errors)) {
-                require '../mail.php';
-              echo 'Votre message à été envoyé';
+
+                $transport = (new Swift_SmtpTransport('smtp.gmail.com', 465, 'ssl'))
+                    ->setUsername(USER)
+                    ->setPassword(PASS)
+                ;
+
+                $mailer = new Swift_Mailer($transport);
+
+                $message = (new Swift_Message($subject))
+                    ->setFrom([$mail => $name])
+                    ->setTo([MAIL])
+                    ->setBody($message)
+                ;
+
+                $result = $mailer->send($message);
 
             }
         }
