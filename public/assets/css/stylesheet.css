@@ -102,15 +102,11 @@
 .titles {
     text-align: center;
     margin-bottom: 70px;
+    font-family: "Dancing Script", cursive;
 }
 
 h1 {
-    display: inline-block;
-    /*background: url("../images/underline.png") center bottom;*/
-    background-size: 100% 300%;
     font-family: "Dancing Script", cursive;
-    margin-bottom: 50px;
-    padding-bottom: 10px;
     margin-top: 50px;
     text-align: center;
     font-size: 60px;
@@ -176,11 +172,8 @@ p {
     margin-bottom: 70px;
 }
 
-.news {
-    font-family: "Playfair Display", cursive;
-    font-size: 20px;
-    margin-bottom: 30px;
-    margin-top: 60px;
+.news * {
+    font-family: "Dancing Script", cursive;
 }
 
 
@@ -215,11 +208,11 @@ p {
 .img-news {
     max-width: 990px;
     max-height: 600px;
-    margin-top: 50px;
+    margin-top: 150px;
 }
 
 .bloc-news {
-    margin-top: 100px;
+    margin-top: 150px;
 }
 
 .composition {
@@ -470,4 +463,9 @@ h2 {
 
 .panel-body {
     margin-top: 100px;
+}
+
+.fields {
+    margin-top: 10px;
+    margin-bottom: 20px;
 }

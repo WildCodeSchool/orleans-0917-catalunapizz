@@ -6,6 +6,7 @@ use Cataluna\Controller\LocationController;
 use Cataluna\Controller\AdminController;
 use Cataluna\Controller\UpdateHomeController;
 use Cataluna\Controller\AdminHomeController;
+use Cataluna\Controller\EventController;
 
 require '../vendor/autoload.php';
 require '../connect.php';
@@ -21,6 +22,11 @@ if (!empty($_GET['route'])) {
     } elseif ($_GET['route'] === 'lieux') {
         // charge page des lieux
         $controller = new LocationController();
+        echo $controller->showAction();
+
+    } elseif ($_GET['route'] === 'evenements') {
+        // charge page des evenement
+        $controller = new EventController();
         echo $controller->showAction();
 
     } elseif ($_GET['route'] === 'addPizza') {
