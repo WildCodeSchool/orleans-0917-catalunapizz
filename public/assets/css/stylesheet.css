@@ -102,14 +102,15 @@
 .titles {
     text-align: center;
     margin-bottom: 70px;
-    font-family: "Dancing Script", cursive;
+    font-family: "ScribblerSerif", cursive;
+    font-size: 60px;
 }
 
 h1 {
-    font-family: "Dancing Script", cursive;
+    font-family: "ScribblerSerif", cursive;
     margin-top: 50px;
     text-align: center;
-    font-size: 60px;
+    font-size: 200px;
 }
 
 .aboutUs {
@@ -369,11 +370,6 @@ h2 {
     text-align: right;
 }
 
-.truckDraw {
-    max-height: 100px;
-    width: auto;
-}
-
 
 .summary {
     font-family: 'Cabin Sketch', cursive;
@@ -387,85 +383,87 @@ h2 {
         margin-left: 6.5%;
     }
 
-.adminBrand {
-    padding-top: 40px;
-    padding-left: 15px;
-}
-
-.adminbg {
-    height: calc(100vh - 100px);
-    width: 100%;
-    background: url("https://i.ytimg.com/vi/_t-U3eQeQIc/maxresdefault.jpg") center;
-    background-size: cover;
-    margin-top: 100px;
-}
-
-.adminLinks {
-    font-family: serif;
-    font-size: 30px;
-    background: white;
-}
-
-.icon-bar {
-    background: black;
-}
-
-.navbar-toggle {
-    margin-top: 30px;
-    border: 1px solid black;
-}
-
-.nav > li > a:focus, .nav > li > a:hover {
-    background-color: white;
-}
-
-@media only screen and (max-width: 990px) {
-    .img-tomato {
-        display: none;
+    .adminBrand {
+        padding-top: 40px;
+        padding-left: 15px;
     }
 
-    .img-olives {
-        display: none;
+    .adminbg {
+        height: calc(100vh - 100px);
+        width: 100%;
+        background: url("https://i.ytimg.com/vi/_t-U3eQeQIc/maxresdefault.jpg") center;
+        background-size: cover;
+        margin-top: 100px;
     }
 
-    .img-peppers {
-        display: none;
+    .adminLinks {
+        font-family: serif;
+        font-size: 30px;
+        background: white;
     }
 
-    .img-onions {
-        display: none;
+    .icon-bar {
+        background: black;
     }
 
-    .img-news {
-        max-width: 800px;
-        max-height: 600px;
-        margin-top: 0px;
+    .navbar-toggle {
+        margin-top: 30px;
+        border: 1px solid black;
     }
 
-    .news {
-        margin-top: 0px;
+    .nav > li > a:focus, .nav > li > a:hover {
+        background-color: white;
     }
 
-    .titles {
-        text-align: center;
-        margin-bottom: 10px;
-    }
-}
+    @media only screen and (max-width: 990px) {
+        .img-tomato {
+            display: none;
+        }
 
-@media only screen and (max-width:767px) {
-    .navbar-inverse .navbar-collapse, .navbar-form {
-        background-color: rgba(255, 255, 255, 0.9);
-    }
-    .truckDraw {
-        display: none;
-    }
-}
+        .img-olives {
+            display: none;
+        }
 
-.panel-body {
-    margin-top: 100px;
-}
+        .img-peppers {
+            display: none;
+        }
 
-.fields {
-    margin-top: 10px;
-    margin-bottom: 20px;
+        .img-onions {
+            display: none;
+        }
+
+        .img-news {
+            max-width: 800px;
+            max-height: 600px;
+            margin-top: 0px;
+        }
+
+        .news {
+            margin-top: 0px;
+        }
+
+        .titles {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+    }
+
+    @media only screen and (max-width: 767px) {
+        .navbar-inverse .navbar-collapse, .navbar-form {
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+
+        .truckDraw {
+            display: none;
+        }
+    }
+
+    .panel-body {
+        margin-top: 100px;
+    }
+
+    .fields {
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
 }
