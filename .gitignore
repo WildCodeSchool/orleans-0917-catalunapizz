@@ -1,5 +1,6 @@
 /vendor/
 connect.php
 .idea
+composer.json
 catalunapizzdb.sql
 src/View/Admin/.htpasswd
