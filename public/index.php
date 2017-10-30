@@ -38,6 +38,12 @@ if (!empty($_GET['route'])) {
         $controller = new AdminController();
         echo $controller->deleteAction();
     }
+
+    elseif ($_GET['route'] === 'updatePizza') {
+        $controller = new Admincontroller();
+        echo $controller->updateAction();
+    }
+
     elseif ($_GET['route'] === 'updateHome') {
         $controller = new UpdateHomeController();
         echo $controller->updateAction();
