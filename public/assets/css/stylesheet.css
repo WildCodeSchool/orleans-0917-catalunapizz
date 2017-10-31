@@ -102,18 +102,15 @@
 .titles {
     text-align: center;
     margin-bottom: 70px;
+    font-family: "ScribblerSerif", cursive;
+    font-size: 60px;
 }
 
 h1 {
-    display: inline-block;
-    background: url("../images/underline.png") center bottom;
-    background-size: 100% 300%;
-    font-family: "Dancing Script", cursive;
-    margin-bottom: 50px;
-    padding-bottom: 10px;
+    font-family: "ScribblerSerif", cursive;
     margin-top: 50px;
     text-align: center;
-    font-size: 60px;
+    font-size: calc(30px + 8vw);
 }
 
 .aboutUs {
@@ -140,17 +137,17 @@ p {
 }
 
 .item1 {
-    background: url("../images/pizzaZoom.JPG") center no-repeat;
+    background: url("../images/pizzaPlanche.JPG") center no-repeat;
     background-size: cover;
 }
 
 .item2 {
-    background: url("../images/camion.JPG") center no-repeat;
+    background: url("../images/pizzaZoom.JPG") center no-repeat;
     background-size: cover;
 }
 
 .item3 {
-    background: url("../images/pizzaPlanche.JPG") center top no-repeat;
+    background: url("../images/camion.JPG") center top no-repeat;
     background-size: cover;
 }
 
@@ -176,11 +173,8 @@ p {
     margin-bottom: 70px;
 }
 
-.news {
-    font-family: "Playfair Display", cursive;
-    font-size: 20px;
-    margin-bottom: 30px;
-    margin-top: 60px;
+.news * {
+    font-family: "Dancing Script", cursive;
 }
 
 
@@ -215,11 +209,11 @@ p {
 .img-news {
     max-width: 990px;
     max-height: 600px;
-    margin-top: 50px;
+    margin-top: 150px;
 }
 
 .bloc-news {
-    margin-top: 100px;
+    margin-top: 150px;
 }
 
 .composition {
@@ -229,7 +223,6 @@ p {
 
 footer {
     background-color: black;
-
 }
 
 .footer_list li {
@@ -281,42 +274,41 @@ footer {
 .locationsContent {
     padding-top: 100px;
     overflow-x: hidden;
+    background: url("http://www.obfuscata.com/wp-content/uploads/2017/04/chalkboard-background-6.jpg");
+    background-size: cover;
+    padding-bottom: 150px;
 }
 
 .page {
     position: relative;
-    height: 450px;
-    width: 20%;
-    margin-left: 4%;
-    border: solid black 1px;
-    box-shadow: 10px 10px 5px -6px rgba(0, 0, 0, 0.75);
+    height: 500px;
     font-family: "Handlee", cursive;
-    background: #ED000B;
-    margin-bottom: 15px;
+    margin-bottom: 70px;
+    color: white;
+    /*background-color: rgba(255, 255, 255, 0.2);*/
 }
 
 .pageHead {
     position: absolute;
-    height: 15%;
-    width: 98%;
-    margin: 1%;
+    height: 20%;
+    width: 100%;
     text-align: center;
-    border-bottom: solid black 5px;
-    padding-top: 5px;
     font-size: 36px;
-    left: 0;
-    color: white;
 }
 
 .pageBody {
     position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 85%;
+    height: 80%;
     width: 100%;
+    font-size: 26px;
+    bottom: 0;
     padding: 5%;
-    background: white;
-    font-size: 20px;
+    text-align: center;
+}
+
+.titlewhite {
+    color: white;
+    background: transparent;
 }
 
 .carte {
@@ -382,10 +374,6 @@ h2 {
     text-align: right;
 }
 
-.truckDraw {
-    max-height: 150px;
-    width: auto;
-}
 
 .summary {
     font-family: 'Cabin Sketch', cursive;
@@ -398,54 +386,88 @@ h2 {
         width: 40%;
         margin-left: 6.5%;
     }
-}
 
-@media only screen and (max-width: 990px) {
-    .img-tomato {
-        display: none;
-    }
-
-    .img-olives {
-        display: none;
+    .adminBrand {
+        padding-top: 40px;
+        padding-left: 15px;
     }
 
-    .img-peppers {
-        display: none;
+    .adminbg {
+        height: calc(100vh - 100px);
+        width: 100%;
+        background: url("https://i.ytimg.com/vi/_t-U3eQeQIc/maxresdefault.jpg") center;
+        background-size: cover;
+        margin-top: 100px;
     }
 
-    .img-onions {
-        display: none;
+    .adminLinks {
+        font-family: serif;
+        font-size: 30px;
+        background: white;
     }
 
-    .img-news {
-        max-width: 800px;
-        max-height: 600px;
-        margin-top: 0px;
+    .icon-bar {
+        background: black;
     }
 
-    .news {
-        margin-top: 0px;
+    .navbar-toggle {
+        margin-top: 30px;
+        border: 1px solid black;
     }
 
-    .titles {
-        text-align: center;
-        margin-bottom: 10px;
+    .nav > li > a:focus, .nav > li > a:hover {
+        background-color: white;
     }
-}
 
-@media only screen and (max-width:767px) {
-    .navbar-inverse .navbar-collapse, .navbar-form {
-        background-color: rgba(255, 255, 255, 0.9);
-    }
-    .truckDraw {
-        display: none;
-    }
-    .page {
-        width: 85%;
-        margin-left: 6.5%;
-    }
-}
+    @media only screen and (max-width: 990px) {
+        .img-tomato {
+            display: none;
+        }
 
-.panel-body {
-    margin-top: 100px;
+        .img-olives {
+            display: none;
+        }
+
+        .img-peppers {
+            display: none;
+        }
+
+        .img-onions {
+            display: none;
+        }
+
+        .img-news {
+            max-width: 800px;
+            max-height: 600px;
+            margin-top: 0px;
+        }
+
+        .news {
+            margin-top: 0px;
+        }
+
+        .titles {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+    }
+
+    @media only screen and (max-width: 767px) {
+        .navbar-inverse .navbar-collapse, .navbar-form {
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+
+        .truckDraw {
+            display: none;
+        }
+    }
+
+    .panel-body {
+        margin-top: 100px;
+    }
+
+    .fields {
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
 }
