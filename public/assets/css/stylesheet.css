@@ -454,6 +454,7 @@ footer {
         .truckDraw {
             display: none;
         }
+
     }
 
     .panel-body {
@@ -465,3 +466,14 @@ footer {
         margin-bottom: 20px;
     }
 
+    }
+
+    .panel-body {
+        margin-top: 100px;
+    }
+
+    .fields {
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+}
