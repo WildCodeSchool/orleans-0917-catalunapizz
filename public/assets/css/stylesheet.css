@@ -107,6 +107,8 @@
 }
 
 h1 {
+    padding-top: 70px;
+    padding-bottom: 70px;
     font-family: "ScribblerSerif", cursive;
     margin-top: 50px;
     text-align: center;
@@ -321,13 +323,6 @@ footer {
     padding-top: 100px;
 }
 
-h2 {
-    padding-top: 70px;
-    padding-bottom: 70px;
-    font-size: 200px;
-    text-align: center;
-    font-family: "ScribblerSerif",cursive;
-}
 
 .pizza_tomate{
     background-image: url("../assets");    
@@ -381,7 +376,6 @@ h2 {
     text-align: right;
 }
 
-@media only screen and (max-width:1000px) {
     .page {
         width: 40%;
         margin-left: 6.5%;
@@ -470,4 +464,4 @@ h2 {
         margin-top: 10px;
         margin-bottom: 20px;
     }
-}
+

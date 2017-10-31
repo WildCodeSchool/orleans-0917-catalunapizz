@@ -8,7 +8,6 @@ use Cataluna\Controller\AdminHomeController;
 use Cataluna\Controller\AdminMenuUploadController;
 use Cataluna\Controller\AdminController;
 use Cataluna\Controller\UpdateHomeController;
-use Cataluna\Controller\AdminHomeController;
 use Cataluna\Controller\EventController;
 
 require '../vendor/autoload.php';
@@ -49,7 +48,7 @@ if (!empty($_GET['route'])) {
     } elseif ($_GET['route'] === 'updateHome') {
         $controller = new AdminHomeController();
 
-    elseif ($_GET['route'] === 'updateHome') {
+    } elseif ($_GET['route'] === 'updateHome') {
         $controller = new UpdateHomeController();
         echo $controller->updateAction();
 
