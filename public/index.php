@@ -6,9 +6,6 @@ use Cataluna\Controller\LocationController;
 use Cataluna\Controller\AdminMenuController;
 use Cataluna\Controller\AdminHomeController;
 use Cataluna\Controller\AdminMenuUploadController;
-use Cataluna\Controller\AdminController;
-use Cataluna\Controller\UpdateHomeController;
-use Cataluna\Controller\AdminController;
 use Cataluna\Controller\UpdateHomeController;
 use Cataluna\Controller\EventController;
 
