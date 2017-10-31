@@ -14,14 +14,14 @@ class UploadManager extends EntityManager
     public function addMenuFilePT($tmpName, $fileExtension)
     {
         $uploadDir = __DIR__ . "/../../public/assets/upload/Menu/";
-        $uploadFile = $uploadDir . 'Base_tomate' . $fileExtension;
+        $uploadFile = $uploadDir . 'Base_tomate.' . $fileExtension['extension'];
         move_uploaded_file($tmpName, "$uploadFile");
     }
 
     public function addMenuFilePC($tmpName, $fileExtension)
     {
         $uploadDir = __DIR__ . "/../../public/assets/upload/Menu/";
-        $uploadFile = $uploadDir . 'Base_creme' . $fileExtension;
+        $uploadFile = $uploadDir . 'Base_creme.' . $fileExtension['extension'];
         move_uploaded_file($tmpName, "$uploadFile");
     }
 

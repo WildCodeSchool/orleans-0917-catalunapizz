@@ -26,8 +26,8 @@ class AdminMenuUploadController extends Controller
             if (!empty($_FILES['fichier']['name'][0] != '')) {
                 for ($i = 0; $i < count($_FILES['fichier']['name']); $i++) {
                     $tmpName = $_FILES['fichier']['tmp_name'][$i];
-                    $fileExtension = strtolower(strrchr($_FILES['fichier']['name'][$i], '.'));
-                    if (in_array(substr($fileExtension, 1), $extensions)){
+                    $fileExtension = pathinfo($_FILES['fichier']['name'][$i]);
+                    if (in_array ($fileExtension['extension'], $extensions)){
                         $uploadManager->addMenuFilePT($tmpName, $fileExtension);
                     }
                 }
@@ -54,8 +54,9 @@ class AdminMenuUploadController extends Controller
             if (!empty($_FILES['fichier']['name'][0] != '')) {
                 for ($i = 0; $i < count($_FILES['fichier']['name']); $i++) {
                     $tmpName = $_FILES['fichier']['tmp_name'][$i];
-                    $fileExtension = strtolower(strrchr($_FILES['fichier']['name'][$i], '.'));
-                    if (in_array(substr($fileExtension, 1), $extensions)){
+                    $fileExtension = pathinfo($_FILES['fichier']['name'][$i]);
+
+                    if (in_array($fileExtension['extension'], $extensions)){
                         $uploadManager->addMenuFilePC($tmpName, $fileExtension);
                     }
                 }
