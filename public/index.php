@@ -3,8 +3,10 @@
 use Cataluna\Controller\HomeController;
 use Cataluna\Controller\MenuController;
 use Cataluna\Controller\LocationController;
-use Cataluna\Controller\AdminController;
+use Cataluna\Controller\AdminMenuController;
 use Cataluna\Controller\AdminHomeController;
+use Cataluna\Controller\AdminMenuUploadController;
+
 
 require '../vendor/autoload.php';
 require '../connect.php';
@@ -24,22 +26,32 @@ if (!empty($_GET['route'])) {
 
     } elseif ($_GET['route'] === 'addPizza') {
         // charge la page d'ajout
-        $controller = new AdminController();
+        $controller = new AdminMenuController();
         echo $controller->addAction();
-    }
-    elseif ($_GET['route'] === 'delPizza') {
-        $controller = new AdminController();
+
+    } elseif ($_GET['route'] === 'delPizza') {
+        $controller = new AdminMenuController();
         echo $controller->deleteAction();
-    }
 
-    elseif ($_GET['route'] === 'updatePizza') {
-        $controller = new Admincontroller();
+    } elseif ($_GET['route'] === 'updatePizza') {
+        $controller = new AdminMenucontroller();
         echo $controller->updateAction();
-    }
 
-    elseif ($_GET['route'] === 'updateHome') {
+    } elseif ($_GET['route'] === 'updateHome') {
         $controller = new AdminHomeController();
         echo $controller->updateAction();
+
+    } elseif ($_GET['route'] === 'uploadMenuPT') {
+        $controller = new AdminMenuUploadController();
+        echo $controller->addUploadPT();
+
+    }elseif ($_GET['route'] === 'uploadMenuPC') {
+        $controller = new AdminMenuUploadController();
+        echo $controller->addUploadPC();
+
+    } elseif ($_GET['route'] === 'uploadMenu') {
+        $controller = new AdminMenuUploadController();
+        echo $controller->deleteUpload();
     }
 
 

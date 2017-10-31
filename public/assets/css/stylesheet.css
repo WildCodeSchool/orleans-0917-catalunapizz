@@ -337,6 +337,10 @@ h2 {
     font-family: "ScribblerSerif",cursive;
 }
 
+.pizza_tomate{
+    background-image: url("../assets");    
+}
+
 .tomate li{
     padding-top: 20px;
     list-style-type: none;
