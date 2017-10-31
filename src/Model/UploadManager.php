@@ -27,7 +27,6 @@ class UploadManager extends EntityManager
 
     public function delMenuFile($id)
     {
-        var_dump($id);
         unlink($id);
     }
 }

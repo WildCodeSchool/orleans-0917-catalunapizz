@@ -34,14 +34,6 @@ class AdminMenuUploadController extends Controller
             }
         }
 
-        $dir = __DIR__ . "/../../public/assets/upload/Menu/";
-        if (!empty(scandir($dir))){
-            foreach (scandir($dir) as $file)
-                if (scandir($dir) == '.' || scandir($dir) == '..') {
-
-                }
-                $files[] = $file;
-        }
         header('Location:index.php?route=uploadMenu');
 
         return $this->twig->render('Admin/uploadImg.html.twig', [
@@ -70,14 +62,6 @@ class AdminMenuUploadController extends Controller
             }
         }
 
-        $dir = __DIR__ . "/../../public/assets/upload/Menu/";
-        if (!empty(scandir($dir))){
-            foreach (scandir($dir) as $file)
-                if (scandir($dir) == '.' || scandir($dir) == '..') {
-
-                }
-            $files[] = $file;
-        }
 
         header('Location:index.php?route=uploadMenu');
 

@@ -14,7 +14,7 @@
             <p>Uniquement les images au format png sont acceptées !</p>
             <button class="btn btn-success btn-xs" name="submit2" type="submit" value="Envoyer2">Envoyer</button>
         </form><hr>
-        <form action="index.php?route=uploadMenuDel" method="POST">
+        <form action="index.php?route=uploadMenu" method="POST">
                 {% for file in files %}
                     <img src="assets/upload/Menu/{{ file }}">
                     <input type="hidden" name="idDelete" value="{{ file }}" />
