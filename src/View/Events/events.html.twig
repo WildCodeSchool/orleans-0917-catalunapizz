@@ -1,6 +1,29 @@
 {% extends 'base.html.twig' %}
 {% block title %}Events-Cataluña Pizz'{% endblock %}
 {% block body %}
+    <div class="event-content">
+    {% for event in events %}
+    <section class="events">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="media">
+                    {% if events[ loop.index0 ].EventPicture == true %}
+                    <div class="col-md-offset-1 col-md-5 img-events">
+                        <img class="media-object img-responsive" src={{ events[ loop.index0 ].EventPicture }}
+                        alt="Image">
+                    </div>
+                    {% endif %}
+                    <div class="media-body">
+                        <div class="col-md-offset-3 col-md-6 bloc-events">
+                            <div class="media-heading news-title">{{ events[ loop.index0 ].EventTitle }}</div>
+                            <div class="news">{{ events[ loop.index0 ].Description|raw }}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% endfor %}
     <div class="container">
         <div class="row>">
             <div class="panel">
@@ -37,5 +60,6 @@
                 </div>
             </div>
         </div>
+    </div>
     </div>
 {% endblock %}
