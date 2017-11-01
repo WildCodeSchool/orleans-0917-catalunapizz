@@ -3,7 +3,7 @@
 use Cataluna\Controller\HomeController;
 use Cataluna\Controller\MenuController;
 use Cataluna\Controller\LocationController;
-use Cataluna\Controller\AdminController;
+use Cataluna\Controller\AdminMenuController;
 use Cataluna\Controller\UpdateHomeController;
 use Cataluna\Controller\AdminHomeController;
 use Cataluna\Controller\EventController;
@@ -31,16 +31,16 @@ if (!empty($_GET['route'])) {
 
     } elseif ($_GET['route'] === 'addPizza') {
         // charge la page d'ajout
-        $controller = new AdminController();
+        $controller = new AdminMenuController();
         echo $controller->addAction();
     }
     elseif ($_GET['route'] === 'delPizza') {
-        $controller = new AdminController();
+        $controller = new AdminMenuController();
         echo $controller->deleteAction();
     }
 
     elseif ($_GET['route'] === 'updatePizza') {
-        $controller = new Admincontroller();
+        $controller = new AdminMenucontroller();
         echo $controller->updateAction();
     }
 

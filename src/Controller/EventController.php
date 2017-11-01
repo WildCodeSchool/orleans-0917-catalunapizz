@@ -6,6 +6,7 @@ use Swift_SmtpTransport;
 use Swift_Mailer;
 use Swift_Message;
 use Cataluna\Model\EventsManager;
+use Cataluna\Model\AboutUsManager;
 
 
 
@@ -20,6 +21,8 @@ class EventController extends Controller
 
         $errors = [];
         $eventsManager = new EventsManager();
+        $aboutUsManager = new AboutUsManager();
+        $home = $aboutUsManager->findAll();
         $events = $eventsManager->findAll();
 
 
@@ -73,7 +76,8 @@ class EventController extends Controller
 
         return $this->twig->render('Events/events.html.twig', [
             'errors' => $errors,
-            'events'=> $events
+            'events'=> $events,
+            'home' => $home[0]
         ]);
 
 

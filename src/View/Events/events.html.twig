@@ -2,64 +2,76 @@
 {% block title %}Events-Cataluña Pizz'{% endblock %}
 {% block body %}
     <div class="event-content">
-    {% for event in events %}
-    <section class="events">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="media">
-                    {% if events[ loop.index0 ].EventPicture == true %}
-                    <div class="col-md-offset-1 col-md-5 img-events">
-                        <img class="media-object img-responsive" src={{ events[ loop.index0 ].EventPicture }}
-                        alt="Image">
-                    </div>
-                    {% endif %}
-                    <div class="media-body">
-                        <div class="col-md-offset-3 col-md-6 bloc-events">
-                            <div class="media-heading news-title">{{ events[ loop.index0 ].EventTitle }}</div>
-                            <div class="news">{{ events[ loop.index0 ].Description|raw }}</div>
+        <h1 class="titles"><span><img src="assets/images/chalkflag.png" class="flagChalk"></span> Evenements <span><img src="assets/images/chalkflag.png" class="flagChalk"></span></h1>
+        <p class="event-contact">Si vous souhaitez organiser un évènement et avoir un camion de pizza à votre disposition,
+            n'hésitez pas à me contacter en remplissant  le formulaire de contact situé en bas de page.
+        </p>
+        <p class="arrow_down">
+            <a href="#mail-form"><button type="button" class="btn btn-danger">
+                    <span class="glyphicon glyphicon-menu-down"></span>
+                </button>
+            </a>
+        </p>
+        {% for event in events %}
+        <section class="events">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="media">
+                        {% if events[ loop.index0 ].EventPicture == true %}
+                        <div class="col-md-offset-1 col-md-5 img-events">
+                            <img class="media-object img-responsive" src={{ events[ loop.index0 ].EventPicture }}
+                            alt="Image">
+                        </div>
+                        {% endif %}
+                        <div class="media-body">
+                            <div class="col-md-offset-2 col-md-8 bloc-events">
+                                <div class="media-heading event-title">{{ events[ loop.index0 ].EventTitle }}<br/>
+                                    <span class="event-date">{{ events[ loop.index0 ].Date }}</span>
+                                </div>
+                                <div class="event-description">{{ events[ loop.index0 ].Description|raw }}</div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    {% endfor %}
-    <div class="container">
-        <div class="row>">
-            <div class="panel">
-                <div class="panel-body">
-                    {% if errors %}
-                        <ul class="alert alert-danger">
-                            {% for error in errors %}
-                                <li>{{ error }}</li>
-                            {% endfor %}
-                        </ul>
-                    {% endif %}
-                    <form action="" method="post">
-                        <h1>Contactez nous</h1>
-                        <fieldset class="form-group">
+        </section>
+        {% endfor %}
+        <div class="container" id="mail-form">
+            <div class="row>">
+                <div class="panel">
+                    <div class="panel-body">
+                        {% if errors %}
+                            <ul class="alert alert-danger">
+                                {% for error in errors %}
+                                    <li>{{ error }}</li>
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
+                        <form action="" method="post">
+                            <h1 class="titles">Contactez nous</h1>
+                            <fieldset class="form-group">
 
-                            <label for="nom">Nom</label>
-                            <input class="form-control fields" name="name" id="nom" placeholder="Votre nom"/>
+                                <label for="nom" class="label-mail">Nom</label>
+                                <input class="form-control fields" name="name" id="nom" placeholder="Votre nom"/>
 
-                            <label for="mail">Mail</label>
-                            <input class="form-control fields" name="mail" id="mail" placeholder="Votre mail"/>
+                                <label for="mail" class="label-mail">Mail</label>
+                                <input class="form-control fields" name="mail" id="mail" placeholder="Votre mail"/>
 
-                            <label for="sujet">Sujet</label>
-                            <input class="form-control fields" name="subject" id="sujet" placeholder="Votre sujet"/>
+                                <label for="sujet" class="label-mail">Sujet</label>
+                                <input class="form-control fields" name="subject" id="sujet" placeholder="Votre sujet"/>
 
-                            <label for="message">Message</label>
-                            <textarea class="form-control fields" name="message" id="message" placeholder="Votre message"></textarea>
+                                <label for="message" class="label-mail">Message</label>
+                                <textarea class="form-control fields" rows="10" name="message" id="message" placeholder="Votre message"></textarea>
 
-                        </fieldset>
+                            </fieldset>
 
-                        <button type="submit" class="btn btn-success">
-                            <span class="glyphicon glyphicon-envelope"></span> Envoyer
-                        </button>
-                    </form>
+                            <button type="submit" class="btn btn-success">
+                                <span class="glyphicon glyphicon-envelope"></span> Envoyer
+                            </button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
     </div>
 {% endblock %}
