@@ -5,110 +5,125 @@
     <div class="locationsContent">
 
         <div class="titles titlewhite">
-            <span><img class="flagChalk" src="assets/images/chalkflag.png"></span>
+            <span><img class="flagChalk hidden-sm hidden-xs" src="assets/images/chalkflag.png"></span>
             <h1>Mon planning</h1>
-            <span><img class="flagChalk" src="assets/images/chalkflag.png"></span>
+            <span><img class="flagChalk hidden-sm hidden-xs" src="assets/images/chalkflag.png"></span>
         </div>
-
+        <br>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-4 col-sm-6 col-xs-12 page">
+                <div class="col-md-4 col-xs-12 agendaPage">
                     <div class="pageHead">
-                        Mardi {{ location.day }}
+                        <span class="planningDay">{{ locations[0].day }}</span>
                     </div>
+                    <br>
                     <div class="pageBody">
                         <div class="houram">
-                            12h - 14h
+                            {{ locations[0].hour_am }}
                         </div>
                         <div class="locationam">
-                            Parking de Carrefour Market, Orléans/St Pryvé, Avenue de St Mesmin
+                            {{ locations[0].location_am|raw }}
                         </div>
-                        <br/>
+                        {% if locations[0].hour_am %}
+                        <br>
+                        {% endif %}
                         <div class="hourpm">
-                            18h - 21h
+                            {{ locations[0].hour_pm }}
                         </div>
                         <div class="locationpm">
-                            Parking de Carrefour Market, Orléans/St Pryvé, Avenue de St Mesmin
+                            {{ locations[0].location_pm|raw }}
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-6 col-xs-12 page">
+                <div class="col-md-4 col-xs-12 agendaPage">
                     <div class="pageHead">
-                        Mercredi
+                        <span class="planningDay">{{ locations[1].day }}</span>
                     </div>
+                    <br>
                     <div class="pageBody">
                         <div class="houram">
-                            12h - 14h
+                            {{ locations[1].hour_am }}
                         </div>
                         <div class="locationam">
-                            Parking de Carrefour Market, Orléans/St Pryvé, Avenue de St Mesmin
+                            {{ locations[1].location_am|raw }}
                         </div>
-                        <br/>
+                        {% if locations[1].hour_am %}
+                        <br>
+                        {% endif %}
                         <div class="hourpm">
-                            18h - 21h
+                            {{ locations[1].hour_pm }}
                         </div>
                         <div class="locationpm">
-                            Parking de Carrefour Market, Orléans/St Pryvé, Avenue de St Mesmin
+                            {{ locations[1].location_pm|raw }}
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-6 col-xs-12 page">
+                <div class="col-md-4 col-xs-12 agendaPage">
                     <div class="pageHead">
-                        Jeudi
+                        <span class="planningDay">{{ locations[2].day }}</span>
                     </div>
+                    <br>
                     <div class="pageBody">
                         <div class="houram">
-                            12h - 14h
+                            {{ locations[2].hour_am }}
                         </div>
                         <div class="locationam">
-                            Parking de Carrefour Market, Orléans/St Pryvé, Avenue de St Mesmin
+                            {{ locations[2].location_am|raw }}
                         </div>
-                        <br/>
+                        {% if locations[2].hour_am %}
+                        <br>
+                        {% endif %}
                         <div class="hourpm">
-                            18h - 21h
+                            {{ locations[2].hour_pm }}
                         </div>
                         <div class="locationpm">
-                            Parking de Carrefour Market, Orléans/St Pryvé, Avenue de St Mesmin
+                            {{ locations[2].location_pm|raw }}
                         </div>
                     </div>
                 </div>
-                <div class="col-md-offset-2 col-md-4 col-sm-6 col-xs-12 page">
+                <div class="col-md-offset-2 col-md-4 col-xs-12 agendaPage">
                     <div class="pageHead">
-                        Vendredi
+                        <span class="planningDay">{{ locations[3].day }}</span>
                     </div>
+                    <br>
                     <div class="pageBody">
                         <div class="houram">
-                            12h - 14h
+                            {{ locations[3].hour_am }}
                         </div>
                         <div class="locationam">
-                            Parking de Carrefour Market, Orléans/St Pryvé, Avenue de St Mesmin
+                            {{ locations[3].location_am|raw }}
                         </div>
-                        <br/>
+                        {% if locations[3].hour_am %}
+                        <br>
+                        {% endif %}
                         <div class="hourpm">
-                            18h - 21h
+                            {{ locations[3].hour_pm }}
                         </div>
                         <div class="locationpm">
-                            Parking de Carrefour Market, Orléans/St Pryvé, Avenue de St Mesmin
+                            {{ locations[3].location_pm|raw }}
                         </div>
                     </div>
                 </div>
-                <div class="col-md-offset-0 col-md-4 col-sm-offset-3 col-sm-6 col-xs-12 page">
+                <div class="col-md-offset-0 col-md-4 col-xs-12 agendaPage">
                     <div class="pageHead">
-                        Dimanche
+                        <span class="planningDay">{{ locations[4].day }}</span>
                     </div>
+                    <br>
                     <div class="pageBody">
                         <div class="houram">
-                            12h - 14h
+                            {{ locations[4].hour_am }}
                         </div>
                         <div class="locationam">
-                            Parking de Carrefour Market, Orléans/St Pryvé, Avenue de St Mesmin
+                            {{ locations[4].location_am|raw }}
                         </div>
-                        <br/>
+                        {% if locations[4].hour_am %}
+                        <br>
+                        {% endif %}
                         <div class="hourpm">
-                            18h - 21h
+                            {{ locations[4].hour_pm }}
                         </div>
                         <div class="locationpm">
-                            Parking de Carrefour Market, Orléans/St Pryvé, Avenue de St Mesmin
+                            {{ locations[4].location_pm|raw }}
                         </div>
                     </div>
                 </div>
