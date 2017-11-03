@@ -9,124 +9,35 @@
             <h1>Mon planning</h1>
             <span><img class="flagChalk hidden-sm hidden-xs" src="assets/images/chalkflag.png"></span>
         </div>
-        <br>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-4 col-xs-12 agendaPage">
-                    <div class="pageHead">
-                        <span class="planningDay">{{ locations[0].day }}</span>
-                    </div>
-                    <br>
-                    <div class="pageBody">
-                        <div class="houram">
-                            {{ locations[0].hour_am }}
+                {% for i in 0..4 %}
+                    <div class="col-md-4 {% if i == 3 %} col-md-offset-2
+                {% elseif i == 4 %} col-md-offset-0 {% endif %}col-xs-12 agendaPage">
+                        <div class="pageHead">
+                            <span class="planningDay">{{ locations[i].day }}</span>
                         </div>
-                        <div class="locationam">
-                            {{ locations[0].location_am|raw }}
-                        </div>
-                        {% if locations[0].hour_am %}
-                        <br>
-                        {% endif %}
-                        <div class="hourpm">
-                            {{ locations[0].hour_pm }}
-                        </div>
-                        <div class="locationpm">
-                            {{ locations[0].location_pm|raw }}
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-xs-12 agendaPage">
-                    <div class="pageHead">
-                        <span class="planningDay">{{ locations[1].day }}</span>
-                    </div>
-                    <br>
-                    <div class="pageBody">
-                        <div class="houram">
-                            {{ locations[1].hour_am }}
-                        </div>
-                        <div class="locationam">
-                            {{ locations[1].location_am|raw }}
-                        </div>
-                        {% if locations[1].hour_am %}
-                        <br>
-                        {% endif %}
-                        <div class="hourpm">
-                            {{ locations[1].hour_pm }}
-                        </div>
-                        <div class="locationpm">
-                            {{ locations[1].location_pm|raw }}
+                        <div class="pageBody">
+                            <p>
+                                <div class="houram">
+                                    {{ locations[i].hour_am }}
+                                </div>
+                                <div class="locationam">
+                                    {{ locations[i].location_am|raw }}
+                                </div>
+                                {% if locations[i].hour_am %}
+                                    <br>
+                                {% endif %}
+                                <div class="hourpm">
+                                    {{ locations[i].hour_pm }}
+                                </div>
+                                <div class="locationpm">
+                                    {{ locations[i].location_pm|raw }}
+                                </div>
+                            </p>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4 col-xs-12 agendaPage">
-                    <div class="pageHead">
-                        <span class="planningDay">{{ locations[2].day }}</span>
-                    </div>
-                    <br>
-                    <div class="pageBody">
-                        <div class="houram">
-                            {{ locations[2].hour_am }}
-                        </div>
-                        <div class="locationam">
-                            {{ locations[2].location_am|raw }}
-                        </div>
-                        {% if locations[2].hour_am %}
-                        <br>
-                        {% endif %}
-                        <div class="hourpm">
-                            {{ locations[2].hour_pm }}
-                        </div>
-                        <div class="locationpm">
-                            {{ locations[2].location_pm|raw }}
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-offset-2 col-md-4 col-xs-12 agendaPage">
-                    <div class="pageHead">
-                        <span class="planningDay">{{ locations[3].day }}</span>
-                    </div>
-                    <br>
-                    <div class="pageBody">
-                        <div class="houram">
-                            {{ locations[3].hour_am }}
-                        </div>
-                        <div class="locationam">
-                            {{ locations[3].location_am|raw }}
-                        </div>
-                        {% if locations[3].hour_am %}
-                        <br>
-                        {% endif %}
-                        <div class="hourpm">
-                            {{ locations[3].hour_pm }}
-                        </div>
-                        <div class="locationpm">
-                            {{ locations[3].location_pm|raw }}
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-offset-0 col-md-4 col-xs-12 agendaPage">
-                    <div class="pageHead">
-                        <span class="planningDay">{{ locations[4].day }}</span>
-                    </div>
-                    <br>
-                    <div class="pageBody">
-                        <div class="houram">
-                            {{ locations[4].hour_am }}
-                        </div>
-                        <div class="locationam">
-                            {{ locations[4].location_am|raw }}
-                        </div>
-                        {% if locations[4].hour_am %}
-                        <br>
-                        {% endif %}
-                        <div class="hourpm">
-                            {{ locations[4].hour_pm }}
-                        </div>
-                        <div class="locationpm">
-                            {{ locations[4].location_pm|raw }}
-                        </div>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </div>
