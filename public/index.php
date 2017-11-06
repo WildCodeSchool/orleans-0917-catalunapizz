@@ -4,8 +4,10 @@ use Cataluna\Controller\HomeController;
 use Cataluna\Controller\MenuController;
 use Cataluna\Controller\LocationController;
 use Cataluna\Controller\AdminMenuController;
-use Cataluna\Controller\UpdateHomeController;
 use Cataluna\Controller\AdminHomeController;
+use Cataluna\Controller\AdminMenuUploadController;
+use Cataluna\Controller\AdminDrinkController;
+use Cataluna\Controller\UpdateHomeController;
 use Cataluna\Controller\EventController;
 use Cataluna\Controller\UpdateLocationController;
 
@@ -34,6 +36,48 @@ if (!empty($_GET['route'])) {
         // charge la page d'ajout
         $controller = new AdminMenuController();
         echo $controller->addAction();
+
+    } elseif ($_GET['route'] === 'delPizza') {
+        $controller = new AdminMenuController();
+        echo $controller->deleteAction();
+
+    } elseif ($_GET['route'] === 'updatePizza') {
+        $controller = new AdminMenucontroller();
+        echo $controller->updateAction();
+
+    } elseif ($_GET['route'] === 'addDrink') {
+        $controller = new AdminDrinkController();
+        echo $controller->addDrink();
+
+    } elseif ($_GET['route'] === 'delDrink') {
+        $controller = new AdminDrinkController();
+        echo $controller->deleteDrink();
+
+    } elseif ($_GET['route'] === 'updateDrink') {
+        $controller = new AdminDrinkController();
+        echo $controller->updateDrink();
+
+    } elseif ($_GET['route'] === 'updateHome') {
+        $controller = new AdminHomeController();
+
+    } elseif ($_GET['route'] === 'updateHome') {
+        $controller = new UpdateHomeController();
+        echo $controller->updateAction();
+
+    } elseif ($_GET['route'] === 'uploadMenuPT') {
+        $controller = new AdminMenuUploadController();
+        echo $controller->addUploadPT();
+
+    }elseif ($_GET['route'] === 'uploadMenuPC') {
+        $controller = new AdminMenuUploadController();
+        echo $controller->addUploadPC();
+
+    } elseif ($_GET['route'] === 'uploadMenu') {
+        $controller = new AdminMenuUploadController();
+        echo $controller->deleteUpload();
+      
+    } elseif ($_GET['route'] === 'updateHome') {
+
     }
     elseif ($_GET['route'] === 'delPizza') {
         $controller = new AdminMenuController();
@@ -44,6 +88,7 @@ if (!empty($_GET['route'])) {
         echo $controller->updateAction();
     }
     elseif ($_GET['route'] === 'updateHome') {
+
         $controller = new UpdateHomeController();
         echo $controller->updateAction();
     }
