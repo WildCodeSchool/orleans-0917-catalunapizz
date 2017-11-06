@@ -8,6 +8,8 @@ use Cataluna\Model\PizzaManager;
 use Cataluna\Model\AboutUsManager;
 use Cataluna\Model\Category;
 use Cataluna\Model\CategoryManager;
+use Cataluna\Model\Drink;
+use Cataluna\Model\DrinkManager;
 
 class MenuController extends Controller
 {
@@ -17,11 +19,14 @@ class MenuController extends Controller
     public function showAction()
     {
         // appels éventuels aux données des modèles
-         $menuManager = new PizzaManager();
-         $pizzas = $menuManager->findAll();
-         $aboutUsManager = new AboutUsManager();
-         $home = $aboutUsManager->findAll();
-         $categoryManager = new CategoryManager();
+        $menuManager = new PizzaManager();
+        $pizzas = $menuManager->findAll();
+        $aboutUsManager = new AboutUsManager();
+        $home = $aboutUsManager->findAll();
+        $categoryManager = new CategoryManager();
+        $drinkManager = new DrinkManager();
+        $drinks = $drinkManager->findAll();
+
 
         foreach($pizzas as $pizza) {
             $category = $categoryManager->find($pizza->getCategoryId());
@@ -31,7 +36,8 @@ class MenuController extends Controller
         // appel de la vue
         return $this->twig->render('Menu/show.html.twig', [
             'pizzaCategories'=>$pizzaCategories ,
-            'home'=>$home[0],
+            'drinks' => $drinks,
+
         ]);
 
     }

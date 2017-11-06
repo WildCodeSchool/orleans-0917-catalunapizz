@@ -1,12 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Indie+Flower');
 @import url('https://fonts.googleapis.com/css?family=Cabin+Sketch');
-
 .baudi {
     margin-top: 100vh;
     position: absolute;
     background: url("../images/chalkboard.jpg");
     background-size: contain;
     z-index: 1;
+}
+
+.center {
+    text-align: center;
 }
 
 .navbar {
@@ -18,22 +21,22 @@
     z-index: 10;
 }
 
-.navbar-nav > li > a {
+.navbar-nav>li>a {
     padding-top: 35px;
     font-family: "Dancing Script", cursive;
 }
 
 .navbar-inverse {
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 1);
 }
 
-.navbar-inverse .navbar-nav > li > a {
+.navbar-inverse .navbar-nav>li>a {
     color: black;
-    font-size: 50px;
+    font-size: calc(15px + 1.5vw);
     background-color: transparent;
 }
 
-.navbar-inverse .navbar-nav > li > a:focus, .navbar-inverse .navbar-nav > li > a:hover {
+.navbar-inverse .navbar-nav>li>a:focus, .navbar-inverse .navbar-nav>li>a:hover {
     color: #747475;
 }
 
@@ -63,8 +66,8 @@
     color: black;
 }
 
-.nav > li > a {
-    padding-left: 5vw;
+.nav>li>a {
+    padding-left: 2vw;
 }
 
 .navbar-inverse .navbar-toggle .icon-bar {
@@ -90,10 +93,7 @@
     padding-bottom: 35px;
 }
 
-@media only screen and (max-width:940px) {
-    .logo {
-        display: none;
-    }
+@media only screen and (max-width:991px) {
     .navbar-brand {
         padding-top: 35px;
         font-size: 40px;
@@ -103,6 +103,14 @@
 .titles {
     text-align: center;
     margin-bottom: 70px;
+    font-family: "ScribblerSerif", cursive;
+    font-size: 60px;
+}
+
+h1 {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    display: inline;
     font-family: "ScribblerSerif", cursive;
     margin-top: 50px;
     font-size: calc(30px + 6vw);
@@ -129,7 +137,7 @@
     width: 100vw;
 }
 
-.item > img {
+.item>img {
     width: 100%;
     visibility: hidden;
 }
@@ -164,10 +172,10 @@
     src: url('../fonts/Font_test/DJB Chalk It Up.ttf');
 }
 
+
 .news {
     margin-bottom: 170px;
 }
-
 
 .news-title {
     font-family: 'Cabin Sketch', cursive;
@@ -180,8 +188,6 @@
     font-family: 'Cabin Sketch', cursive;
     color: white;
 }
-
-
 
 .media-body {
     text-align: center;
@@ -273,35 +279,33 @@ footer {
 .locationsContent {
     padding-top: 100px;
     overflow-x: hidden;
-    background: url("http://www.obfuscata.com/wp-content/uploads/2017/04/chalkboard-background-6.jpg");
-    background-size: cover;
+    background: url("../images/chalkboard.jpg");
+    background-size: contain;
     padding-bottom: 150px;
 }
 
-.page {
-    position: relative;
-    height: 500px;
-    font-family: "Handlee", cursive;
-    margin-bottom: 70px;
+.agendaPage {
+    font-family: "Cabin Sketch", cursive;
+    margin-bottom: 50px;
     color: white;
-    /*background-color: rgba(255, 255, 255, 0.2);*/
 }
 
 .pageHead {
-    position: absolute;
-    height: 20%;
-    width: 100%;
     text-align: center;
-    font-size: 36px;
+    font-size: 50px;
+    font-family: "ScribblerSerif", cursive;
+    background: url("../images/chalkbg2.png");
+    background-size: 100% 100%;
+    margin-bottom: 10px;
+}
+
+.planningDay {
+    color: darkred;
+    padding: 10px 30px;
 }
 
 .pageBody {
-    position: absolute;
-    height: 80%;
-    width: 100%;
     font-size: 26px;
-    bottom: 0;
-    padding: 5%;
     text-align: center;
 }
 
@@ -312,21 +316,42 @@ footer {
 
 .carte {
     color: white;
-    background: url("http://www.obfuscata.com/wp-content/uploads/2017/04/chalkboard-background-6.jpg");
-    background-size: cover;
+        background-image: url("/assets/images/chalkboard2.jpg");
+    background-size: contain;
     background-repeat: repeat;
     font-family: "Dancing Script", cursive;
     font-size: 20px;
     padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 
-.tomate li{
+.image_pres_creme {
+    max-width: 1200px;
+    padding-right:300px;
+}
+
+
+.image_pres_tomate {
+    max-width: 1200px;
+    padding-right:200px;
+}
+
+.pizza_tomate{
+    background-image: url("../assets");    
+
+h2 {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    text-align: center;
+}
+
+.tomate li {
     padding-top: 20px;
     list-style-type: none;
 }
 
-.creme li{
+.creme li {
     padding-top: 20px;
     list-style-type: none;
 }
@@ -337,31 +362,29 @@ footer {
 }
 
 .category_title {
-    font-family: "ScribblerSerif",cursive;
+    font-family: "ScribblerSerif", cursive;
     font-size: 60px;
 }
 
 .pizza_title {
-    font-family: "Cabin Sketch",cursive;
+    font-family: "Cabin Sketch", cursive;
     font-size: 40px;
 }
 
 .ingredients_title {
-
     font-family: 'Cabin Sketch', cursive;
     font-size: 25px;
 }
 
 .flagChalk {
     max-height: 100px;
-
+    vertical-align: baseline;
 }
 
 .price {
-
     text-align: right;
+    font-family: "Handlee", cursive;
 }
-
 
 .summary {
     font-family: 'Cabin Sketch', cursive;
@@ -402,51 +425,50 @@ footer {
         border: 1px solid black;
     }
 
-    .nav > li > a:focus, .nav > li > a:hover {
-        background-color: white;
-    }
+.adminContent {
+    padding-top: 100px;
+}
 
-    @media only screen and (max-width: 990px) {
-        .img-tomato {
-            display: none;
-        }
+.adminBrand {
+    padding-top: 40px;
+    padding-left: 15px;
+}
 
-        .img-olives {
-            display: none;
-        }
+.adminbg {
+    height: calc(100vh - 100px);
+    width: 100%;
+    background: url("../images/adminbg.JPG") center;
+    background-size: cover;
+    margin-top: 100px;
+}
 
-        .img-peppers {
-            display: none;
-        }
+.adminLinks {
+    font-family: serif;
+    font-size: 30px;
+    background: white;
+}
 
-        .img-onions {
-            display: none;
-        }
+.icon-bar {
+    background: black;
+}
 
-        .img-news {
-            max-width: 800px;
-            max-height: 600px;
-            margin-top: 0px;
-        }
+.navbar-toggle {
+    margin-top: 30px;
+    border: 1px solid black;
+}
 
-        .news {
-            margin-top: 0px;
-        }
+.nav>li>a:focus, .nav>li>a:hover {
+    background-color: white;
+}
 
-        .titles {
-            text-align: center;
-            margin-bottom: 10px;
-        }
-    }
-
-    @media only screen and (max-width: 767px) {
-        .navbar-inverse .navbar-collapse, .navbar-form {
-            background-color: rgba(255, 255, 255, 0.9);
-        }
+.adminUpdateBtn {
+    text-align: center;
+}
 
         .truckDraw {
             display: none;
         }
+
     }
 
     .panel-body {
@@ -462,6 +484,7 @@ footer {
         margin-bottom: 20px;
         border: 2px solid white;
     }
+
 
     .event-content {
         padding-top: 100px;
@@ -554,5 +577,54 @@ footer {
         background-color: rgba(255,23,23,0.69);
         font-weight: bold;
     }
+
+.updateDays {
+    font-size: 36px;
+}
+
+@media only screen and (max-width: 990px) {
+    .img-tomato {
+        display: none;
+    }
+    .img-olives {
+        display: none;
+    }
+    .img-peppers {
+        display: none;
+    }
+    .img-onions {
+        display: none;
+    }
+    .img-news {
+        max-width: 800px;
+        max-height: 600px;
+        margin-top: 0px;
+    }
+    .news {
+        margin-top: 0px;
+    }
+    .titles {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .navbar-inverse .navbar-collapse, .navbar-form {
+        background-color: rgba(255, 255, 255, 1);
+    }
+    .truckDraw {
+        display: none;
+    }
+}
+
+.panel-body {
+    margin-top: 100px;
+}
+
+.fields {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
 
 

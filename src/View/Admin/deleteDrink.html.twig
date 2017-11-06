@@ -1,0 +1,20 @@
+{% extends 'adminBase.html.twig' %}
+{% block title %}Admin-Cataluña Pizz'{% endblock %}
+{% block body %}
+    <ul>
+        <h1>Modifier/Supprimer boisson</h1>
+        {% for drink in drinks %}
+                <li>{{ drink.title }} :
+                    <span class="label label-info">{{ drink.price1 }} {{ drink.price2 }}</span>
+                    <form method="post" action="index.php?route=updateDrink">
+                        <input type="hidden" name="id" value="{{ drink.id }}">
+                        <button type="submit" class="btn btn-info"><span class="glyphicon glyphicon-refresh"></span>Modifier boisson</button>
+                    </form>
+                    <form method="post" action="index.php?route=delDrink">
+                        <input type="hidden" name="id" value="{{ drink.id }}">
+                        <button type="submit" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span>Supprimer</button>
+                    </form>
+                </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
