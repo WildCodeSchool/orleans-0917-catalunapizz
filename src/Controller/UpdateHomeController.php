@@ -65,7 +65,7 @@ class UpdateHomeController extends Controller
 // si pas d'erreur, met à jour la bdd
             if (empty($errors)) {
                 $aboutUsManager->updateAboutUs($aboutUs);
-                header('Location:index.php');
+                header('Location:admin.php');
             }
         }
 

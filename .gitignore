@@ -3,4 +3,4 @@ connect.php
 .idea
 composer.json
 catalunapizzdb.sql
-src/View/Admin/.htpasswd
+public/.htpasswd
