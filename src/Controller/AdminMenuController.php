@@ -89,7 +89,7 @@ class AdminMenuController extends Controller
             $deleteManager = new PizzaManager();
             $deleteManager->delete($_POST['id']);
 
-            header('Location:index.php?route=carte');
+            header('Location:admin.php?route=carte');
 
 
         }
@@ -104,7 +104,7 @@ class AdminMenuController extends Controller
     {
         $errors = [];
         // creation d'un objet pizza vide
-  
+
         $pizzaManager = new PizzaManager();
         $pizza = $pizzaManager->find($_POST['id']);
         if (!empty($_POST['updating'])) {
@@ -135,7 +135,7 @@ class AdminMenuController extends Controller
             // si pas d'erreur, insert en bdd
             if (empty($errors)) {
                 $pizzaManager->update($pizza);
-                header('Location:index.php?route=carte');
+                header('Location:admin.php?route=carte');
             }
         }
 

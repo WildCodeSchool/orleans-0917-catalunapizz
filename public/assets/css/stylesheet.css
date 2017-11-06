@@ -100,6 +100,11 @@
     }
 }
 
+hr {
+    height: 2px;
+    background-color: black;
+}
+
 .titles {
     text-align: center;
     margin-bottom: 70px;

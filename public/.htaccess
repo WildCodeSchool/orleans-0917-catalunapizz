@@ -1,4 +1,6 @@
+<FilesMatch "admin.php">
 AuthName "Admin"
 AuthUserFile /.htpasswd
 AuthType Basic
 require valid-user
+</FilesMatch>
