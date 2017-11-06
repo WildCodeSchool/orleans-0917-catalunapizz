@@ -15,12 +15,10 @@ if (!empty($_GET['route'])) {
         // charge la page de la carte
         $controller = new MenuController();
         echo $controller->showAction();
-
     } elseif ($_GET['route'] === 'lieux') {
         // charge page des lieux
         $controller = new LocationController();
         echo $controller->showAction();
-
     } elseif ($_GET['route'] === 'evenements') {
         // charge page des evenement
         $controller = new EventController();
