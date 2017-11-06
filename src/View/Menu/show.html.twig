@@ -34,13 +34,13 @@
                     </div>
                 </div>
             </ul>
-            <img src="assets/upload/Menu/Base_creme.png">
+            <img src="assets/images/Base_creme.png" class="img-responsive image_pres_tomate hidden-sm hidden-xs">
         </div>
         <div class="col-md-offset-1 col-md-5">
             <ul>
                 <div class="container-fluid">
                     <div class="row">
-                        <img src="assets/upload/Menu/Base_tomate.png">
+                        <img src="assets/images/Base_tomate.png" class="img-responsive image_pres_creme hidden-sm hidden-xs">
                         <div class="creme">
                             <div class="row">
                                 <h3><div class="category_title col-md-6">Base creme</div></h3>
@@ -70,19 +70,57 @@
         </div>
     </div>
 </div>
-
-<div>
-    <h1><span><img src="assets/images/chalkflag.png" class="flagChalk"></span> Nos Boissons <span><img src="assets/images/chalkflag.png" class="flagChalk"></span></h1>
-    <ul>
-        {% for drink in drinks %}
-            <li>{{ drink }}</li>
-        {% endfor %}
-    </ul>
-
-</div>
+        <div class="container-fluid carte">
+            <div class="row">
+                <div class="carte_title"><h1><span><img src="assets/images/chalkflag.png" class="flagChalk"></span> Nos Bocadillos <span><img src="assets/images/chalkflag.png" class="flagChalk"></span></h1></div>
+            </div>
+            <ul>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="dessert col-md-12">
+                            {% for pizzaCategory in pizzaCategories %}
+                                {% if pizzaCategory.category.name == 'BOCADILLOS' %}
+                                    <li>
+                                        <div class="col-md-6">
+                                            <div class="col-md-6 pizza_title">{{ pizzaCategory.pizza.title }}</div>
+                                            <div class="col-md-5 price">{{ pizzaCategory.pizza.price1 }}</div>
+                                            <div class="col-md-1 price">{{ pizzaCategory.pizza.price2 }}</div>
+                                            <div class="row">
+                                                <div class="col-md-9 ingredients_title"><small>{{ pizzaCategory.category.name }} {{ pizzaCategory.pizza.ingredients }}</small></div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </ul>
+        </div>
     <div class="container-fluid carte">
         <div class="row">
-            <div class="carte_title"><h1><span><img src="assets/images/chalkflag.png" class="flagChalk"></span> Nos desserts <span><img src="assets/images/chalkflag.png" class="flagChalk"></span></h1></div>
+            <div class="carte_title"><h1><span><img src="assets/images/chalkflag.png" class="flagChalk"></span> Nos Boissons <span><img src="assets/images/chalkflag.png" class="flagChalk"></span></h1></div>
+        </div>
+        <ul>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="dessert col-md-12">
+                        {% for drink in drinks %}
+                            <li>
+                                <div class="col-md-6">
+                                    <div class="col-md-6 pizza_title">{{ drink.title }}</div>
+                                    <div class="col-md-5 price">{{ drink.price1 }}</div>
+                                </div>
+                            </li>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </ul>
+    </div>
+    <div class="container-fluid carte">
+        <div class="row">
+            <div class="carte_title"><h1><span><img src="assets/images/chalkflag.png" class="flagChalk"></span> Nos Desserts <span><img src="assets/images/chalkflag.png" class="flagChalk"></span></h1></div>
         </div>
         <ul>
             <div class="container-fluid">
@@ -110,3 +148,4 @@
 
 
 {% endblock %}
+
