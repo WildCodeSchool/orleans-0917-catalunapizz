@@ -53,7 +53,7 @@ class UpdateLocationController extends Controller
 // si pas d'erreur, met à jour la bdd
             if (empty($errors)) {
                 $locationManager->updateLocation($location);
-                header('Location:index.php?route=updateLocationHome');
+                header('Location:admin.php?route=updateLocationHome');
             }
         }
 
