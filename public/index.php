@@ -24,6 +24,7 @@ if (!empty($_GET['route'])) {
         $controller = new EventController();
         echo $controller->showAction();
     }
+  
 } else {
     // charge homepage
     $controller = new HomeController();
