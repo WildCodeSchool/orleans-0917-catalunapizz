@@ -17,18 +17,18 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="media">
-                        {% if events[ loop.index0 ].EventPicture == true %}
+                        {% if events[ loop.index0 ].eventPicture == true %}
                         <div class="col-md-offset-1 col-md-5 img-events">
-                            <img class="media-object img-responsive" src={{ events[ loop.index0 ].EventPicture }}
+                            <img class="media-object img-responsive" src={{ events[ loop.index0 ].eventPicture }}
                             alt="Image">
                         </div>
                         {% endif %}
                         <div class="media-body">
                             <div class="col-md-offset-2 col-md-8 bloc-events">
-                                <div class="media-heading event-title">{{ events[ loop.index0 ].EventTitle }}<br/>
-                                    <span class="event-date">{{ events[ loop.index0 ].Date }}</span>
+                                <div class="media-heading event-title">{{ events[ loop.index0 ].eventTitle }}<br/>
+                                    <span class="event-date">{{ events[ loop.index0 ].date }}</span>
                                 </div>
-                                <div class="event-description">{{ events[ loop.index0 ].Description|raw }}</div>
+                                <div class="event-description">{{ events[ loop.index0 ].description|raw }}</div>
                             </div>
                         </div>
                     </div>

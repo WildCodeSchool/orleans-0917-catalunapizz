@@ -13,6 +13,16 @@ class AboutUsManager extends EntityManager
         return $statement->fetchAll(\PDO::FETCH_CLASS, AboutUs::class);
     }
 
+    public function findFirst()
+    {
+        $req = "SELECT * FROM about_us
+                  LIMIT 0,1";
+        $statement = $this->pdo->query($req);
+        $statement->setFetchMode(\PDO::FETCH_CLASS, AboutUs::class);
+
+        return $statement->fetch();
+    }
+
     /**
      *   met a jours les nouveauté
      */

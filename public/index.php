@@ -7,6 +7,7 @@ use Cataluna\Controller\AdminMenuController;
 use Cataluna\Controller\UpdateHomeController;
 use Cataluna\Controller\AdminHomeController;
 use Cataluna\Controller\EventController;
+use Cataluna\Controller\AdminEventsController;
 
 require '../vendor/autoload.php';
 require '../connect.php';
@@ -51,6 +52,18 @@ if (!empty($_GET['route'])) {
     elseif ($_GET['route'] === 'adminHome') {
         $controller = new AdminHomeController();
         echo $controller->showAction();
+    }
+    elseif ($_GET['route'] === 'addEvent') {
+        $controller = new AdminEventsController();
+        echo $controller->addAction();
+    }
+    elseif ($_GET['route'] === 'delEvent') {
+        $controller = new AdminEventsController();
+        echo $controller->deleteAction();
+    }
+    elseif ($_GET['route'] === 'updateEvent') {
+        $controller = new AdminEventsController();
+        echo $controller->updateAction();
     }
 
 } else {

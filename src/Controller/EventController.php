@@ -22,7 +22,7 @@ class EventController extends Controller
         $errors = [];
         $eventsManager = new EventsManager();
         $aboutUsManager = new AboutUsManager();
-        $home = $aboutUsManager->findAll();
+        $home = $aboutUsManager->findFirst();
         $events = $eventsManager->findAll();
 
 
@@ -69,7 +69,6 @@ class EventController extends Controller
                     ->setBody($message);
 
                 $mailer->send($message);
-                //header location
 
             }
         }
@@ -77,7 +76,7 @@ class EventController extends Controller
         return $this->twig->render('Events/events.html.twig', [
             'errors' => $errors,
             'events'=> $events,
-            'home' => $home[0]
+            'home' => $home
         ]);
 
 

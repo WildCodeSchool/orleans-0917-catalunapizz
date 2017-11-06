@@ -4,8 +4,8 @@
 .baudi {
     margin-top: 100vh;
     position: absolute;
-    background: url("http://www.obfuscata.com/wp-content/uploads/2017/04/chalkboard-background-6.jpg");
-    background-size: cover;
+    background: url("../images/chalkboard.jpg");
+    background-size: contain;
     z-index: 1;
 }
 
@@ -465,9 +465,14 @@ footer {
 
     .event-content {
         padding-top: 100px;
-        background: url("http://www.obfuscata.com/wp-content/uploads/2017/04/chalkboard-background-6.jpg");
-        background-size: cover;
+        background: url("../images/chalkboard.jpg");
+        background-size: contain;
         padding-bottom: 170px;
+    }
+
+    .admin-event-content {
+        padding-top: 100px;
+        color: black;
     }
 
     .events {
@@ -491,15 +496,33 @@ footer {
         margin-bottom: 70px;
     }
 
+    .admin-event-title {
+        color: black;
+        font-family: "ScribblerSerif", cursive;
+        font-size: calc(20px + 3vw) ;
+        margin-bottom: 70px;
+    }
+
     .event-date {
         font-family: 'Cabin Sketch', cursive;
         color: white;
+        font-size: calc(20px + 1vw) ;
+    }
+    .admin-event-date {
+        font-family: 'Cabin Sketch', cursive;
+        color: black;
         font-size: calc(20px + 1vw) ;
     }
 
     .event-description {
         font-family: 'Cabin Sketch', cursive;
         color: white;
+        font-size: calc(20px + 1vw) ;
+    }
+
+    .admin-event-description {
+        font-family: 'Cabin Sketch', cursive;
+        color: black;
         font-size: calc(20px + 1vw) ;
     }
 
@@ -519,8 +542,17 @@ footer {
         background-color: rgb(213,0,19) ;
     }
 
+    .btn-modif {
+        font-size: 30px;
+    }
+
     .label-mail {
         color: white;
+    }
+
+    .error {
+        background-color: rgba(255,23,23,0.69);
+        font-weight: bold;
     }
 
 
