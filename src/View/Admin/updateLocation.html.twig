@@ -1,0 +1,45 @@
+{% extends 'adminBase.html.twig' %}
+{% block title %}Admin - Cataluña Pizz'{% endblock %}
+{% block body %}
+
+<div class="container">
+    <div class="row>"
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <form action="index.php?route=updateLocation" method="post">
+                    <h1>Planning</h1>
+
+                    <fieldset class="form-group">
+                        <legend>Modification</legend>
+                        {% set days=['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi', 'Dimanche'] %}
+                        <select name="day" id="day" class="form-control">
+                                {% for day in days %}
+                                <option name="day" {{ locations.day == day ? 'selected' }}>{{ day }}</option>
+                                {% endfor %}
+                        </select>
+                        <label for="location_am">Emplacement du midi</label>
+                        <textarea class="form-control fields summernote" name="location_am" id="location_am">{{ locations.location_am }}</textarea>
+                        <label for="hour_am">Créneau horaire du midi</label>
+                        <input type="text" class="form-control fields" name="hour_am" id="hour_am" value="{{ locations.hour_am }}"/>
+                        <label for="location_pm">Emplacement du soir</label>
+                        <textarea class="form-control fields summernote" name="location_pm" id="location_pm">{{ locations.location_pm }}</textarea>
+                        <label for="hour_pm">Créneau horaire du soir</label>
+                        <input type="text" class="form-control fields" name="hour_pm" id="hour_pm" value="{{ locations.hour_pm }}"/>
+                        <input type="hidden" name="id" value="{{ locations.id }}" />
+                    </fieldset>
+
+                    <button type="submit" class="btn btn-success" value="true" name="updating">
+                        <span class="glyphicon glyphicon-plus"></span>Mettre à jour
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+    {% if errors %}
+        {%  for error in errors %}
+            <div class="error"><p>{{ error }}</p></div>
+        {% endfor %}
+    {% endif %}
+
+{% endblock %}
