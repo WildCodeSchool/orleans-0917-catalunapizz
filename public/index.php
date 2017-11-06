@@ -23,6 +23,18 @@ if (!empty($_GET['route'])) {
         // charge page des evenement
         $controller = new EventController();
         echo $controller->showAction();
+
+    } elseif ($_GET['route'] === 'uploadMenuPT') {
+        $controller = new AdminMenuUploadController();
+        echo $controller->addUploadPT();
+
+    }elseif ($_GET['route'] === 'uploadMenuPC') {
+        $controller = new AdminMenuUploadController();
+        echo $controller->addUploadPC();
+
+    } elseif ($_GET['route'] === 'uploadMenu') {
+        $controller = new AdminMenuUploadController();
+        echo $controller->deleteUpload();
     }
 } else {
     // charge homepage
