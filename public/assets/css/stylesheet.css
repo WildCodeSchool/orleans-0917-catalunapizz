@@ -112,6 +112,8 @@ hr {
 }
 
 h1 {
+    padding-top: 70px;
+    padding-bottom: 70px;
     display: inline;
     font-family: "ScribblerSerif", cursive;
     margin-top: 50px;
@@ -315,13 +317,28 @@ footer {
 
 .carte {
     color: white;
-    background: url("http://www.obfuscata.com/wp-content/uploads/2017/04/chalkboard-background-6.jpg");
-    background-size: cover;
+        background-image: url("/assets/images/chalkboard2.jpg");
+    background-size: contain;
     background-repeat: repeat;
     font-family: "Dancing Script", cursive;
     font-size: 20px;
     padding-top: 100px;
+    padding-bottom: 100px;
 }
+
+
+.image_pres_creme {
+    max-width: 1200px;
+    padding-right:300px;
+}
+
+.image_pres_tomate {
+    max-width: 1200px;
+    padding-right:200px;
+}
+
+.pizza_tomate{
+    background-image: url("../assets");    
 
 h2 {
     padding-top: 70px;
@@ -366,6 +383,7 @@ h2 {
 
 .price {
     text-align: right;
+    font-family: "Handlee", cursive;
 }
 
 .summary {
@@ -378,6 +396,7 @@ h2 {
     width: 40%;
     margin-left: 6.5%;
 }
+
 
 .adminContent {
     padding-top: 100px;
@@ -418,6 +437,23 @@ h2 {
 .adminUpdateBtn {
     text-align: center;
 }
+
+        .truckDraw {
+            display: none;
+        }
+
+    }
+
+    .panel-body {
+        margin-top: 100px;
+    }
+
+    .fields {
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    }
 
 .updateDays {
     font-size: 36px;
