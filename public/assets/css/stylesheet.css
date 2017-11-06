@@ -131,22 +131,6 @@
 
 .item > img {
     width: 100%;
-    visibility: hidden;
-}
-
-.item1 {
-    background: url("../images/pizzaPlanche.JPG") center no-repeat;
-    background-size: cover;
-}
-
-.item2 {
-    background: url("../images/pizzaZoom.JPG") center no-repeat;
-    background-size: cover;
-}
-
-.item3 {
-    background: url("../images/camion2.JPG") center top no-repeat;
-    background-size: cover;
 }
 
 @font-face {
@@ -180,7 +164,6 @@
     font-family: 'Cabin Sketch', cursive;
     color: white;
 }
-
 
 
 .media-body {
@@ -319,7 +302,6 @@ footer {
     font-size: 20px;
     padding-top: 100px;
 }
-
 
 .tomate li{
     padding-top: 20px;
