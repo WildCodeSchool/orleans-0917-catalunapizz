@@ -7,6 +7,7 @@ use Cataluna\Controller\AdminMenuController;
 use Cataluna\Controller\UpdateHomeController;
 use Cataluna\Controller\AdminHomeController;
 use Cataluna\Controller\EventController;
+use Cataluna\Controller\UpdateLocationController;
 
 require '../vendor/autoload.php';
 require '../connect.php';
@@ -38,18 +39,24 @@ if (!empty($_GET['route'])) {
         $controller = new AdminMenuController();
         echo $controller->deleteAction();
     }
-
     elseif ($_GET['route'] === 'updatePizza') {
-        $controller = new AdminMenucontroller();
+        $controller = new AdminMenuController();
         echo $controller->updateAction();
     }
-
     elseif ($_GET['route'] === 'updateHome') {
         $controller = new UpdateHomeController();
         echo $controller->updateAction();
     }
     elseif ($_GET['route'] === 'adminHome') {
         $controller = new AdminHomeController();
+        echo $controller->showAction();
+    }
+    elseif ($_GET['route'] === 'updateLocation') {
+        $controller = new UpdateLocationController();
+        echo $controller->updateAction();
+    }
+    elseif ($_GET['route'] === 'updateLocationHome') {
+        $controller = new UpdateLocationController();
         echo $controller->showAction();
     }
 
