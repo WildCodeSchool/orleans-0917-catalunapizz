@@ -3,7 +3,8 @@
 .baudi {
     margin-top: 100vh;
     position: absolute;
-    background: white;
+    background: url("http://www.obfuscata.com/wp-content/uploads/2017/04/chalkboard-background-6.jpg");
+    background-size: cover;
     z-index: 1;
 }
 
@@ -110,18 +111,20 @@ h1 {
     display: inline;
     font-family: "ScribblerSerif", cursive;
     margin-top: 50px;
-    text-align: center;
-    font-size: calc(30px + 8vw);
+    font-size: calc(30px + 6vw);
+    padding-top: 70px;
+    color: white;
 }
+
 
 .aboutUs {
+    font-family: 'Cabin Sketch', cursive;
     margin-left: 5vw;
     margin-right: 5vw;
+    color: white;
+    font-size: calc(20px + 1vw);
 }
 
-p {
-    font-size: 24px;
-}
 
 .carouselFixed {
     position: fixed;
@@ -148,7 +151,7 @@ p {
 }
 
 .item3 {
-    background: url("../images/camion.JPG") center top no-repeat;
+    background: url("../images/camion2.JPG") center top no-repeat;
     background-size: cover;
 }
 
@@ -167,14 +170,20 @@ p {
     src: url('../fonts/Font_test/DJB Chalk It Up.ttf');
 }
 
-.news-title {
-    font-family: "Dancing Script", cursive;
-    font-size: 100px;
-    margin-bottom: 70px;
+.news {
+    margin-bottom: 170px;
 }
 
-.news * {
-    font-family: "Dancing Script", cursive;
+.news-title {
+    font-family: 'Cabin Sketch', cursive;
+    font-size: calc(20px + 3vw);
+    margin-bottom: 70px;
+    color: white;
+}
+
+.news-description * {
+    font-family: 'Cabin Sketch', cursive;
+    color: white;
 }
 
 .media-body {
@@ -215,10 +224,6 @@ p {
     margin-top: 150px;
 }
 
-.composition {
-    margin-bottom: 60px;
-    margin-top: 60px;
-}
 
 footer {
     background-color: black;
@@ -227,16 +232,14 @@ footer {
 .footer_list li {
     list-style-type: none;
     color: white;
-    font-weight: bold;
     margin: 15px;
-    font-family: "Cormorant+Garamond", cursive;
+    font-family: 'Cabin Sketch', cursive;
     font-size: 1.2em;
 }
 
 .footer_list li a {
     color: white;
     font-size: 1.2em;
-    font-weight: bold;
     text-decoration: none;
 }
 
@@ -318,11 +321,6 @@ footer {
     padding-top: 100px;
 }
 
-h2 {
-    padding-top: 70px;
-    padding-bottom: 70px;
-    text-align: center;
-}
 
 .tomate li {
     padding-top: 20px;
@@ -445,6 +443,78 @@ h2 {
     }
 }
 
+    .panel {
+        background-color: transparent;
+    }
+
+    .fields {
+        margin-top: 10px;
+        margin-bottom: 20px;
+        border: 2px solid white;
+    }
+
+    .event-content {
+        padding-top: 100px;
+        background: url("http://www.obfuscata.com/wp-content/uploads/2017/04/chalkboard-background-6.jpg");
+        background-size: cover;
+        padding-bottom: 170px;
+    }
+
+    .events {
+        padding-top: 100px;
+    }
+
+    .bloc-events {
+        margin-top: 150px;
+    }
+
+    .img-events {
+        max-width: 990px;
+        max-height: 600px;
+        margin-top: 150px;
+    }
+
+    .event-title {
+        color: white;
+        font-family: "ScribblerSerif", cursive;
+        font-size: calc(20px + 3vw) ;
+        margin-bottom: 70px;
+    }
+
+    .event-date {
+        font-family: 'Cabin Sketch', cursive;
+        color: white;
+        font-size: calc(20px + 1vw) ;
+    }
+
+    .event-description {
+        font-family: 'Cabin Sketch', cursive;
+        color: white;
+        font-size: calc(20px + 1vw) ;
+    }
+
+    .event-contact {
+        font-family: 'Cabin Sketch', cursive;
+        margin-left: 5vw;
+        margin-right: 5vw;
+        color: white;
+        font-size: calc(20px + 1vw) ;
+    }
+
+    .arrow_down {
+        text-align: center;
+    }
+
+    .btn-danger {
+        background-color: rgb(213,0,19) ;
+    }
+
+    .label-mail {
+        color: white;
+    }
+
+
+
 @media only screen and (max-width: 767px) {
     .navbar-inverse .navbar-collapse, .navbar-form {
         background-color: rgba(255, 255, 255, 1);
@@ -464,3 +534,4 @@ h2 {
 }
 
 }
+

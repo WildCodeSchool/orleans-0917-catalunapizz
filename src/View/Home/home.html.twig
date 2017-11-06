@@ -17,7 +17,7 @@
                         <img src="../images/pizzaZoom.JPG" alt="Photo de pizza">
                     </div>
                         <div class="item item2">
-                            <img src="../images/camion.JPG" alt="Photo de camion">
+                            <img src="../images/camion2.JPG" alt="Photo de camion">
                         </div>
 
                         <div class="item item3">
@@ -31,22 +31,9 @@
 </div>
 
 <div class="baudi">
-    <div class="titles">
-        <h1>{{ home.AboutUsTitle }}</h1>
-    </div>
-    <div class=" aboutUs">
-        <p> {{ home.AboutUs }}
-        </p>
-    </div>
-    <div class="titles">
-        <h1>{{ home.BlocNewsTitle }}</h1>
-    </div>
-    <div>
-        <img src="assets/images/tomato.png" class="img-tomato"/>
-        <img src="assets/images/olives.png" class="img-olives"/>
-        <img src="assets/images/poivrons.png" class="img-peppers"/>
-        <img src="assets/images/oignons.png" class="img-onions"/>
-    </div>
+    <h1 class="titles"><span><img src="assets/images/chalkflag.png" class="flagChalk"></span> {{ home.AboutUsTitle }} <span><img src="assets/images/chalkflag.png" class="flagChalk"></span></h1>
+        <p class="aboutUs"> {{ home.AboutUs }}</p>
+        <h1 class="titles"><span><img src="assets/images/chalkflag.png" class="flagChalk"></span> {{ home.BlocNewsTitle }} <span><img src="assets/images/chalkflag.png" class="flagChalk"></span> </h1>
     <section class="news">
         <div class="container-fluid">
             <div class="row">
@@ -56,9 +43,9 @@
                              alt="Image">
                     </div>
                     <div class="media-body">
-                        <div class="col-md-offset-2 col-md-6 bloc-news">
+                        <div class="col-md-offset-2 col-md-8 bloc-news">
                             <div class="media-heading news-title">{{ home.NewsTitle }}</div>
-                            <div class="news">{{ home.News|raw}}</div>
+                            <div class="news-description">{{ home.News|raw}}</div>
                     </div>
                 </div>
             </div>
