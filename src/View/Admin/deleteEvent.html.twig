@@ -24,11 +24,11 @@
                         </div>
                     </div>
                     <div class="row">
-                        <form method="post" action="index.php?route=updateEvent" class="col-md-offset-4 col-md-4 col-md-offset-4">
+                        <form method="post" action="admin.php?route=updateEvent" class="col-md-offset-4 col-md-4 col-md-offset-4">
                             <input type="hidden" name="id" value="{{ events[loop.index0].id }}">
                             <button type="submit" class="btn btn-success btn-modif"><span class="glyphicon glyphicon-refresh"></span>Modifier</button>
                         </form>
-                        <form method="post" action="index.php?route=delEvent" class="col-md-offset-4 col-md-4 col-md-offset-4">
+                        <form method="post" action="admin.php?route=delEvent" class="col-md-offset-4 col-md-4 col-md-offset-4">
                             <input type="hidden" name="id" value="{{ events[loop.index0].id }}">
                             <button type="submit" class="btn btn-danger btn-modif"><span class="glyphicon glyphicon-trash"></span>Supprimer</button>
                         </form>

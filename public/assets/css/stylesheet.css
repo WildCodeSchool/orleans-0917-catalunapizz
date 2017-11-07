@@ -107,21 +107,12 @@ hr {
 
 .titles {
     text-align: center;
-    margin-bottom: 70px;
     font-family: "ScribblerSerif", cursive;
-    font-size: 60px;
-}
-
-h1 {
     padding-top: 70px;
     padding-bottom: 70px;
-    display: inline;
-    font-family: "ScribblerSerif", cursive;
-    margin-top: 50px;
     font-size: calc(30px + 6vw);
     color: white;
 }
-
 
 .aboutUs {
     font-family: 'Cabin Sketch', cursive;
@@ -130,7 +121,6 @@ h1 {
     color: white;
     font-size: calc(20px + 1vw);
 }
-
 
 .carouselFixed {
     position: fixed;
@@ -325,11 +315,6 @@ footer {
     padding-right:200px;
 }
 
-h2 {
-    padding-top: 70px;
-    padding-bottom: 70px;
-    text-align: center;
-}
 
 .tomate li {
     padding-top: 20px;

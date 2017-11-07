@@ -36,6 +36,9 @@ class AboutUsManager extends EntityManager
                       news = :news,
                       news_picture = :newsPicture,
                       mail = :mail,
+                      img1_carrousel = :img1Carrousel,
+                      img2_carrousel = :img2Carrousel,
+                      img3_carrousel = :img3Carrousel,
                       tel = :tel";
         $statement = $this->pdo->prepare($query);
         $statement->bindValue('aboutUsTitle', $aboutUs->getAboutUsTitle(), \PDO::PARAM_STR);
@@ -46,6 +49,9 @@ class AboutUsManager extends EntityManager
         $statement->bindValue('news', $aboutUs->getNews(), \PDO::PARAM_STR);
         $statement->bindValue('mail', $aboutUs->getMail(), \PDO::PARAM_STR);
         $statement->bindValue('tel', $aboutUs->getTel(), \PDO::PARAM_STR);
+        $statement->bindValue('img1Carrousel', $aboutUs->getImg1Carrousel(), \PDO::PARAM_STR);
+        $statement->bindValue('img2Carrousel', $aboutUs->getImg2Carrousel(), \PDO::PARAM_STR);
+        $statement->bindValue('img3Carrousel', $aboutUs->getImg3Carrousel(), \PDO::PARAM_STR);
         $statement->execute();
     }
 }
