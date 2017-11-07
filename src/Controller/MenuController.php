@@ -37,6 +37,7 @@ class MenuController extends Controller
         return $this->twig->render('Menu/show.html.twig', [
             'pizzaCategories'=>$pizzaCategories ,
             'drinks' => $drinks,
+            'home' => $home[0],
 
         ]);
 

@@ -3,24 +3,24 @@
 {% block body %}
 <div class="container-fluid carte">
     <div class="row">
-        <div class="carte_title"><h1 class="titles"><span><img src="assets/images/chalkflag.png" class="flagChalk"></span> Nos pizzas <span><img src="assets/images/chalkflag.png" class="flagChalk"></span></h1></div>
+        <div class="titles"><h1><span><img src="assets/images/chalkflag.png" class="flagChalk"></span> Nos pizzas <span><img src="assets/images/chalkflag.png" class="flagChalk"></span></h1></div>
         <div class="col-md-5">
             <ul>
                 <div class="container-fluid">
                     <div class="row">
                         <div class="tomate">
                             <div class="row">
-                                <h3><div class="category_title col-md-6">Base tomate</div></h3>
-                                <div class="col-md-5 summary">29cm</div>
-                                <div class="col-md-1 summary">33cm</div>
+                                <h3><div class="category_title col-md-9">Base tomate</div></h3>
+                                <div class="col-md-2 summary hidden-xs">29cm</div>
+                                <div class="col-md-1 summary hidden-xs">33cm</div>
                             </div>
                             {% for pizzaCategory in pizzaCategories %}
                                 {% if pizzaCategory.category.name == 'BASE TOMATE' %}
                                 <li>
                                     <div class="container-fluid">
                                         <div class="row">
-                                            <div class="col-md-6 pizza_title">{{ pizzaCategory.pizza.title }}</div>
-                                            <div class="col-md-5 price">{{ pizzaCategory.pizza.price1 }}</div>
+                                            <div class="col-md-10 pizza_title">{{ pizzaCategory.pizza.title }}</div>
+                                            <div class="col-md-1 price">{{ pizzaCategory.pizza.price1 }}</div>
                                             <div class="col-md-1 price">{{ pizzaCategory.pizza.price2 }}</div>
                                         </div>
                                         <div class="row">
@@ -43,8 +43,8 @@
                         <img src="assets/images/Base_tomate.png" class="img-responsive image_pres_creme hidden-sm hidden-xs">
                         <div class="creme">
                             <div class="row">
-                                <h3><div class="category_title col-md-6">Base creme</div></h3>
-                                <div class="col-md-5 summary">29cm</div>
+                                <h3><div class="category_title col-md-9">Base creme</div></h3>
+                                <div class="col-md-2 summary">29cm</div>
                                 <div class="col-md-1 summary">33cm</div>
                             </div>
                             {% for pizzaCategory in pizzaCategories %}
@@ -72,7 +72,7 @@
 </div>
         <div class="container-fluid carte">
             <div class="row">
-                <div class="carte_title"><h1><span><img src="assets/images/chalkflag.png" class="flagChalk"></span> Nos Bocadillos <span><img src="assets/images/chalkflag.png" class="flagChalk"></span></h1></div>
+                <div class="titles"><h1><span><img src="assets/images/chalkflag.png" class="flagChalk hidden-xs"></span> Nos Bocadillos <span><img src="assets/images/chalkflag.png" class="flagChalk hidden-xs"></span></h1></div>
             </div>
             <ul>
                 <div class="container-fluid">
@@ -82,8 +82,8 @@
                                 {% if pizzaCategory.category.name == 'BOCADILLOS' %}
                                     <li>
                                         <div class="col-md-6">
-                                            <div class="col-md-6 pizza_title">{{ pizzaCategory.pizza.title }}</div>
-                                            <div class="col-md-5 price">{{ pizzaCategory.pizza.price1 }}</div>
+                                            <div class="col-md-10 pizza_title">{{ pizzaCategory.pizza.title }}</div>
+                                            <div class="col-md-1 price">{{ pizzaCategory.pizza.price1 }}</div>
                                             <div class="col-md-1 price">{{ pizzaCategory.pizza.price2 }}</div>
                                             <div class="row">
                                                 <div class="col-md-9 ingredients_title"><small>{{ pizzaCategory.category.name }} {{ pizzaCategory.pizza.ingredients }}</small></div>
@@ -99,7 +99,7 @@
         </div>
     <div class="container-fluid carte">
         <div class="row">
-            <div class="carte_title"><h1><span><img src="assets/images/chalkflag.png" class="flagChalk"></span> Nos Boissons <span><img src="assets/images/chalkflag.png" class="flagChalk"></span></h1></div>
+            <div class="titles"><h1><span><img src="assets/images/chalkflag.png" class="flagChalk hidden-xs"></span> Nos Boissons <span><img src="assets/images/chalkflag.png" class="flagChalk hidden-xs"></span></h1></div>
         </div>
         <ul>
             <div class="container-fluid">
@@ -120,7 +120,7 @@
     </div>
     <div class="container-fluid carte">
         <div class="row">
-            <div class="carte_title"><h1><span><img src="assets/images/chalkflag.png" class="flagChalk"></span> Nos Desserts <span><img src="assets/images/chalkflag.png" class="flagChalk"></span></h1></div>
+            <div class="titles"><h1><span><img src="assets/images/chalkflag.png" class="flagChalk hidden-xs"></span> Nos Desserts <span><img src="assets/images/chalkflag.png" class="flagChalk hidden-xs"></span></h1></div>
         </div>
         <ul>
             <div class="container-fluid">
