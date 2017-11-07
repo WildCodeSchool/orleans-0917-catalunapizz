@@ -20,10 +20,6 @@ if (!empty($_GET['route'])) {
         $controller = new AdminMenuController();
         echo $controller->deleteAction();
     }
-    elseif ($_GET['route'] === 'updatePizza') {
-        $controller = new AdminMenuController();
-        echo $controller->updateAction();
-    }
     elseif ($_GET['route'] === 'updateHome') {
         $controller = new UpdateHomeController();
         echo $controller->updateAction();
