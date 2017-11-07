@@ -18,6 +18,15 @@
 
                             <legend>Rentrer les modifications à apporter</legend>
 
+                            <label for="image 1 carrousel">Image 1 du carrousel</label>
+                            <input class="form-control" name="img1_carrousel" id="img1_carrousel" value="{{ aboutUs.img1Carrousel }}"/>
+
+                            <label for="image 2 carrousel">Image 2 du carrousel</label>
+                            <input class="form-control" name="img2_carrousel" id="img2_carrousel" value="{{ aboutUs.img2Carrousel }}"/>
+
+                            <label for="image 3 carrousel">Image 3 du carrousel</label>
+                            <input class="form-control" name="img3_carrousel" id="img3_carrousel" value="{{ aboutUs.img3Carrousel }}"/>
+
                             <label for="titre présentation">Titre de la présentation</label>
                             <input class="form-control" name="about_us_title" id="about_us_title" value="{{ aboutUs.AboutUsTitle }}"/>
 
@@ -31,7 +40,7 @@
                             <input class="form-control" name="news_title" id="news_title" value="{{ aboutUs.NewsTitle }}"/>
 
                             <label for="nouveauté">Description de la nouveauté</label>
-                            <textarea class="form-control" name="news" id="summernote">{{ aboutUs.News }}</textarea>
+                            <textarea class="form-control summernote" name="news">{{ aboutUs.News }}</textarea>
 
                             <label for="image nouveauté">Image de la nouveauté</label>
                             <input type="text" class="form-control" name="news_picture" id="news_picture"

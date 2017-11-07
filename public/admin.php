@@ -4,7 +4,9 @@ use Cataluna\Controller\AdminMenuController;
 use Cataluna\Controller\UpdateHomeController;
 use Cataluna\Controller\AdminHomeController;
 use Cataluna\Controller\UpdateLocationController;
+use Cataluna\Controller\AdminEventsController;
 use Cataluna\Controller\AdminDrinkController;
+
 
 require '../vendor/autoload.php';
 require '../connect.php';
@@ -13,7 +15,6 @@ require '../connect.php';
 // ROUTER
 if (!empty($_GET['route'])) {
     if ($_GET['route'] === 'addPizza') {
-        // charge la page d'ajout
         $controller = new AdminMenuController();
         echo $controller->addAction();
     }
@@ -52,6 +53,18 @@ if (!empty($_GET['route'])) {
     elseif ($_GET['route'] === 'updateLocationHome') {
         $controller = new UpdateLocationController();
         echo $controller->showAction();
+    }
+    if ($_GET['route'] === 'addEvent') {
+        $controller = new AdminEventsController();
+        echo $controller->addAction();
+    }
+    elseif ($_GET['route'] === 'delEvent') {
+        $controller = new AdminEventsController();
+        echo $controller->deleteAction();
+    }
+    elseif ($_GET['route'] === 'updateEvent') {
+        $controller = new AdminEventsController();
+        echo $controller->updateAction();
     }
 
 } else {

@@ -28,6 +28,9 @@ class UpdateHomeController extends Controller
             $aboutUs->setNews($_POST['news']);
             $aboutUs->setMail($_POST['mail']);
             $aboutUs->setTel($_POST['tel']);
+            $aboutUs->setImg1Carrousel($_POST['img1_carrousel']);
+            $aboutUs->setImg2Carrousel($_POST['img2_carrousel']);
+            $aboutUs->setImg3Carrousel($_POST['img3_carrousel']);
 
 
             if (empty($_POST['about_us_title'])) {
@@ -58,8 +61,20 @@ class UpdateHomeController extends Controller
                 $errors[] = 'Remplissez le champs Mail';
             }
 
-            if (empty($_POST['news'])) {
+            if (empty($_POST['tel'])) {
                 $errors[] = 'Remplissez le champs Téléphone';
+            }
+
+            if (empty($_POST['img1_carrousel'])) {
+                $errors[] = 'Remplissez le champs  Image 1 du carrousel';
+            }
+
+            if (empty($_POST['img2_carrousel'])) {
+                $errors[] = 'Remplissez le champs  Image 2 du carrousel';
+            }
+
+            if (empty($_POST['img3_carrousel'])) {
+                $errors[] = 'Remplissez le champs  Image 3 du carrousel';
             }
 
 // si pas d'erreur, met à jour la bdd

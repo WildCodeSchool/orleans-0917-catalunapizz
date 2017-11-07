@@ -13,6 +13,63 @@ class AboutUs
     private $news;
     private $mail;
     private $tel;
+    private $img1_carrousel;
+    private $img2_carrousel;
+    private $img3_carrousel;
+
+    /**
+     * @return mixed
+     */
+    public function getImg1Carrousel()
+    {
+        return $this->img1_carrousel;
+    }
+
+    /**
+     * @param mixed $img1_carrousel
+     * @return AboutUs
+     */
+    public function setImg1Carrousel($img1_carrousel)
+    {
+        $this->img1_carrousel = $img1_carrousel;
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getImg2Carrousel()
+    {
+        return $this->img2_carrousel;
+    }
+
+    /**
+     * @param mixed $img2_carrousel
+     * @return AboutUs
+     */
+    public function setImg2Carrousel($img2_carrousel)
+    {
+        $this->img2_carrousel = $img2_carrousel;
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getImg3Carrousel()
+    {
+        return $this->img3_carrousel;
+    }
+
+    /**
+     * @param mixed $img3_carrousel
+     * @return AboutUs
+     */
+    public function setImg3Carrousel($img3_carrousel)
+    {
+        $this->img3_carrousel = $img3_carrousel;
+        return $this;
+    }
 
 
     public function getId()
