@@ -89,7 +89,7 @@ class AdminMenuController extends Controller
             $deleteManager = new PizzaManager();
             $deleteManager->delete($_POST['id']);
 
-            header('Location:admin.php?route=carte');
+            header('Location:admin.php?route=delPizza');
 
 
         }
@@ -135,7 +135,7 @@ class AdminMenuController extends Controller
             // si pas d'erreur, insert en bdd
             if (empty($errors)) {
                 $pizzaManager->update($pizza);
-                header('Location:admin.php?route=carte');
+                header('Location:admin.php?route=delPizza');
             }
         }
 
