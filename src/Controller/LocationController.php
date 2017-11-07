@@ -1,11 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: sylvain
- * Date: 13/10/17
- * Time: 09:38
- */
-
 namespace Cataluna\Controller;
 
 use Cataluna\Model\LocationManager;
@@ -20,9 +13,18 @@ class LocationController extends Controller
         $locations = $locationManager->findAll();
         $aboutUsManager = new AboutUsManager();
         $home = $aboutUsManager->findAll();
+        $days = ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"];
+        $result = [];
+        foreach($days as $day) {
+            foreach($locations as $location) {
+                if($day == $location->getDay()) {
+                    $result[] = $location;
+                }
+            }
+        }
         // appel de la vue
         return $this->twig->render('Locations/locations.html.twig', [
-            'location' => $locations,
+            'locations' => $result,
             'home' => $home[0],
         ]);
 
