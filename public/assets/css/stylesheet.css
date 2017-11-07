@@ -106,22 +106,15 @@ hr {
 }
 
 .titles {
+    display: inline;
     text-align: center;
-    margin-bottom: 70px;
     font-family: "ScribblerSerif", cursive;
     font-size: 60px;
-}
-
-h1 {
     padding-top: 70px;
     padding-bottom: 70px;
-    display: inline;
-    font-family: "ScribblerSerif", cursive;
-    margin-top: 50px;
     font-size: calc(30px + 6vw);
     color: white;
 }
-
 
 .aboutUs {
     font-family: 'Cabin Sketch', cursive;
@@ -413,6 +406,13 @@ h2 {
     padding-top: 100px;
 }
 
+.adminTitle {
+        font-size: calc(20px + 4vw);
+        color: black;
+        font-family: "Dancing Script", cursive;
+        text-align: center;
+}
+
 .adminBrand {
     padding-top: 40px;
     padding-left: 15px;
@@ -662,10 +662,6 @@ h2 {
         .navbar-inverse .navbar-collapse, .navbar-form {
             background-color: rgba(255, 255, 255, 1);
         }
-
-        .truckDraw {
-            display: none;
-        }
     }
 
 
@@ -677,5 +673,5 @@ h2 {
         margin-top: 10px;
         margin-bottom: 20px;
     }
-}
+
 

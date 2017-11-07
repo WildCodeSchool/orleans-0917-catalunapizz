@@ -2,7 +2,7 @@
 {% block title %}Admin-Cataluña Pizz'{% endblock %}
 {% block body %}
     <ul>
-        <h1>Modifier/Supprimer boisson</h1>
+        <h1 class="adminTitle">Modifier/Supprimer boisson</h1>
         {% for drink in drinks %}
                 <li>{{ drink.title }} :
                     <span class="label label-info">{{ drink.price1 }} {{ drink.price2 }}</span>
