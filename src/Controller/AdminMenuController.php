@@ -89,7 +89,7 @@ class AdminMenuController extends Controller
             $deleteManager = new PizzaManager();
             $deleteManager->delete($_POST['id']);
 
-            header('Location:admin.php?route=carte');
+            header('Location:admin.php?route=delPizza');
 
 
         }

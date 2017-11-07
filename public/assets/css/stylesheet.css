@@ -105,12 +105,15 @@ hr {
     background-color: black;
 }
 
+.titleCenter {
+    text-align: center;
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+
 .titles {
     display: inline;
-    text-align: center;
     font-family: "ScribblerSerif", cursive;
-    padding-top: 70px;
-    padding-bottom: 70px;
     font-size: calc(30px + 6vw);
     color: white;
 }
@@ -472,20 +475,6 @@ footer {
 }
 
 
-@media only screen and (max-width: 990px) {
-    .img-tomato {
-        display: none;
-    }
-    .img-olives {
-        display: none;
-    }
-    .img-peppers {
-        display: none;
-    }
-    .img-onions {
-        display: none;
-    }
-
     .panel {
         background-color: transparent;
     }
@@ -520,17 +509,6 @@ footer {
     .titles {
         text-align: center;
         margin-bottom: 10px;
-    }
-}
-
-
-@media only screen and (max-width: 767px) {
-    .navbar-inverse .navbar-collapse, .navbar-form {
-        background-color: rgba(255, 255, 255, 0.9);
-    }
-
-    .truckDraw {
-        display: none;
     }
 
     .events {
