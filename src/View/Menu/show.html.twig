@@ -1,86 +1,90 @@
 {% extends 'base.html.twig' %}
 {% block title %}Carte - Cataluña Pizz'{% endblock %}
 {% block body %}
-<div class="container-fluid carte">
-    <div class="row">
-
-        <div class="titleCenter">
-            <h1 class="titles"><span><img src="assets/images/chalkflag.png" class="flagChalk hidden-xs"></span> Nos pizzas <span>
-                    <img src="assets/images/chalkflag.png" class="flagChalk hidden-xs"></span></h1>
-        </div>
-        <div class="col-md-5">
-            <ul>
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="tomate">
-                            <div class="row">
-                                <h3><div class="category_title col-md-9">Base tomate</div></h3>
-                                <div class="col-md-2 summary hidden-sm hidden-xs">29cm</div>
-                                <div class="col-md-1 summary hidden-sm hidden-xs">33cm</div>
-                            </div>
-                            {% for pizzaCategory in pizzaCategories %}
-                                {% if pizzaCategory.category.name == 'BASE TOMATE' %}
-                                <li>
-                                    <div class="container-fluid">
-                                        <div class="row">
-                                            <div class="col-md-10 col-xs-12 pizza_title">{{ pizzaCategory.pizza.title }}</div>
-                                            <div class="col-md-1 col-xs-6 price"><div class="visible-xs"></div>{{ pizzaCategory.pizza.price1 }}</div>
-                                            <div class="visible-xs"></div>
-                                            <div class="col-md-1 col-xs-6 price"><div class="visible-xs">L</div>{{ pizzaCategory.pizza.price2 }}</div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-9 ingredients_title"><small>{{ pizzaCategory.category.name }} {{ pizzaCategory.pizza.ingredients }}</small></div>
-                                        </div>
-                                    </div>
-                                </li>
-                                {% endif %}
-                            {% endfor %}
-                        </div>
-                    </div>
-                </div>
-            </ul>
-
-            </div>
-        <div class="col-md-offset-1 col-md-5">
-            <ul>
-                <div class="container-fluid">
-                    <div class="row">
-                        <img src="assets/images/Base_tomate.png" class="img-responsive image_pres_creme hidden-sm hidden-xs">
-                        <div class="creme">
-                            <div class="row">
-                                <h3><div class="category_title col-md-9">Base creme</div></h3>
-                                <div class="col-md-2 summary">29cm</div>
-                                <div class="col-md-1 summary">33cm</div>
-                            </div>
-                            {% for pizzaCategory in pizzaCategories %}
-                                {% if pizzaCategory.category.name == 'BASE CREME' %}
-                                    <li>
-                                        <div class="container-fluid">
-                                            <div class="row">
-                                                <div class="col-md-6 pizza_title">{{ pizzaCategory.pizza.title }}</div>
-                                                <div class="col-md-5 price">{{ pizzaCategory.pizza.price1 }}</div>
-                                                <div class="col-md-1 price">{{ pizzaCategory.pizza.price2 }}</div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-md-9 ingredients_title"><small>{{ pizzaCategory.category.name }} {{ pizzaCategory.pizza.ingredients }}</small></div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                {% endif %}
-                            {% endfor %}
-                        </div>
-                    </div>
-                </div>
-            </ul>
-        </div>
-        <div class="col-md-6">
-            <img src="assets/images/Base_creme.png" class="img-responsive image_pres_tomate hidden-sm hidden-xs">
-        </div>
-    </div>
-</div>
+    <div class="Menu">
         <div class="container-fluid carte">
             <div class="row">
-                <div class="titleCenter"><h1 class="titles"><span><img src="assets/images/chalkflag.png" class="flagChalk hidden-xs"></span> Nos Bocadillos <span><img src="assets/images/chalkflag.png" class="flagChalk hidden-xs"></span></h1></div>
+
+                <div class="titleCenter">
+                    <h1 class="titles"><span><img src="assets/images/chalkflag.png" class="flagChalk"></span> Nos pizzas <span>
+                        <img src="assets/images/chalkflag.png" class="flagChalk"></span></h1>
+                </div>
+                <div class="col-md-5">
+                    <ul>
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="tomate">
+                                    <div class="row">
+                                        <h3><div class="category_title col-md-9">Base tomate</div></h3>
+                                        <div class="col-md-2 summary hidden-sm hidden-xs">29cm</div>
+                                        <div class="col-md-1 summary hidden-sm hidden-xs">33cm</div>
+                                    </div>
+                                    {% for pizzaCategory in pizzaCategories %}
+                                        {% if pizzaCategory.category.name == 'BASE TOMATE' %}
+                                            <li>
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        <div class="col-md-10 col-xs-12 pizza_title">{{ pizzaCategory.pizza.title }}</div>
+                                                        <div class="col-md-1 price hidden-xs">{{ pizzaCategory.pizza.price1 }}&euro;</div>
+                                                        <div class="col-xs-6 priceXs visible-xs">M<div>{{ pizzaCategory.pizza.price1 }}&euro;</div></div>
+                                                        <div class="col-md-1 price hidden-xs">{{ pizzaCategory.pizza.price2 }}&euro;</div>
+                                                        <div class="col-xs-6 priceXs visible-xs">L<div>{{ pizzaCategory.pizza.price2 }}&euro;</div></div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-9 ingredients_title"><small>{{ pizzaCategory.pizza.ingredients }}</small></div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        {% endif %}
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    </ul>
+
+                </div>
+                <div class="col-md-offset-1 col-md-5">
+                    <ul>
+                        <div class="container-fluid">
+                            <div class="row">
+                                <img src="assets/images/Base_tomate.png" class="img-responsive image_pres_creme hidden-sm hidden-xs">
+                                <div class="creme">
+                                    <div class="row">
+                                        <h3><div class="category_title col-md-9">Base creme</div></h3>
+                                        <div class="col-md-2 summary hidden-xs">29cm</div>
+                                        <div class="col-md-1 summary hidden-xs">33cm</div>
+                                    </div>
+                                    {% for pizzaCategory in pizzaCategories %}
+                                        {% if pizzaCategory.category.name == 'BASE CREME' %}
+                                            <li>
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        <div class="col-md-10 pizza_title">{{ pizzaCategory.pizza.title }}</div>
+                                                        <div class="col-md-1 price hidden-xs">{{ pizzaCategory.pizza.price1 }}&euro;</div>
+                                                        <div class="col-xs-6 priceXs visible-xs">M<div>{{ pizzaCategory.pizza.price1 }}&euro;</div></div>
+                                                        <div class="col-md-1 price hidden-xs">{{ pizzaCategory.pizza.price2 }}&euro;</div>
+                                                        <div class="col-xs-6 priceXs visible-xs">L<div>{{ pizzaCategory.pizza.price2 }}&euro;</div></div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-9 ingredients_title"><small>{{ pizzaCategory.pizza.ingredients }}</small></div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        {% endif %}
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <img src="assets/images/Base_creme.png" class="col-md-offset-2 img-responsive image_pres_tomate hidden-sm hidden-xs">
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid carte">
+            <div class="row">
+                <div class="titleCenter"><h1 class="titles"><span><img src="assets/images/chalkflag.png" class="flagChalk"></span> Bocadillos <span><img src="assets/images/chalkflag.png" class="flagChalk"></span></h1></div>
             </div>
             <ul>
                 <div class="container-fluid">
@@ -89,12 +93,11 @@
                             {% for pizzaCategory in pizzaCategories %}
                                 {% if pizzaCategory.category.name == 'BOCADILLOS' %}
                                     <li>
-                                        <div class="col-md-6">
-                                            <div class="col-md-10 pizza_title">{{ pizzaCategory.pizza.title }}</div>
-                                            <div class="col-md-1 price">{{ pizzaCategory.pizza.price1 }}</div>
-                                            <div class="col-md-1 price">{{ pizzaCategory.pizza.price2 }}</div>
+                                        <div class="col-md-6 col-xs-12">
+                                            <div class="col-md-10 col-xs-10 pizza_title">{{ pizzaCategory.pizza.title }}</div>
+                                            <div class="col-md-2 col-xs-2 price">{{ pizzaCategory.pizza.price1 }}&euro;</div>
                                             <div class="row">
-                                                <div class="col-md-9 ingredients_title"><small>{{ pizzaCategory.category.name }} {{ pizzaCategory.pizza.ingredients }}</small></div>
+                                                <div class="col-md-12  col-xs-12 ingredients_title"><small>{{ pizzaCategory.pizza.ingredients }}</small></div>
                                             </div>
                                         </div>
                                     </li>
@@ -105,53 +108,53 @@
                 </div>
             </ul>
         </div>
-    <div class="container-fluid carte">
-        <div class="row">
-            <div class="titleCenter"><h1 class="titles"><span><img src="assets/images/chalkflag.png" class="flagChalk hidden-xs"></span> Nos Boissons <span><img src="assets/images/chalkflag.png" class="flagChalk hidden-xs"></span></h1></div>
-        </div>
-        <ul>
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="dessert col-md-12">
-                        {% for drink in drinks %}
-                            <li>
-                                <div class="col-md-6">
-                                    <div class="col-md-6 pizza_title">{{ drink.title }}</div>
-                                    <div class="col-md-5 price">{{ drink.price1 }}</div>
-                                </div>
-                            </li>
-                        {% endfor %}
-                    </div>
-                </div>
+        <div class="container-fluid carte">
+            <div class="row">
+                <div class="titleCenter"><h1 class="titles"><span><img src="assets/images/chalkflag.png" class="flagChalk"></span> Nos Boissons <span><img src="assets/images/chalkflag.png" class="flagChalk"></span></h1></div>
             </div>
-        </ul>
-    </div>
-    <div class="container-fluid carte">
-        <div class="row">
-            <div class="titleCenter"><h1 class="titles"><span><img src="assets/images/chalkflag.png" class="flagChalk hidden-xs"></span> Nos Desserts <span><img src="assets/images/chalkflag.png" class="flagChalk hidden-xs"></span></h1></div>
-        </div>
-        <ul>
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="dessert col-md-12">
-                        {% for pizzaCategory in pizzaCategories %}
-                            {% if pizzaCategory.category.name == 'DESSERT' %}
-                            <li>
-                                <div class="col-md-6">
-                                    <div class="col-md-6 pizza_title">{{ pizzaCategory.pizza.title }}</div>
-                                    <div class="col-md-5 price">{{ pizzaCategory.pizza.price1 }}</div>
-                                    <div class="col-md-1 price">{{ pizzaCategory.pizza.price2 }}</div>
-                                    <div class="row">
-                                        <div class="col-md-9 ingredients_title"><small>{{ pizzaCategory.category.name }} {{ pizzaCategory.pizza.ingredients }}</small></div>
+            <ul>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="dessert col-md-12">
+                            {% for drink in drinks %}
+                                <li>
+                                    <div class="col-md-6">
+                                        <div class="col-md-10 col-xs-10 pizza_title">{{ drink.title }}</div>
+                                        <div class="col-md-2 col-xs-2 priceXs">{{ drink.price1 }}&euro;</div>
                                     </div>
-                                </div>
-                            </li>
-                        {% endif %}
-                    {% endfor %}
+                                </li>
+                            {% endfor %}
+                        </div>
                     </div>
                 </div>
+            </ul>
+        </div>
+        <div class="container-fluid carte">
+            <div class="row">
+                <div class="titleCenter"><h1 class="titles"><span><img src="assets/images/chalkflag.png" class="flagChalk"></span> Nos Desserts <span><img src="assets/images/chalkflag.png" class="flagChalk"></span></h1></div>
             </div>
-        </ul>
+            <ul>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="dessert col-md-12">
+                            {% for pizzaCategory in pizzaCategories %}
+                                {% if pizzaCategory.category.name == 'DESSERT' %}
+                                    <li>
+                                        <div class="col-md-6">
+                                            <div class="col-md-10 col-xs-10 pizza_title">{{ pizzaCategory.pizza.title }}</div>
+                                            <div class="col-md-1 col-xs-2 price">{{ pizzaCategory.pizza.price1 }}&euro;</div>
+                                            <div class="row">
+                                                <div class="col-md-12 col-xs-12 ingredients_title"><small>{{ pizzaCategory.pizza.ingredients }}</small></div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </ul>
+        </div>
     </div>
 
 
