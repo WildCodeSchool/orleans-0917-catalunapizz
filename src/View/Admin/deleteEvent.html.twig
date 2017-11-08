@@ -1,7 +1,13 @@
 {% extends 'adminBase.html.twig' %}
 {% block body %}
-    <div class="admin-event-content">
+<div class="adminContent">
+    <div class="container">
+        <div class="row">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <h1 class="adminTitle">Modifier/supprimer un événement</h1>
         {% for event in events %}
+        <hr class="yellow">
             <section class="events">
                 <div class="container-fluid">
                     <div class="row">
@@ -34,5 +40,11 @@
                     </div>
                 </div>
             </section>
+
         {% endfor %}
+    </div>
+</div>
+</div>
+</div>
+</div>
 {% endblock %}

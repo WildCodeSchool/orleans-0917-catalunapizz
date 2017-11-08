@@ -1,9 +1,13 @@
 {% extends 'adminBase.html.twig' %}
 {% block body %}
     <div class="adminContent">
+    <div class="container">
+        <div class="row">
+            <div class="panel panel-default">
+                <div class="panel-body">
     <h1 class="adminTitle">La carte</h1>
-
-    <h2>Nos pizzas</h2>
+    <hr class="yellow">
+    <h2 class="titleCenter">Nos pizzas</h2>
     <ul>
         <h3>Pizza Base tomate</h3>
         {% for pizzaCategory in pizzaCategories %}
@@ -43,7 +47,7 @@
             {% endif %}
         {% endfor %}
     </ul>
-
+    <hr class="yellow">
         <ul>
             <h3>Bocadillos</h3>
             {% for pizzaCategory in pizzaCategories %}
@@ -63,7 +67,7 @@
                 {% endif %}
             {% endfor %}
         </ul>
-
+        <hr class="yellow">
         <ul>
 
         <h3>Dessert</h3>
@@ -85,12 +89,6 @@
         {% endfor %}
     </ul>
 
-    <h2>Nos Boissons</h2>
-    <ul>
-        {% for drink in drinks %}
-            <li>{{ drink }}</li>
-        {% endfor %}
-    </ul>
 {% if errors %}
     <ul class="alert alert-danger">
         {% for error in errors %}
@@ -99,4 +97,8 @@
     </ul>
 {% endif %}
     </div>
+</div>
+</div>
+</div>
+</div>
 {% endblock %}

@@ -1,10 +1,15 @@
 {% extends 'adminBase.html.twig' %}
 {% block body %}
 <div class="adminContent">
+    <div class="container">
+        <div class="row">
+            <div class="panel panel-default">
+                <div class="panel-body">
     <div class="titles">
         <h1 class="adminTitle">Planning</h1>
     </div>
-    <h2>Jour à modifier</h2>
+    <hr class="yellow">
+    <h2 class="titleCenter">Jour à modifier</h2>
     <br>
     {% for location in locations %}
         <p>
@@ -29,5 +34,9 @@
             </form>
         </p>
     {% endfor %}
+</div>
+</div>
+</div>
+</div>
 </div>
 {% endblock %}

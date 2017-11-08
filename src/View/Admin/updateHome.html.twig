@@ -1,5 +1,6 @@
 {% extends 'adminBase.html.twig' %}
 {% block body %}
+<div class="adminContent">
     <div class="container">
         <div class="row>">
             <div class="panel panel-default">
@@ -13,8 +14,8 @@
                     {% endif %}
                     <form action="admin.php?route=updateHome" method="post">
                         <h1 class="adminTitle">Mettre à jour ma page d'Accueil</h1>
+                            <hr class="yellow">
                         <fieldset class="form-group">
-
                             <legend>Rentrer les modifications à apporter</legend>
 
                             <label for="image 1 carrousel">Image 1 du carrousel</label>
@@ -62,4 +63,5 @@
             </div>
         </div>
     </div>
+</div>
 {% endblock %}

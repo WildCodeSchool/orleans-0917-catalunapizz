@@ -1,7 +1,8 @@
 {% extends 'adminBase.html.twig' %}
 {% block body %}
+<div class="adminContent">
     <div class="container">
-        <div class="row>"
+        <div class="row">
         <div class="panel panel-default">
             <div class="panel-body">
                 <form action="index.php?route=updateEvent" method="post">
@@ -34,4 +35,5 @@
             <div class="error"><p>{{ error }}</p></div>
         {% endfor %}
     {% endif %}
+</div>
 {% endblock %}

@@ -1,7 +1,13 @@
 {% extends 'adminBase.html.twig' %}
 {% block body %}
+<div class="adminContent">
+    <div class="container">
+        <div class="row">
+            <div class="panel panel-default">
+                <div class="panel-body">
     <ul>
         <h1 class="adminTitle">Modifier/Supprimer boisson</h1>
+        <hr class="yellow">
         {% for drink in drinks %}
                 <li>{{ drink.title }} :
                     <span class="label label-info">{{ drink.price1 }} {{ drink.price2 }}</span>
@@ -16,4 +22,9 @@
                 </li>
         {% endfor %}
     </ul>
+</div>
+</div>
+</div>
+</div>
+</div>
 {% endblock %}

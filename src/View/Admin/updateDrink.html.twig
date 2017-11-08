@@ -1,10 +1,12 @@
 {% extends 'adminBase.html.twig' %}
 {% block body %}
+<div class="adminContent">
     <div class="container">
         <div class="row>">
         <div class="panel panel-default">
             <div class="panel-body">
                 <h1 class="adminTitle">Modifier Boisson</h1>
+                <hr class="yellow">
                 <form action="index.php?route=updateDrink" method="post">
                     <fieldset class="form-group">
                         <legend>Modification</legend>
@@ -34,4 +36,5 @@
             <div class="error"><p>{{ error }}</p></div>
         {% endfor %}
     {% endif %}
+</div>
 {% endblock %}
