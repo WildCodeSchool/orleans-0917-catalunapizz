@@ -15,17 +15,18 @@
                         <div class="tomate">
                             <div class="row">
                                 <h3><div class="category_title col-md-9">Base tomate</div></h3>
-                                <div class="col-md-2 summary hidden-xs">29cm</div>
-                                <div class="col-md-1 summary hidden-xs">33cm</div>
+                                <div class="col-md-2 summary hidden-sm hidden-xs">29cm</div>
+                                <div class="col-md-1 summary hidden-sm hidden-xs">33cm</div>
                             </div>
                             {% for pizzaCategory in pizzaCategories %}
                                 {% if pizzaCategory.category.name == 'BASE TOMATE' %}
                                 <li>
                                     <div class="container-fluid">
                                         <div class="row">
-                                            <div class="col-md-10 pizza_title">{{ pizzaCategory.pizza.title }}</div>
-                                            <div class="col-md-1 price">{{ pizzaCategory.pizza.price1 }}</div>
-                                            <div class="col-md-1 price">{{ pizzaCategory.pizza.price2 }}</div>
+                                            <div class="col-md-10 col-xs-12 pizza_title">{{ pizzaCategory.pizza.title }}</div>
+                                            <div class="col-md-1 col-xs-6 price"><div class="visible-xs"></div>{{ pizzaCategory.pizza.price1 }}</div>
+                                            <div class="visible-xs"></div>
+                                            <div class="col-md-1 col-xs-6 price"><div class="visible-xs">L</div>{{ pizzaCategory.pizza.price2 }}</div>
                                         </div>
                                         <div class="row">
                                             <div class="col-md-9 ingredients_title"><small>{{ pizzaCategory.category.name }} {{ pizzaCategory.pizza.ingredients }}</small></div>
