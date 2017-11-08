@@ -107,8 +107,8 @@ hr {
 
 .titleCenter {
     text-align: center;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 70px;
+    margin-bottom: 70px;
 }
 
 .titles {
@@ -137,8 +137,8 @@ hr {
 
 .item>img {
     width: 100%;
+    visibility: hidden;
 }
-
 
 @font-face {
     font-family: "ScribblerSerif";
@@ -201,7 +201,7 @@ hr {
 }
 
 .bloc-news {
-    margin-top: 50px;
+    margin-top: 150px;
 }
 
 
@@ -277,7 +277,7 @@ footer {
 }
 
 .planningDay {
-    color: rgb(213, 0, 19);
+    color: darkred;
     padding: 10px 30px;
 }
 
@@ -455,6 +455,7 @@ footer {
     text-align: center;
 }
 
+
 .truckDraw {
     display: none;
 }
@@ -628,3 +629,5 @@ footer {
         margin-top: 10px;
         margin-bottom: 20px;
     }
+
+
