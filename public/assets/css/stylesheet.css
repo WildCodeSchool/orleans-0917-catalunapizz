@@ -107,8 +107,8 @@
 
 .titleCenter {
     text-align: center;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 70px;
+    margin-bottom: 70px;
 }
 
 .titles {
@@ -146,8 +146,8 @@
 
 .item>img {
     width: 100%;
+    visibility: hidden;
 }
-
 
 @font-face {
     font-family: "ScribblerSerif";
@@ -210,7 +210,7 @@
 }
 
 .bloc-news {
-    margin-top: 50px;
+    margin-top: 150px;
 }
 
 
@@ -286,7 +286,7 @@ footer {
 }
 
 .planningDay {
-    color: rgb(213, 0, 19);
+    color: darkred;
     padding: 10px 30px;
 }
 
@@ -299,6 +299,9 @@ footer {
     color: white;
     background: transparent;
 }
+.Menu{
+    padding-top: 100px;
+}
 
 .carte {
     color: white;
@@ -307,20 +310,18 @@ footer {
     background-repeat: repeat;
     font-family: "Dancing Script", cursive;
     font-size: 20px;
-    padding-top: 100px;
-    padding-bottom: 100px;
 }
 
 
 .image_pres_creme {
     max-width: 1200px;
-    padding-right:300px;
+    margin-right:300px;
 }
 
 
 .image_pres_tomate {
     max-width: 1200px;
-    padding-right:200px;
+    margin-right:200px;
 }
 
 
@@ -346,7 +347,7 @@ footer {
     font-size: calc(60px + 1vw);
     background: url("../images/chalkbg2.png");
     background-size: 100% 100%;
-    color: red;
+    color: rgb(213, 0, 19);
     text-align: center;
 
 }
@@ -354,11 +355,13 @@ footer {
 .pizza_title {
     font-family: "Cabin Sketch", cursive;
     font-size: 40px;
+    text-align: left;
 }
 
 .ingredients_title {
     font-family: 'Cabin Sketch', cursive;
     font-size: 25px;
+    margin-bottom: 40px;
 }
 
 .flagChalk {
@@ -369,9 +372,14 @@ footer {
 
 .price {
     text-align: right;
+    padding-top: 20px;
     font-family: "Handlee", cursive;
 }
 
+.priceXs {
+    text-align: center;
+    font-family: "Handlee", cursive;
+}
 .summary {
     font-family: 'Cabin Sketch', cursive;
     font-size: 35px;
@@ -434,6 +442,7 @@ footer {
 .adminUpdateBtn {
     text-align: center;
 }
+
 
 .truckDraw {
     display: none;
@@ -594,3 +603,5 @@ footer {
         margin-top: 10px;
         margin-bottom: 20px;
     }
+
+
