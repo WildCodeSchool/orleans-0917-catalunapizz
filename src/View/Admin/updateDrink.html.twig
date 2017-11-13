@@ -1,40 +1,39 @@
 {% extends 'adminBase.html.twig' %}
 {% block body %}
-<div class="adminContent">
-    <div class="container">
-        <div class="row>">
-        <div class="panel panel-default">
-            <div class="panel-body">
-                <h1 class="adminTitle">Modifier Boisson</h1>
-                <hr class="yellow">
-                <form action="index.php?route=updateDrink" method="post">
-                    <fieldset class="form-group">
-                        <legend>Modification</legend>
-                        <label for="title">Boisson</label>
-                        <input type="text" class="form-control" name="title" id="title"
-                               placeholder="Entrer le nom de la pizza" value="{{ drink.title }}"/>
-                        <label for="price_1">Prix boisson standard</label>
-                        <input type="text" class="form-control" name="price_1" id="price_1"
-                               placeholder="Entrer le prix" value="{{ drink.price1 }}"/>
-                        <label for="price_2">Prix boisson grande</label>
-                        <input type="text" class="form-control" name="price_2" id="price_2"
-                               placeholder="Entrer le prix" value="{{ drink.price2 }}"/>
-                        <input type="hidden" name="id" value="{{ drink.id }}" />
-                    </fieldset>
+    <div class="adminContent">
+        <div class="container">
+            <div class="row>">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <h1 class="adminTitle">Modifier Boisson</h1>
+                        <hr class="yellow">
+                        <form action="index.php?route=updateDrink" method="post">
+                            <fieldset class="form-group">
+                                <legend>Modification</legend>
+                                <label for="title">Boisson</label>
+                                <input type="text" class="form-control" name="title" id="title" placeholder="Entrer le nom de la pizza" value="{{ drink.title }}"/>
+                                <label for="price_1">Prix boisson standard</label>
+                                <input type="text" class="form-control" name="price_1" id="price_1" placeholder="Entrer le prix" value="{{ drink.price1 }}"/>
+                                <label for="price_2">Prix boisson grande</label>
+                                <input type="text" class="form-control" name="price_2" id="price_2" placeholder="Entrer le prix" value="{{ drink.price2 }}"/>
+                                <input type="hidden" name="id" value="{{ drink.id }}"/>
+                            </fieldset>
 
-                    <button type="submit" class="btn btn-success" value="true" name="updating">
+                            <button type="submit" class="btn btn-success" value="true" name="updating">
 
-                        <span class="glyphicon glyphicon-plus"></span>Mettre à jour
-                    </button>
-                </form>
+                                <span class="glyphicon glyphicon-plus"></span>Mettre à jour
+                            </button>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
+        {% if errors %}
+            {% for error in errors %}
+                <div class="error">
+                    <p>{{ error }}</p>
+                </div>
+            {% endfor %}
+        {% endif %}
     </div>
-    </div>
-    {% if errors %}
-        {%  for error in errors %}
-            <div class="error"><p>{{ error }}</p></div>
-        {% endfor %}
-    {% endif %}
-</div>
 {% endblock %}

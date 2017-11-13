@@ -1,42 +1,42 @@
 {% extends 'adminBase.html.twig' %}
 {% block body %}
-<div class="adminContent">
-    <div class="container">
-        <div class="row">
-            <div class="panel panel-default">
-                <div class="panel-body">
-    <div class="titles">
-        <h1 class="adminTitle">Planning</h1>
-    </div>
-    <hr class="yellow">
-    <h2 class="titleCenter">Jour à modifier</h2>
-    <br>
-    {% for location in locations %}
-        <p>
-            <hr>
-            <br>
-            <form action="?route=updateLocation" method="post">
-                <div class="row">
-                    <input type="hidden" name="id" id="id" value="{{ location.id }}">
-                    <span class="updateDays col-xs-offset-2 col-xs-4">{{ location.day }}</span>
-                    <button type="submit" class="btn btn-warning col-xs-offset-2 col-xs-2">
-                        <span class="glyphicon glyphicon-pencil">Modifier</span></button>
-                </div>
-                <br>
-                <div class="row">
-                    <div class="col-xs-offset-2 col-xs-4">
-                        {{ location.hour_am|raw }}
-                        {{ location.location_am|raw  }}
-                        {{ location.hour_pm|raw  }}
-                        {{ location.location_pm|raw }}
+    <div class="adminContent">
+        <div class="container">
+            <div class="row">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="titles">
+                            <h1 class="adminTitle">Planning</h1>
+                        </div>
+                        <hr class="yellow">
+                        <h2 class="titleCenter">Jour à modifier</h2>
+                        <br>
+                        {% for location in locations %}
+                            <p>
+                                <hr>
+                                <br>
+                                <form action="?route=updateLocation" method="post">
+                                    <div class="row">
+                                        <input type="hidden" name="id" id="id" value="{{ location.id }}">
+                                        <span class="updateDays col-xs-offset-2 col-xs-4">{{ location.day }}</span>
+                                        <button type="submit" class="btn btn-warning col-xs-offset-2 col-xs-2">
+                                            <span class="glyphicon glyphicon-pencil">Modifier</span></button>
+                                    </div>
+                                    <br>
+                                    <div class="row">
+                                        <div class="col-xs-offset-2 col-xs-4">
+                                            {{ location.hour_am|raw }}
+                                            {{ location.location_am|raw  }}
+                                            {{ location.hour_pm|raw  }}
+                                            {{ location.location_pm|raw }}
+                                        </div>
+                                    </div>
+                                </form>
+                            </p>
+                        {% endfor %}
                     </div>
                 </div>
-            </form>
-        </p>
-    {% endfor %}
-</div>
-</div>
-</div>
-</div>
-</div>
+            </div>
+        </div>
+    </div>
 {% endblock %}

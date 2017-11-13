@@ -2,26 +2,26 @@
 {% block title %}Accueil - Cataluña Pizz'{% endblock %}
 {% block body %}
 
-<div class="carouselFixed">
-    <div class="container-fluid">
-        <div class="row">
-            <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                    <li data-target="#myCarousel" data-slide-to="1"></li>
-                    <li data-target="#myCarousel" data-slide-to="2"></li>
-                </ol>
+    <div class="carouselFixed">
+        <div class="container-fluid">
+            <div class="row">
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                    </ol>
 
-                <div class="carousel-inner">
-                    <div class="item active item1">
-                        <img src={{ home.img1Carrousel }} alt="Photo de pizza">
-                    </div>
+                    <div class="carousel-inner">
+                        <div class="item active item1">
+                            <img src={{ home.img1Carrousel } }="}" alt="Photo de pizza">
+                        </div>
                         <div class="item item2">
-                            <img src={{ home.img2Carrousel }} alt="Photo de camion">
+                            <img src={{ home.img2Carrousel } }="}" alt="Photo de camion">
                         </div>
 
                         <div class="item item3">
-                            <img src={{ home.img3Carrousel }} alt="Photo de pizza sortie du four">
+                            <img src={{ home.img3Carrousel } }="}" alt="Photo de pizza sortie du four">
                         </div>
                     </div>
                 </div>
@@ -29,31 +29,38 @@
         </div>
     </div>
 
-<div class="baudi">
-    <div class="titleCenter">
-        <h1 class="titles"><span><img src="assets/images/chalkflag.png" class="flagChalk"></span> {{ home.aboutUsTitle }} <span><img src="assets/images/chalkflag.png" class="flagChalk"></span></h1>
-    </div>
-        <p class="aboutUs"> {{ home.aboutUs }}</p>
+    <div class="baudi">
         <div class="titleCenter">
-        <h1 class="titles"><span><img src="assets/images/chalkflag.png" class="flagChalk"></span> {{ home.blocNewsTitle }} <span><img src="assets/images/chalkflag.png" class="flagChalk"></span> </h1>
+            <h1 class="titles">
+                <span><img src="assets/images/chalkflag.png" class="flagChalk"></span>
+                {{ home.aboutUsTitle }}
+                <span><img src="assets/images/chalkflag.png" class="flagChalk"></span></h1>
         </div>
-    <section class="news">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="media">
-                    <div class="col-md-offset-1 col-md-5 img-news">
-                        <img class="media-object img-responsive" src={{ home.newsPicture }}
-                             alt="Image">
-                    </div>
-                    <div class="media-body">
-                        <div class="col-md-offset-2 col-md-8 bloc-news">
-                            <div class="media-heading news-title">{{ home.newsTitle }}</div>
-                            <div class="news-description">{{ home.news|raw}}</div>
+        <p class="aboutUs">
+            {{ home.aboutUs }}</p>
+        <div class="titleCenter">
+            <h1 class="titles">
+                <span><img src="assets/images/chalkflag.png" class="flagChalk"></span>
+                {{ home.blocNewsTitle }}
+                <span><img src="assets/images/chalkflag.png" class="flagChalk"></span>
+            </h1>
+        </div>
+        <section class="news">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="media">
+                        <div class="col-md-offset-1 col-md-5 img-news">
+                            <img class="media-object img-responsive" src={{ home.newsPicture } }="}" alt="Image">
+                        </div>
+                        <div class="media-body">
+                            <div class="col-md-offset-2 col-md-8 bloc-news">
+                                <div class="media-heading news-title">{{ home.newsTitle }}</div>
+                                <div class="news-description">{{ home.news|raw}}</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        </div>
-    </section>
+        </section>
 
     {% endblock %}

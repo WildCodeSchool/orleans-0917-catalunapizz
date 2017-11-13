@@ -1,39 +1,37 @@
 {% extends 'adminBase.html.twig' %}
 {% block body %}
-<div class="adminContent">
-    <div class="container">
-        <div class="row">
-        <div class="panel panel-default">
-            <div class="panel-body">
-                <form action="index.php?route=updateEvent" method="post">
-                    <h1 class="adminTitle">Mettre à jour un évènement</h1>
-                    <fieldset class="form-group">
-                        <label for="title">Titre</label>
-                        <input type="text" class="form-control" name="title" id="title"
-                               placeholder="Titre de l'évènement" value="{{ event.eventTitle }}"/>
-                        <label for="date">Date</label>
-                        <input type="text" class="form-control" name="date" id="date"
-                               placeholder="date de l'évènment" value="{{ event.date }}"/>
-                        <label for="description">Description</label>
-                        <textarea class="form-control" name="description" id="description"
-                                  placeholder="Description de l'évènement">{{ event.description }}</textarea>
-                        <label for="picture">Image</label>
-                        <input type="text" class="form-control" name="picture" id="picture"
-                               placeholder="Entrez l'url de l'image" value="{{ event.eventPicture }}"/>
-                    </fieldset>
-                    <input type="hidden" name="id" value="{{ event.id }}" />
-                    <button type="submit" class="btn btn-success" value="true" name="updating">
-                        <span class="glyphicon glyphicon-plus"></span>Mettre à jour
-                    </button>
-                </form>
+    <div class="adminContent">
+        <div class="container">
+            <div class="row">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <form action="index.php?route=updateEvent" method="post">
+                            <h1 class="adminTitle">Mettre à jour un évènement</h1>
+                            <fieldset class="form-group">
+                                <label for="title">Titre</label>
+                                <input type="text" class="form-control" name="title" id="title" placeholder="Titre de l'évènement" value="{{ event.eventTitle }}"/>
+                                <label for="date">Date</label>
+                                <input type="text" class="form-control" name="date" id="date" placeholder="date de l'évènment" value="{{ event.date }}"/>
+                                <label for="description">Description</label>
+                                <textarea class="form-control" name="description" id="description" placeholder="Description de l'évènement">{{ event.description }}</textarea>
+                                <label for="picture">Image</label>
+                                <input type="text" class="form-control" name="picture" id="picture" placeholder="Entrez l'url de l'image" value="{{ event.eventPicture }}"/>
+                            </fieldset>
+                            <input type="hidden" name="id" value="{{ event.id }}"/>
+                            <button type="submit" class="btn btn-success" value="true" name="updating">
+                                <span class="glyphicon glyphicon-plus"></span>Mettre à jour
+                            </button>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
+        {% if errors %}
+            {% for error in errors %}
+                <div class="error">
+                    <p>{{ error }}</p>
+                </div>
+            {% endfor %}
+        {% endif %}
     </div>
-    </div>
-    {% if errors %}
-        {%  for error in errors %}
-            <div class="error"><p>{{ error }}</p></div>
-        {% endfor %}
-    {% endif %}
-</div>
 {% endblock %}
