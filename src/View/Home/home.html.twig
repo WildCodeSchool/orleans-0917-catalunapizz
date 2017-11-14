@@ -1,6 +1,23 @@
 {% extends 'base.html.twig' %}
-{% block title %}Accueil - Cataluña Pizz'{% endblock %}
+{% block title %}Accueil-Cataluña Pizz'{% endblock %}
 {% block body %}
+
+<style>
+    .item1 {
+        background: url("{{ home.img1Carrousel }}") center no-repeat;
+        background-size: cover;
+    }
+
+    .item2 {
+        background: url("{{ home.img2Carrousel }}") center no-repeat;
+        background-size: cover;
+    }
+
+    .item3 {
+        background: url("{{ home.img3Carrousel }}") center top no-repeat;
+        background-size: cover;
+    }
+</style>
 
 <div class="carouselFixed">
     <div class="container-fluid">
@@ -13,15 +30,16 @@
                 </ol>
 
                 <div class="carousel-inner">
+
                     <div class="item active item1">
-                        <img src={{ home.img1Carrousel }} alt="Photo de pizza">
+                        <img src="{{ home.img1Carrousel }}" alt="Photo de pizza">
                     </div>
                         <div class="item item2">
-                            <img src={{ home.img2Carrousel }} alt="Photo de camion">
+                            <img src="{{ home.img2Carrousel }}" alt="Photo de camion">
                         </div>
 
                         <div class="item item3">
-                            <img src={{ home.img3Carrousel }} alt="Photo de pizza sortie du four">
+                            <img src="{{ home.img3Carrousel }}" alt="Photo de pizza sortie du four">
                         </div>
                     </div>
                 </div>
