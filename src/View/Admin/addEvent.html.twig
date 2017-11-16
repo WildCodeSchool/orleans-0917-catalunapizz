@@ -1,42 +1,42 @@
 {% extends 'adminBase.html.twig' %}
 {% block body %}
-
-    <div class="container">
-        <div class="row">
-            <div class="panel">
-                <div class="panel-body">
-                    <form action="index.php?route=addEvent" method="post">
-                        <h1 class="adminTitle">Événement</h1>
-                        <fieldset class="form-group">
-                            <legend>Ajouter un nouvel évènement</legend>
-                            <label for="title">Titre</label>
-                            <input type="text" class="form-control" name="title" id="title"
-                                   placeholder="Titre de l'évènement" value="{{ events.eventTitle }}"/>
-                            <label for="date">Date</label>
-                            <input type="text" class="form-control" name="date" id="date"
-                                      placeholder="date de l'évènment" value="{{ events.date }}"/>
-                            <label for="description">Description</label>
-                            <textarea class="form-control" name="description" id="description"
-                                      placeholder="Description de l'évènement">{{ events.description }}</textarea>
-                            <label for="picture">Image</label>
-                            <input type="text" class="form-control" name="picture" id="picture"
-                                   placeholder="Entrez l'url de l'image" value="{{ events.eventPicture }}"/>
-                        </fieldset>
-                        <button type="submit" class="btn btn-success">
-                            <span class="glyphicon glyphicon-plus"></span> Ajouter
-                        </button>
+    <div class="adminContent">
+        <div class="container">
+            <div class="row">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <form action="index.php?route=addEvent" method="post">
+                            <h1 class="adminTitle">Événement</h1>
+                            <hr class="yellow">
+                            <fieldset class="form-group">
+                                <legend>Ajouter un nouvel évènement</legend>
+                                <label for="title">Titre</label>
+                                <input type="text" class="form-control" name="title" id="title" placeholder="Titre de l'évènement" value="{{ events.eventTitle }}"/>
+                                <label for="date">Date</label>
+                                <input type="text" class="form-control" name="date" id="date" placeholder="date de l'évènment" value="{{ events.date }}"/>
+                                <label for="description">Description</label>
+                                <textarea class="form-control" name="description" id="description" placeholder="Description de l'évènement">{{ events.description }}</textarea>
+                                <label for="picture">Image</label>
+                                <input type="text" class="form-control" name="picture" id="picture" placeholder="Entrez l'url de l'image" value="{{ events.eventPicture }}"/>
+                            </fieldset>
+                            <button type="submit" class="btn btn-success">
+                                <span class="glyphicon glyphicon-plus"></span>
+                                Ajouter
+                            </button>
+                        </form>
+                    </div>
+                    <form method="get" action="">
+                        <input type="hidden" name="route" value="delEvent">
                     </form>
                 </div>
-                <form method="get" action="">
-                    <input type="hidden" name="route" value="delEvent">
-                </form>
             </div>
         </div>
+        {% if errors %}
+            {% for error in errors %}
+                <div class="error">
+                    <p>{{ error }}</p>
+                </div>
+            {% endfor %}
+        {% endif %}
     </div>
-    {% if errors %}
-        {%  for error in errors %}
-            <div class="error"><p>{{ error }}</p></div>
-        {% endfor %}
-    {% endif %}
-
 {% endblock %}

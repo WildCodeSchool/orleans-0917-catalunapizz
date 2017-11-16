@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>{% block title %}Cataluña Pizz'{% endblock %}</title>
+        <title>
+            {% block title %}Cataluña Pizz'{% endblock %}
+        </title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
@@ -12,7 +14,7 @@
     </head>
     <body>
         {% block navbar %}
-        {% include 'header.html.twig' %}
+            {% include 'header.html.twig' %}
         {% endblock %}
         {% block body %}{% endblock %}
 

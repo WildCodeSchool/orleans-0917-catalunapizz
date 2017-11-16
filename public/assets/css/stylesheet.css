@@ -93,16 +93,16 @@
     padding-bottom: 35px;
 }
 
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:focus, .navbar-inverse .navbar-nav > .open > a:hover {
+    color: black;
+    background-color: white;
+}
+
 @media only screen and (max-width:991px) {
     .navbar-brand {
         padding-top: 35px;
         font-size: 40px;
     }
-}
-
-hr {
-    height: 2px;
-    background-color: black;
 }
 
 .titleCenter {
@@ -116,6 +116,15 @@ hr {
     font-family: "ScribblerSerif", cursive;
     font-size: calc(30px + 6vw);
     color: white;
+}
+
+.yellow {
+    background: rgba(255, 194, 0);
+    height: 2px;
+}
+
+.panel-default {
+    border-color: rgb(213, 0, 19);
 }
 
 .aboutUs {
@@ -383,51 +392,23 @@ footer {
     margin-left: 6.5%;
 }
 
-.adminContent {
-    padding-top: 100px;
-}
-
-.adminBrand {
-    padding-top: 40px;
-    padding-left: 15px;
-}
-
 .adminbg {
-    height: calc(100vh - 100px);
+    height: 100vh;
     width: 100%;
-    background: url("../images/adminbg.JPG") center;
+    background: url("../images/adminbg.JPG") center top;
     background-size: cover;
-    margin-top: 100px;
-}
-
-.adminLinks {
-    font-family: serif;
-    font-size: 30px;
-    background: white;
 }
 
 .adminContent {
-    padding-top: 100px;
+    padding-top: 150px;
 }
 
 .adminTitle {
-        font-size: calc(20px + 4vw);
-        color: black;
-        font-family: "Dancing Script", cursive;
-        text-align: center;
-}
-
-.adminBrand {
-    padding-top: 40px;
-    padding-left: 15px;
-}
-
-.adminbg {
-    height: calc(100vh - 100px);
-    width: 100%;
-    background: url("../images/adminbg.JPG") center;
-    background-size: cover;
-    margin-top: 100px;
+    font-size: calc(20px + 4vw);
+    color: black;
+    font-family: "Dancing Script", cursive;
+    text-align: center;
+    margin-bottom: 50px;
 }
 
 .adminLinks {
@@ -435,7 +416,6 @@ footer {
     font-size: 30px;
     background: white;
 }
-
 
 .icon-bar {
     background: black;
@@ -466,11 +446,6 @@ footer {
 
 .truckDraw {
     display: none;
-}
-
-
-.panel-body {
-    margin-top: 100px;
 }
 
 .fields {
@@ -517,10 +492,6 @@ footer {
     .titles {
         text-align: center;
         margin-bottom: 10px;
-    }
-
-    .events {
-        padding-top: 100px;
     }
 
     .bloc-events {
@@ -626,11 +597,6 @@ footer {
         .navbar-inverse .navbar-collapse, .navbar-form {
             background-color: rgba(255, 255, 255, 1);
         }
-    }
-
-
-    .panel-body {
-        margin-top: 100px;
     }
 
     .fields {
