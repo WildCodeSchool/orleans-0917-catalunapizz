@@ -11,15 +11,16 @@ namespace Cataluna\Model;
 
 class UploadManager extends EntityManager
 {
-    public function addMenuFilePT($tmpName, $fileExtension, $fileName)
+    public function addMenuFilePT($tmpName, $fileExtension)
     {
         $uploadDir = __DIR__ . "/../../public/assets/images/upload/";
+        $fileName = uniqid('image');
         $uploadFile = $uploadDir . $fileName;
         move_uploaded_file($tmpName, "$uploadFile");
     }
 
-    public function delMenuFile($id)
+    public function delMenuFile($id, $dir)
     {
-        unlink($id);
+        unlink($dir . $id);
     }
 }

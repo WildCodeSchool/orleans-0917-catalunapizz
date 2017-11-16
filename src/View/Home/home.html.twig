@@ -23,11 +23,11 @@
                         <div class="item item3">
                             <img src={{ home.img3Carrousel }} alt="Photo de pizza sortie du four">
                         </div>
-                    </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
 <div class="baudi">
     <div class="titleCenter">
@@ -49,11 +49,16 @@
                         <div class="col-md-offset-2 col-md-8 bloc-news">
                             <div class="media-heading news-title">{{ home.newsTitle }}</div>
                             <div class="news-description">{{ home.news|raw}}</div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        </div>
     </section>
 
+    {% endblock %}
+
+    {% block footer %}
+        {{ parent() }}
+        </div>
     {% endblock %}

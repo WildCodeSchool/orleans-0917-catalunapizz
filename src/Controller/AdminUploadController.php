@@ -25,12 +25,13 @@ class AdminUploadController extends Controller
         if (!empty($_POST['submit1'])) {
             if (!empty($_FILES['fichier']['name'][0] != '')) {
                 for ($i = 0; $i < count($_FILES['fichier']['name']); $i++) {
-                    $tmpName = $_FILES['fichier']['tmp_name'][$i];
-                    $fileExtension = pathinfo($_FILES['fichier']['name'][$i]);
-                    $fileName = $_FILES['fichier']['name'][$i];
-                    if (in_array ($fileExtension['extension'], $extensions)){
-                        $uploadManager->addMenuFilePT($tmpName, $fileExtension, $fileName);
-                        header('Location:admin.php?route=delUpload');
+                    if ($_FILES['fichier']['size'][$i] < 2000000){
+                        $tmpName = $_FILES['fichier']['tmp_name'][$i];
+                        $fileExtension = pathinfo($_FILES['fichier']['name'][$i]);
+                        if (in_array($fileExtension['extension'], $extensions)) {
+                            $uploadManager->addMenuFilePT($tmpName, $fileExtension);
+                            header('Location:admin.php?route=delUpload');
+                        }
                     }
                 }
             }
@@ -43,13 +44,16 @@ class AdminUploadController extends Controller
 
     public function deleteUpload()
     {
+        $dir = __DIR__ . "/../../public/assets/images/upload/";
         $uploadManager = new UploadManager();
 
         if (!empty($_POST['delete'])) {
-            $id = __DIR__ . "/../../public/assets/images/upload/" . $_POST['idDelete'];
-            $uploadManager->delMenuFile($id);
-
+                $id = $_POST['idDelete'];
+                if (file_exists($dir . $id)){
+                $uploadManager->delMenuFile($id, $dir);
+            }
         }
+
         $files = [];
         $dir = __DIR__ . "/../../public/assets/images/upload/";
         if (!empty(scandir($dir))){
