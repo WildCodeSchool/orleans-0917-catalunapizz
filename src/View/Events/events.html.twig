@@ -1,43 +1,43 @@
 {% extends 'base.html.twig' %}
-{% block title %}Events-Cataluña Pizz'{% endblock %}
+{% block title %}Événements - Cataluña Pizz'{% endblock %}
 {% block body %}
     <div class="event-content">
-    <div class="titleCenter">
-        <h1 class="titles"><span><img src="assets/images/chalkflag.png" class="flagChalk"></span> Evenements <span>
-                <img src="assets/images/chalkflag.png" class="flagChalk"></span></h1>
-    </div>
-        <p class="event-contact">Si vous souhaitez organiser un évènement et avoir un camion de pizza à votre disposition,
-            n'hésitez pas à me contacter en remplissant  le formulaire de contact situé en bas de page.
+        <div class="titleCenter">
+            <h1 class="titles">
+                <span><img src="assets/images/chalkflag.png" class="flagChalk"></span>
+                Evenements
+                <span>
+                    <img src="assets/images/chalkflag.png" class="flagChalk"></span></h1>
+        </div>
+        <p class="event-contact">Si vous souhaitez organiser un évènement et avoir un camion de pizza à votre disposition, n'hésitez pas à me contacter en remplissant le formulaire de contact situé en bas de page.
         </p>
-        <p class="arrow_down">
-            <a href="#mail-form"><button type="button" class="btn btn-danger">
-                    <span class="glyphicon glyphicon-menu-down"></span>
-                </button>
+        <div class="titleCenter">
+            <a href="#mail-form">
+                <img src="assets/images/chalkarrow.png">
             </a>
-        </p>
+        </div>
         {% for event in events %}
-        <section class="events">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="media">
-                        {% if events[loop.index0].eventPicture == true %}
-                        <div class="col-md-offset-1 col-md-5 img-events">
-                            <img class="media-object img-responsive" src={{ events[loop.index0].eventPicture }}
-                            alt="Image">
-                        </div>
-                        {% endif %}
-                        <div class="media-body">
-                            <div class="col-md-offset-2 col-md-8 bloc-events">
-                                <div class="media-heading event-title">{{ events[loop.index0].eventTitle }}<br/>
-                                    <span class="event-date">{{ events[loop.index0].date }}</span>
+            <section class="events">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="media">
+                            {% if events[loop.index0].eventPicture == true %}
+                                <div class="col-md-offset-1 col-md-5 img-events">
+                                    <img class="media-object img-responsive" src={{ events[loop.index0].eventPicture } }="}" alt="Image">
                                 </div>
-                                <div class="event-description">{{ events[loop.index0].description|raw }}</div>
+                            {% endif %}
+                            <div class="media-body">
+                                <div class="col-md-offset-2 col-md-8 bloc-events">
+                                    <div class="media-heading event-title">{{ events[loop.index0].eventTitle }}<br/>
+                                        <span class="event-date">{{ events[loop.index0].date }}</span>
+                                    </div>
+                                    <div class="event-description">{{ events[loop.index0].description|raw }}</div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
         {% endfor %}
         <div class="container" id="mail-form">
             <div class="row>">
@@ -69,7 +69,8 @@
                             </fieldset>
 
                             <button type="submit" class="btn btn-success">
-                                <span class="glyphicon glyphicon-envelope"></span> Envoyer
+                                <span class="glyphicon glyphicon-envelope"></span>
+                                Envoyer
                             </button>
                         </form>
                     </div>

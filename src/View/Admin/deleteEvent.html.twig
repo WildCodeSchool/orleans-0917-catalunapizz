@@ -1,39 +1,51 @@
 {% extends 'adminBase.html.twig' %}
-{% block title %}Admin-Cataluña Pizz'{% endblock %}
 {% block body %}
-    <div class="admin-event-content">
-        {% for event in events %}
-            <section class="events">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="media">
-                            {% if events[loop.index0].eventPicture == true %}
-                                <div class="col-md-offset-1 col-md-5 img-events">
-                                    <img class="media-object img-responsive" src={{ events[loop.index0].eventPicture }}
-                                    alt="Image">
+    <div class="adminContent">
+        <div class="container">
+            <div class="row">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <h1 class="adminTitle">Modifier/supprimer un événement</h1>
+                        {% for event in events %}
+                            <hr class="yellow">
+                            <section class="events">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="media">
+                                            {% if events[loop.index0].eventPicture == true %}
+                                                <div class="col-md-offset-1 col-md-5 img-events">
+                                                    <img class="media-object img-responsive" src={{ events[loop.index0].eventPicture } }="}" alt="Image">
+                                                </div>
+                                            {% endif %}
+                                            <div class="media-body">
+                                                <div class="col-md-offset-2 col-md-8 bloc-events">
+                                                    <h1 class="media-heading admin-event-title">{{ events[loop.index0].eventTitle }}
+                                                    </h1>
+                                                    <p class="admin-event-date">{{ events[loop.index0].date }}</p>
+                                                    <p class="admin-event-description">{{ events[loop.index0].description|raw }}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <form method="post" action="admin.php?route=updateEvent" class="col-md-offset-4 col-md-4 col-md-offset-4">
+                                            <input type="hidden" name="id" value="{{ events[loop.index0].id }}">
+                                            <button type="submit" class="btn btn-success btn-modif">
+                                                <span class="glyphicon glyphicon-refresh"></span>Modifier</button>
+                                        </form>
+                                        <form method="post" action="admin.php?route=delEvent" class="col-md-offset-4 col-md-4 col-md-offset-4">
+                                            <input type="hidden" name="id" value="{{ events[loop.index0].id }}">
+                                            <button type="submit" class="btn btn-danger btn-modif">
+                                                <span class="glyphicon glyphicon-trash"></span>Supprimer</button>
+                                        </form>
+                                    </div>
                                 </div>
-                            {% endif %}
-                            <div class="media-body">
-                                <div class="col-md-offset-2 col-md-8 bloc-events">
-                                    <h1 class="media-heading admin-event-title">{{ events[loop.index0].eventTitle }}
-                                    </h1>
-                                    <p class="admin-event-date">{{ events[loop.index0].date }}</p>
-                                    <p class="admin-event-description">{{ events[loop.index0].description|raw }}</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <form method="post" action="admin.php?route=updateEvent" class="col-md-offset-4 col-md-4 col-md-offset-4">
-                            <input type="hidden" name="id" value="{{ events[loop.index0].id }}">
-                            <button type="submit" class="btn btn-success btn-modif"><span class="glyphicon glyphicon-refresh"></span>Modifier</button>
-                        </form>
-                        <form method="post" action="admin.php?route=delEvent" class="col-md-offset-4 col-md-4 col-md-offset-4">
-                            <input type="hidden" name="id" value="{{ events[loop.index0].id }}">
-                            <button type="submit" class="btn btn-danger btn-modif"><span class="glyphicon glyphicon-trash"></span>Supprimer</button>
-                        </form>
+                            </section>
+
+                        {% endfor %}
                     </div>
                 </div>
-            </section>
-        {% endfor %}
+            </div>
+        </div>
+    </div>
 {% endblock %}

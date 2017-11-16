@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>{% block title %}Cataluña Pizz'{% endblock %}</title>
+        <title>
+            {% block title %}Cataluña Pizz'{% endblock %}
+        </title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="assets/css/stylesheet.css">
         <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.8/summernote.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond|Dancing+Script|Playfair+Display|Handlee" rel="stylesheet">
+        <link rel="icon" href="assets/images/favicon.png" type="image/gif" sizes="16x16">
     </head>
     <body>
         {% block navbar %}
-        {% include 'header.html.twig' %}
+            {% include 'header.html.twig' %}
         {% endblock %}
         {% block body %}
         {% endblock %}
