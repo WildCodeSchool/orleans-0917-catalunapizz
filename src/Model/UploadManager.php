@@ -14,13 +14,15 @@ class UploadManager extends EntityManager
     public function addMenuFilePT($tmpName, $fileExtension)
     {
         $uploadDir = __DIR__ . "/../../public/assets/images/upload/";
-        $fileName = uniqid('image');
+        $fileName = uniqid();
         $uploadFile = $uploadDir . $fileName;
         move_uploaded_file($tmpName, "$uploadFile");
     }
 
-    public function delMenuFile($id, $dir)
+    public function delMenuFile($name, $dir)
     {
-        unlink($dir . $id);
+        if (file_exists($dir . $name)){
+            unlink($dir . $name);
+        }
     }
 }

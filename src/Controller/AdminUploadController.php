@@ -13,6 +13,8 @@ use Cataluna\Model\UploadManager;
 
 class AdminUploadController extends Controller
 {
+    const MAX_UPLOAD_SIZE = 2000000;
+
     public function addUploadPT()
     {
         $extensions = [
@@ -25,7 +27,7 @@ class AdminUploadController extends Controller
         if (!empty($_POST['submit1'])) {
             if (!empty($_FILES['fichier']['name'][0] != '')) {
                 for ($i = 0; $i < count($_FILES['fichier']['name']); $i++) {
-                    if ($_FILES['fichier']['size'][$i] < 2000000){
+                    if ($_FILES['fichier']['size'][$i] < self::MAX_UPLOAD_SIZE){
                         $tmpName = $_FILES['fichier']['tmp_name'][$i];
                         $fileExtension = pathinfo($_FILES['fichier']['name'][$i]);
                         if (in_array($fileExtension['extension'], $extensions)) {
@@ -48,10 +50,8 @@ class AdminUploadController extends Controller
         $uploadManager = new UploadManager();
 
         if (!empty($_POST['delete'])) {
-                $id = $_POST['idDelete'];
-                if (file_exists($dir . $id)){
-                $uploadManager->delMenuFile($id, $dir);
-            }
+                $name = $_POST['idDelete'];
+                $uploadManager->delMenuFile($name, $dir);
         }
 
         $files = [];
