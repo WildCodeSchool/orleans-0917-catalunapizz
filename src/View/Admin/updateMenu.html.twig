@@ -1,50 +1,48 @@
 {% extends 'adminBase.html.twig' %}
-{% block title %}Admin-Cataluña Pizz'{% endblock %}
 {% block body %}
-<div class="container">
-    <div class="row>">
-        <div class="panel panel-default">
-            <div class="panel-body">
-                <form action="admin.php?route=updatePizza" method="post">
-                    <h1 class="adminTitle">Mettre à jour une pizza</h1>
-                    <fieldset class="form-group">
-                        <legend>Modification</legend>
-                        <label for="title">Pizza</label>
-                        <input type="text" class="form-control" name="title" id="title"
-                               placeholder="Entrer le nom de la pizza" value="{{ pizza.title }}"/>
-                        <label for="ingredients">Ingrédients</label>
-                        <textarea class="form-control" name="ingredients" id="ingredients"
-                               placeholder="Entrer les ingrédients" value="{{ pizza.ingredients }}">{{ pizza.ingredients }}</textarea>
-                        <label for="price_1">Prix taille standard</label>
-                        <input type="text" class="form-control" name="price_1" id="price_1"
-                               placeholder="Entrer le prix" value="{{ pizza.price1 }}"/>
-                        <label for="price_2">Prix grande standard</label>
-                        <input type="text" class="form-control" name="price_2" id="price_2"
-                               placeholder="Entrer le prix" value="{{ pizza.price2 }}"/>
-                        <input type="hidden" name="id" value="{{ pizza.id }}" />
-                    </fieldset>
+    <div class="container">
+        <div class="row>">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <form action="admin.php?route=updatePizza" method="post">
+                        <h1 class="adminTitle">Mettre à jour une pizza</h1>
+                        <fieldset class="form-group">
+                            <legend>Modification</legend>
+                            <label for="title">Pizza</label>
+                            <input type="text" class="form-control" name="title" id="title" placeholder="Entrer le nom de la pizza" value="{{ pizza.title }}"/>
+                            <label for="ingredients">Ingrédients</label>
+                            <textarea class="form-control" name="ingredients" id="ingredients" placeholder="Entrer les ingrédients" value="{{ pizza.ingredients }}">{{ pizza.ingredients }}</textarea>
+                            <label for="price_1">Prix taille standard</label>
+                            <input type="text" class="form-control" name="price_1" id="price_1" placeholder="Entrer le prix" value="{{ pizza.price1 }}"/>
+                            <label for="price_2">Prix grande standard</label>
+                            <input type="text" class="form-control" name="price_2" id="price_2" placeholder="Entrer le prix" value="{{ pizza.price2 }}"/>
+                            <input type="hidden" name="id" value="{{ pizza.id }}"/>
+                        </fieldset>
 
-                    <fieldset class="form-group">
-                        <label for="category">Category</label>
-                        <select name="category" id="category" class="form-control">
-                            {% for category in categories %}
-                                <option {{ pizza.categoryId == category.id ? 'selected' }} value="{{ category.id }}">{{ category.name }}</option>
-                            {% endfor %}
-                        </select>
-                    </fieldset>
+                        <fieldset class="form-group">
+                            <label for="category">Category</label>
+                            <select name="category" id="category" class="form-control">
+                                {% for category in categories %}
+                                    <option {{ pizza.categoryId == category.id ? 'selected' }} value="{{ category.id }}">{{ category.name }}</option>
+                                {% endfor %}
+                            </select>
+                        </fieldset>
 
-                    <button type="submit" class="btn btn-success" value="true" name="updating">
+                        <button type="submit" class="btn btn-success" value="true" name="updating">
 
-                        <span class="glyphicon glyphicon-plus"></span> Mettre à jour
-                    </button>
-                </form>
+                            <span class="glyphicon glyphicon-plus"></span>
+                            Mettre à jour
+                        </button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
-</div>
     {% if errors %}
-        {%  for error in errors %}
-            <div class="error"><p>{{ error }}</p></div>
+        {% for error in errors %}
+            <div class="error">
+                <p>{{ error }}</p>
+            </div>
         {% endfor %}
     {% endif %}
 {% endblock %}

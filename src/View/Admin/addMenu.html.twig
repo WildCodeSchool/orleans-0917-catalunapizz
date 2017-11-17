@@ -1,54 +1,52 @@
-
 {% extends 'adminBase.html.twig' %}
-{% block title %}Admin-Cataluña Pizz'{% endblock %}
 {% block body %}
+    <div class="adminContent">
+        <div class="container">
+            <div class="row">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <form action="admin.php?route=addPizza" method="post">
+                            <h1 class="adminTitle">Ajouter un nouvel article</h1>
+                            <hr class="yellow">
+                            <fieldset class="form-group">
+                                <legend>Création</legend>
+                                <label for="title">Article</label>
+                                <input type="text" class="form-control" name="title" id="title" placeholder="Entrer le nom de la pizza" value="{{ pizza.title }}"/>
+                                <label for="ingredients">Ingrédients</label>
+                                <textarea class="form-control" name="ingredients" id="ingredients" placeholder="Entrer les ingrédients" value="{{ pizza.ingredients }}"></textarea>
+                                <label for="price_1">Prix taille standard</label>
+                                <input type="text" class="form-control" name="price_1" id="price_1" placeholder="Entrer le prix" value="{{ pizza.price_1 }}"/>
+                                <label for="price_2">Prix grande taille</label>
+                                <input type="text" class="form-control" name="price_2" id="price_2" placeholder="Entrer le prix" value="{{ pizza.price_2 }}"/>
+                            </fieldset>
 
-<div class="container">
-    <div class="row">
-        <div class="panel panel-default">
-            <div class="panel-body">
-                <form action="admin.php?route=addPizza" method="post">
-                    <h1 class="adminTitle">Ajouter un nouvel article</h1>
-                    <fieldset class="form-group">
-                        <legend>Création</legend>
-                        <label for="title">Article</label>
-                        <input type="text" class="form-control" name="title" id="title"
-                               placeholder="Entrer le nom de la pizza" value="{{ pizza.title }}"/>
-                        <label for="ingredients">Ingrédients</label>
-                        <textarea class="form-control" name="ingredients" id="ingredients"
-                               placeholder="Entrer les ingrédients" value="{{ pizza.ingredients }}"></textarea>
-                        <label for="price_1">Prix taille standard</label>
-                        <input type="text" class="form-control" name="price_1" id="price_1"
-                               placeholder="Entrer le prix" value="{{ pizza.price_1 }}"/>
-                        <label for="price_2">Prix grande taille</label>
-                        <input type="text" class="form-control" name="price_2" id="price_2"
-                               placeholder="Entrer le prix" value="{{ pizza.price_2 }}"/>
-                    </fieldset>
+                            <fieldset class="form-group">
+                                <label for="category">Category</label>
+                                <select name="category" id="category" class="form-control">
+                                    {% for category in categories %}
+                                        <option {{ pizza.category_id == category.id ? 'selected' }} value="{{ category.id }}">{{ category.name }}</option>
+                                    {% endfor %}
+                                </select>
+                            </fieldset>
 
-                    <fieldset class="form-group">
-                        <label for="category">Category</label>
-                        <select name="category" id="category" class="form-control">
-                            {% for category in categories %}
-                                <option {{ pizza.category_id == category.id ? 'selected' }} value="{{ category.id }}">{{ category.name }}</option>
-                            {% endfor %}
-                        </select>
-                    </fieldset>
+                            <button type="submit" class="btn btn-success">
 
-                    <button type="submit" class="btn btn-success">
-
-                        <span class="glyphicon glyphicon-plus"></span>Ajouter pizza
-                    </button>
-                </form>
+                                <span class="glyphicon glyphicon-plus"></span>Ajouter pizza
+                            </button>
+                        </form>
+                    </div>
+                    <form method="get" action="">
+                        <input type="hidden" name="route" value="delPizza">
+                    </form>
+                </div>
             </div>
-            <form method="get" action="">
-                <input type="hidden" name="route" value="delPizza">
-            </form>
         </div>
+        {% if errors %}
+            {% for error in errors %}
+                <div class="error">
+                    <p>{{ error }}</p>
+                </div>
+            {% endfor %}
+        {% endif %}
     </div>
-</div>
-    {% if errors %}
-        {%  for error in errors %}
-            <div class="error"><p>{{ error }}</p></div>
-        {% endfor %}
-    {% endif %}
 {% endblock %}
