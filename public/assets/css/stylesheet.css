@@ -5,7 +5,6 @@
     position: absolute;
     background: url("../images/chalkboard.jpg");
     background-size: contain;
-    z-index: 1;
 }
 
 .center {
@@ -603,5 +602,6 @@ footer {
         margin-top: 10px;
         margin-bottom: 20px;
     }
+
 
 

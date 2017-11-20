@@ -1,0 +1,23 @@
+{% extends 'adminBase.html.twig' %}
+{% block title %}Admin-Cataluña Pizz'{% endblock %}
+{% block body %}
+    <div class="adminContent">
+    <div class="well">
+        <h3 style="padding-top: 100px">Envoyer un fichier image :</h3>
+        <label for="Pizza tomate">Pizza tomate</label>
+        <form action="admin.php?route=upload" method="post" enctype="multipart/form-data">
+            <input type="file" multiple="multiple" name="fichier[]"/><br/>
+            <p>Uniquement les images au format png, jpg et jpeg sont acceptées.<br/>
+                Taille maximum des fichiers : 2 Mo</p>
+            <button class="btn btn-success btn-xs" name="submit1" type="submit" value="Envoyer">Envoyer</button>
+        </form><hr>
+        <form action="admin.php?route=delUpload" method="POST">
+                {% for file in files %}
+                    <img src="assets/images/upload/{{ file }}">
+                    <input type="hidden" name="idDelete" value="{{ file }}" />
+                    <input type="submit" name="delete" class="btn btn-danger btnn btn-xs" role="button" value="Supprimer">
+                {% endfor %}
+        </form>
+    </div>
+    </div>
+{% endblock %}

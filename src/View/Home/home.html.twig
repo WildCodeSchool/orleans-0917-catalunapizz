@@ -41,11 +41,11 @@
                         <div class="item item3">
                             <img src="{{ home.img3Carrousel }}" alt="Photo de pizza sortie du four">
                         </div>
-                    </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
     <div class="baudi">
         <div class="titleCenter">
@@ -54,6 +54,8 @@
                 {{ home.aboutUsTitle }}
                 <span><img src="assets/images/chalkflag.png" class="flagChalk"></span></h1>
         </div>
+
+   
         <p class="aboutUs">
             {{ home.aboutUs }}</p>
         <div class="titleCenter">
@@ -68,7 +70,7 @@
                 <div class="row">
                     <div class="media">
                         <div class="col-md-offset-1 col-md-5 img-news">
-                            <img class="media-object img-responsive" src={{ home.newsPicture } }="}" alt="Image">
+                            <img class="media-object img-responsive" src={{ home.newsPicture }} alt="Image">
                         </div>
                         <div class="media-body">
                             <div class="col-md-offset-2 col-md-8 bloc-news">
@@ -79,6 +81,11 @@
                     </div>
                 </div>
             </div>
-        </section>
+    </section>
 
+    {% endblock %}
+
+    {% block footer %}
+        {{ parent() }}
+        </div>
     {% endblock %}
