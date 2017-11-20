@@ -6,6 +6,7 @@ use Cataluna\Controller\AdminHomeController;
 use Cataluna\Controller\UpdateLocationController;
 use Cataluna\Controller\AdminEventsController;
 use Cataluna\Controller\AdminDrinkController;
+use Cataluna\Controller\AdminUploadController;
 
 
 require '../vendor/autoload.php';
@@ -65,6 +66,14 @@ if (!empty($_GET['route'])) {
     elseif ($_GET['route'] === 'updateEvent') {
         $controller = new AdminEventsController();
         echo $controller->updateAction();
+    }
+    elseif ($_GET['route'] === 'upload') {
+        $controller = new AdminUploadController();
+        echo $controller->addUploadPT();
+    }
+    elseif ($_GET['route'] === 'delUpload') {
+        $controller = new AdminUploadController();
+        echo $controller->deleteUpload();
     }
 
 } else {
