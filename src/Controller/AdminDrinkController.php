@@ -101,7 +101,7 @@ class AdminDrinkController extends Controller
             // si pas d'erreur, insert en bdd
             if (empty($errors)) {
                 $drinkManager->update($drink);
-                header('Location:admin.php?route=carte');
+                header('Location:admin.php?route=delDrink');
             }
         }
 
