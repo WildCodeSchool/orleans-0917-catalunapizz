@@ -13,12 +13,13 @@ use Cataluna\Model\UploadManager;
 
 class AdminUploadController extends Controller
 {
-    const MAX_UPLOAD_SIZE = 2000000;
+    const MAX_UPLOAD_SIZE = 8000000;
 
     public function addUploadPT()
     {
         $extensions = [
             'jpg',
+            'JPG',
             'png',
             'jpeg',
         ];
@@ -31,7 +32,7 @@ class AdminUploadController extends Controller
                         $tmpName = $_FILES['fichier']['tmp_name'][$i];
                         $fileExtension = pathinfo($_FILES['fichier']['name'][$i]);
                         if (in_array($fileExtension['extension'], $extensions)) {
-                            $uploadManager->addMenuFilePT($tmpName, $fileExtension);
+                            $uploadManager->addMenuFilePT($tmpName, $fileExtension, $_FILES['fichier']['name'][$i]);
                             header('Location:admin.php?route=delUpload');
                         }
                     }
