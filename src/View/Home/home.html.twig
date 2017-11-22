@@ -50,9 +50,12 @@
     <div class="baudi">
         <div class="titleCenter">
             <h1 class="titles">
-                <span><img src="assets/images/chalkflag.png" class="flagChalk"></span>
+                <span class="hidden-xs"><img src="assets/images/chalkflag.png" class="flagChalk"></span>
                 {{ home.aboutUsTitle }}
-                <span><img src="assets/images/chalkflag.png" class="flagChalk"></span></h1>
+                <span class="hidden-xs"><img src="assets/images/chalkflag.png" class="flagChalk"></span></h1>
+            <div class="center hidden-sm hidden-md hidden-lg">
+                <img src="assets/images/chalkflag.png" class="flagChalk">
+            </div>
         </div>
 
    
@@ -60,17 +63,20 @@
             {{ home.aboutUs }}</p>
         <div class="titleCenter">
             <h1 class="titles">
-                <span><img src="assets/images/chalkflag.png" class="flagChalk"></span>
+                <span class="hidden-xs"><img src="assets/images/chalkflag.png" class="flagChalk"></span>
                 {{ home.blocNewsTitle }}
-                <span><img src="assets/images/chalkflag.png" class="flagChalk"></span>
+                <span class="hidden-xs"><img src="assets/images/chalkflag.png" class="flagChalk"></span>
             </h1>
+            <div class="center hidden-sm hidden-md hidden-lg">
+                <img src="assets/images/chalkflag.png" class="flagChalk">
+            </div>
         </div>
         <section class="news">
             <div class="container-fluid">
                 <div class="row">
                     <div class="media">
                         <div class="col-md-offset-1 col-md-5 img-news">
-                            <img class="media-object img-responsive" src={{ home.newsPicture }} alt="Image">
+                            <img class="media-object img-responsive" src="{{ home.newsPicture }}" alt="Image">
                         </div>
                         <div class="media-body">
                             <div class="col-md-offset-2 col-md-8 bloc-news">
