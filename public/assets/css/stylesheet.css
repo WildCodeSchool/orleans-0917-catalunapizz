@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Indie+Flower');
 @import url('https://fonts.googleapis.com/css?family=Cabin+Sketch');
+
+@font-face {
+   font-family: GrutchShaded;
+   src: url("../fonts/GrutchShaded.ttf");
+}
+
 .baudi {
     margin-top: 100vh;
     position: absolute;
@@ -107,14 +113,14 @@ hr {
 
 .titleCenter {
     text-align: center;
-    margin-top: 70px;
-    margin-bottom: 70px;
+    margin-top: calc(10px + 1.5vh);
+    margin-bottom: calc(10px + 1.5vh);
 }
 
 .titles {
     display: inline;
-    font-family: "ScribblerSerif", cursive;
-    font-size: calc(30px + 6vw);
+    font-family: GrutchShaded, cursive;
+    font-size: calc(20px + 6vw);
     color: white;
 }
 
@@ -294,6 +300,10 @@ footer {
     padding-top: 100px;
 }
 
+.paddingul {
+    padding-left: 0;
+}
+
 .carte {
     color: white;
         background-image: url("../images/chalkboard2.jpg");
@@ -334,13 +344,15 @@ footer {
 }
 
 .category_title {
-    font-family: "ScribblerSerif", cursive;
-    font-size: calc(60px + 1vw);
+    font-family: GrutchShaded, cursive;
+    font-size: calc(30px + 1vw);
     background: url("../images/chalkbg2.png");
     background-size: 100% 100%;
     color: rgb(213, 0, 19);
     text-align: center;
-
+    line-height: 0.75;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 .pizza_title {
@@ -620,6 +632,11 @@ footer {
             text-align: center;
             margin-bottom: 10px;
         }
+
+        .category_title {
+            background: none;
+            color: white;
+        }
     }
 
     @media only screen and (max-width: 767px) {
@@ -637,5 +654,3 @@ footer {
         margin-top: 10px;
         margin-bottom: 20px;
     }
-
-
