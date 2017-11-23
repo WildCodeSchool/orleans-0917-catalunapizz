@@ -5,7 +5,7 @@
             <div class="row">
                 <div class="panel panel-default">
                     <div class="panel-body">
-                        <form action="index.php?route=updateEvent" method="post">
+                        <form action="admin.php?route=updateEvent" method="post" enctype="multipart/form-data">
                             <h1 class="adminTitle">Mettre à jour un évènement</h1>
                             <fieldset class="form-group">
                                 <label for="title">Titre</label>
@@ -15,7 +15,8 @@
                                 <label for="description">Description</label>
                                 <textarea class="form-control" name="description" id="description" placeholder="Description de l'évènement">{{ event.description }}</textarea>
                                 <label for="picture">Image</label>
-                                <input type="text" class="form-control" name="picture" id="picture" placeholder="Entrez l'url de l'image" value="{{ event.eventPicture }}"/>
+                                <input type="file" class="form-group" name="picture" id="picture" placeholder="Entrez l'url de l'image" value="{{ event.eventPicture }}"/>
+                                <img class="little-img" src="assets/images/upload/{{ event.eventPicture }}" alt="image evenement" />
                             </fieldset>
                             <input type="hidden" name="id" value="{{ event.id }}"/>
                             <button type="submit" class="btn btn-success" value="true" name="updating">

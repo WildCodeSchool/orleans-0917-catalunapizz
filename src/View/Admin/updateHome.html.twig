@@ -12,20 +12,29 @@
                                 {% endfor %}
                             </ul>
                         {% endif %}
-                        <form action="admin.php?route=updateHome" method="post">
+                        <form action="admin.php?route=updateHome" method="post" enctype="multipart/form-data">
                             <h1 class="adminTitle">Mettre à jour ma page d'Accueil</h1>
                             <hr class="yellow">
                             <fieldset class="form-group">
                                 <legend>Rentrer les modifications à apporter</legend>
+                                <div class="form-group">
+                                <label for="img1_carrousel">Image 1 du carrousel</label>
+                                <input type="file" class="form-group" name="img1_carrousel" id="img1_carrousel" value="{{ aboutUs.img1Carrousel }}"/>
+                                <img class="little-img" src="assets/images/upload/{{ aboutUs.img1Carrousel }}" alt="image carrousel" />
+                                </div>
 
-                                <label for="image 1 carrousel">Image 1 du carrousel</label>
-                                <input class="form-control" name="img1_carrousel" id="img1_carrousel" value="{{ aboutUs.img1Carrousel }}"/>
+                                <div class="form-group">
+                                <label for="img2_carrousel">Image 2 du carrousel</label>
+                                <input type="file" class="form-group" name="img2_carrousel" id="img2_carrousel" value="{{ aboutUs.img2Carrousel }}"/>
+                                <img class="little-img" src="assets/images/upload/{{ aboutUs.img2Carrousel }}" alt="image carrousel" />
+                                </div>
 
-                                <label for="image 2 carrousel">Image 2 du carrousel</label>
-                                <input class="form-control" name="img2_carrousel" id="img2_carrousel" value="{{ aboutUs.img2Carrousel }}"/>
 
-                                <label for="image 3 carrousel">Image 3 du carrousel</label>
-                                <input class="form-control" name="img3_carrousel" id="img3_carrousel" value="{{ aboutUs.img3Carrousel }}"/>
+                                <div class="form-group">
+                                <label for="img3_carrousel">Image 3 du carrousel</label>
+                                <input type="file" class="form-group" name="img3_carrousel" id="img3_carrousel" value="{{ aboutUs.img3Carrousel }}"/>
+                                <img class="little-img" src="assets/images/upload/{{ aboutUs.img3Carrousel }}" alt="image carrousel" />
+                                </div>
 
                                 <label for="titre présentation">Titre de la présentation</label>
                                 <input class="form-control" name="about_us_title" id="about_us_title" value="{{ aboutUs.AboutUsTitle }}"/>
@@ -43,7 +52,7 @@
                                 <textarea class="form-control summernote" name="news">{{ aboutUs.News }}</textarea>
 
                                 <label for="image nouveauté">Image de la nouveauté</label>
-                                <input type="text" class="form-control" name="news_picture" id="news_picture" value="{{ aboutUs.NewsPicture }}"/>
+                                <input type="file" class="form-control" name="news_picture" id="news_picture" value="{{ aboutUs.NewsPicture }}"/>
 
                                 <label for="mail">Mail</label>
                                 <input type="text" class="form-control" name="mail" id="mail" value="{{ aboutUs.Mail }}"/>
@@ -53,10 +62,11 @@
 
                             </fieldset>
 
-                            <button type="submit" class="btn btn-success">
+                           <a href="index.php" target="_blank"><button type="submit" class="btn btn-success">
 
                                 <span class="glyphicon glyphicon-plus"></span>Mise à jour
                             </button>
+                           </a>
                         </form>
                     </div>
                 </div>
