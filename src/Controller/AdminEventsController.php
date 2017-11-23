@@ -5,6 +5,7 @@ namespace Cataluna\Controller;
 
 use Cataluna\Model\Events;
 use Cataluna\Model\EventsManager;
+use Cataluna\Model\UploadManager;
 
 
 class AdminEventsController extends Controller
@@ -20,11 +21,7 @@ class AdminEventsController extends Controller
         $event = new Events();
 
         if (!empty($_POST)) {
-            // traitement des erreurs éventuelles
-            $event->setEventTitle($_POST['title']);
-            $event->setDate($_POST['date']);
-            $event->setDescription($_POST['description']);
-            $event->setEventPicture($_POST['picture']);
+
 
 
             if (empty($_POST['title'])) {
@@ -39,19 +36,29 @@ class AdminEventsController extends Controller
                 $errors[] = 'Remplissez le champs Description !';
             }
 
-            if (empty($_POST['picture'])) {
-                $errors[] = 'Remplissez le champs Image !';
+            $uploadManager = new UploadManager();
+
+            if (!empty($_FILES['picture']['name'])) {
+                $picture = $uploadManager->tryUpload($_FILES['picture']);
+                if (!$picture) {
+                    $errors[] = $uploadManager->getErrorMessage();
+                } else {
+                    $event->setEventPicture($picture);
+                }
             }
 
             // si pas d'erreur, insert en bdd
             if (empty($errors)) {
+
+                // traitement des erreurs éventuelles
+                $event->setEventTitle($_POST['title']);
+                $event->setDate($_POST['date']);
+                $event->setDescription($_POST['description']);
+
                 $eventsManager = new EventsManager();
                 $eventsManager->insert($event);
-
-
             }
         }
-
 
         return $this->twig->render('Admin/addEvent.html.twig', [
             'errors' => $errors,
@@ -72,6 +79,9 @@ class AdminEventsController extends Controller
         if (!empty($_POST)){
 
             $eventManager = new EventsManager();
+            $event = $eventManager->find($_POST['id']);
+            $uploadManager = new UploadManager();
+            $uploadManager->deleteImage($event->getEventPicture());
             $eventManager->delete($_POST['id']);
 
             header('Location:index.php?route=evenements');
@@ -93,11 +103,6 @@ class AdminEventsController extends Controller
         $event = $eventManager->find($_POST['id']);
         if (!empty($_POST['updating'])) {
             // traitement des erreurs éventuelles
-            $event->setEventTitle($_POST['title']);
-            $event->setDate($_POST['date']);
-            $event->setDescription($_POST['description']);
-            $event->setEventPicture($_POST['picture']);
-
 
             if (empty($_POST['title'])) {
                 $errors[] = 'Remplissez le champs Titre !';
@@ -111,18 +116,32 @@ class AdminEventsController extends Controller
                 $errors[] = 'Remplissez le champs Description !';
             }
 
-            if (empty($_POST['picture'])) {
-                $errors[] = 'Remplissez le champs Image !';
+            $uploadManager = new UploadManager();
+            $picture = '';
+            if (!empty($_FILES['picture']['name'])) {
+                $picture = $uploadManager->tryUpload($_FILES['picture']);
+                if (!$picture) {
+                    $errors[] = $uploadManager->getErrorMessage();
+                }
             }
 
             // si pas d'erreur, insert en bdd
             if (empty($errors)) {
+                $event->setEventTitle($_POST['title']);
+                $event->setDate($_POST['date']);
+                $event->setDescription($_POST['description']);
+                if (!empty($picture)){
+                    $uploadManager->deleteImage($event->getEventPicture());
+                    $event->setEventPicture($picture);
+                }
+
                 $eventsManager = new EventsManager();
                 $eventsManager->update($event);
+
+
                 header('Location:index.php?route=evenements');
             }
         }
-
 
         return $this->twig->render('Admin/updateEvent.html.twig', [
             'errors' => $errors,

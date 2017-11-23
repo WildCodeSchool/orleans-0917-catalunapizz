@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Indie+Flower');
 @import url('https://fonts.googleapis.com/css?family=Cabin+Sketch');
+
+@font-face {
+   font-family: GrutchShaded;
+   src: url("../fonts/GrutchShaded.ttf");
+}
+
 .baudi {
     margin-top: 100vh;
     position: absolute;
@@ -106,14 +112,14 @@
 
 .titleCenter {
     text-align: center;
-    margin-top: 70px;
-    margin-bottom: 70px;
+    margin-top: calc(10px + 1.5vh);
+    margin-bottom: calc(10px + 1.5vh);
 }
 
 .titles {
     display: inline;
-    font-family: "ScribblerSerif", cursive;
-    font-size: calc(30px + 6vw);
+    font-family: GrutchShaded, cursive;
+    font-size: calc(20px + 6vw);
     color: white;
 }
 
@@ -160,11 +166,12 @@
 
 .news {
     margin-bottom: 170px;
+    margin-top: 0px;
 }
 
 .news-title {
     font-family: 'Cabin Sketch', cursive;
-    font-size: calc(20px + 3vw);
+    font-size: calc(40px + 3vw);
     margin-bottom: 70px;
     color: white;
 }
@@ -178,38 +185,14 @@
     text-align: center;
 }
 
-.img-tomato {
-    position: absolute;
-    top: 32%;
-    right: 10%;
-}
-
-.img-olives {
-    position: absolute;
-    top: 5%;
-    left: 10%;
-}
-
-.img-peppers {
-    position: absolute;
-    top: 5%;
-    right: 10%;
-}
-
-.img-onions {
-    position: absolute;
-    top: 32%;
-    left: 10%;
-}
-
 .img-news {
-    max-width: 990px;
+    max-width: 800px;
     max-height: 600px;
-    margin-top: 150px;
+    margin-top: 80px;
 }
 
 .bloc-news {
-    margin-top: 150px;
+    margin-top: 80px;
 }
 
 
@@ -302,6 +285,10 @@ footer {
     padding-top: 100px;
 }
 
+.paddingul {
+    padding-left: 0;
+}
+
 .carte {
     color: white;
         background-image: url("../images/chalkboard2.jpg");
@@ -311,17 +298,6 @@ footer {
     font-size: 20px;
 }
 
-
-.image_pres_creme {
-    max-width: 1200px;
-    margin-right:300px;
-}
-
-
-.image_pres_tomate {
-    max-width: 1200px;
-    margin-right:200px;
-}
 
 
 .tomate li {
@@ -342,13 +318,15 @@ footer {
 }
 
 .category_title {
-    font-family: "ScribblerSerif", cursive;
-    font-size: calc(60px + 1vw);
+    font-family: GrutchShaded, cursive;
+    font-size: calc(30px + 1vw);
     background: url("../images/chalkbg2.png");
     background-size: 100% 100%;
     color: rgb(213, 0, 19);
     text-align: center;
-
+    line-height: 0.75;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 .pizza_title {
@@ -467,7 +445,6 @@ footer {
         border: 2px solid white;
     }
 
-
     .event-content {
         padding-top: 100px;
         background: url("../images/chalkboard.jpg");
@@ -478,29 +455,26 @@ footer {
     .admin-event-content {
         padding-top: 100px;
         color: black;
+    }
 
+    .events {
+        margin-bottom: 40px;
     }
-    .img-news {
-        max-width: 800px;
-        max-height: 600px;
-        margin-top: 0px;
-    }
-    .news {
-        margin-top: 0px;
-    }
+
+
     .titles {
         text-align: center;
         margin-bottom: 10px;
     }
 
     .bloc-events {
-        margin-top: 150px;
+        margin-top: 70px;
     }
 
     .img-events {
         max-width: 990px;
         max-height: 600px;
-        margin-top: 150px;
+        margin-top: 70px;
     }
 
     .event-title {
@@ -549,6 +523,21 @@ footer {
         font-size: calc(20px + 1vw);
     }
 
+    .linkCenter {
+        text-align: center;
+    }
+
+    .click-here {
+        font-family: 'Cabin Sketch', cursive;
+        color: white;
+        font-size: calc(10px + 0.5vw);
+    }
+
+    .click-here:hover {
+        text-decoration:none;
+        color: white;
+    }
+
     .arrow_down {
         text-align: center;
     }
@@ -559,6 +548,18 @@ footer {
 
     .btn-modif {
         font-size: 30px;
+    }
+
+    .contact-us {
+        margin-bottom: 30px;
+        font-family: "ScribblerSerif", cursive;
+        font-size: calc(30px + 6vw);
+        color: white;
+        text-align: center;
+    }
+
+    .mail-content {
+        padding-top: 50px;
     }
 
     .label-mail {
@@ -582,13 +583,29 @@ footer {
             margin-top: 0px;
         }
 
+        .bloc-news {
+            margin-top: 50px;
+
+        }
+
         .news {
             margin-top: 0px;
+            margin-bottom: 50px;
         }
 
         .titles {
             text-align: center;
             margin-bottom: 10px;
+        }
+
+
+        .category_title {
+            background: none;
+            color: white;
+        }
+      
+        .events {
+            margin-bottom: 40px;
         }
     }
 
@@ -603,5 +620,11 @@ footer {
         margin-bottom: 20px;
     }
 
+    .center {
+        text-align: center;
+    }
 
+    .little-img {
+        max-width: 250px;
+    }
 

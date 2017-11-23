@@ -4,15 +4,19 @@
     <div class="event-content">
         <div class="titleCenter">
             <h1 class="titles">
-                <span><img src="assets/images/chalkflag.png" class="flagChalk"></span>
-                Evenements
-                <span>
+                <span class="hidden-xs"><img src="assets/images/chalkflag.png" class="flagChalk"></span>
+                Événements
+                <span class="hidden-xs">
                     <img src="assets/images/chalkflag.png" class="flagChalk"></span></h1>
+            <div class="center hidden-sm hidden-md hidden-lg">
+                <img src="assets/images/chalkflag.png" class="flagChalk">
+            </div>
         </div>
         <p class="event-contact">Si vous souhaitez organiser un évènement et avoir un camion de pizza à votre disposition, n'hésitez pas à me contacter en remplissant le formulaire de contact situé en bas de page.
         </p>
-        <div class="titleCenter">
-            <a href="#mail-form">
+        <div class="linkCenter">
+            <a href="#mail-form" class="click-here">
+                <p>Bas de page</p>
                 <img src="assets/images/chalkarrow.png">
             </a>
         </div>
@@ -23,7 +27,7 @@
                         <div class="media">
                             {% if events[loop.index0].eventPicture == true %}
                                 <div class="col-md-offset-1 col-md-5 img-events">
-                                    <img class="media-object img-responsive" src={{ events[loop.index0].eventPicture } }="}" alt="Image">
+                                    <img class="media-object img-responsive" src="assets/images/upload/{{ events[loop.index0].eventPicture }}" alt="Image">
                                 </div>
                             {% endif %}
                             <div class="media-body">
@@ -39,7 +43,7 @@
                 </div>
             </section>
         {% endfor %}
-        <div class="container" id="mail-form">
+        <div class="container mail-content" id="mail-form">
             <div class="row>">
                 <div class="panel">
                     <div class="panel-body">
@@ -51,7 +55,7 @@
                             </ul>
                         {% endif %}
                         <form action="" method="post">
-                            <h1 class="titles">Contactez nous</h1>
+                            <h1 class="contact-us">Contactez nous</h1>
                             <fieldset class="form-group">
 
                                 <label for="nom" class="label-mail">Nom</label>
