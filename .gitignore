@@ -4,3 +4,4 @@ connect.php
 composer.json
 catalunapizzdb.sql
 public/.htpasswd
+/public/assets/images/upload/*

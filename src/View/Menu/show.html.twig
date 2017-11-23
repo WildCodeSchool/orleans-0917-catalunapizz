@@ -30,7 +30,8 @@
                                             <li class="collapse tomato hidden-md hidden-lg">
                                                 <div class="row">
                                                     <div class="col-md-10 col-xs-12 pizza_title">{{ pizzaCategory.pizza.title }}</div>
-                                                    <div class="col-xs-6 priceXs">M<div>{{ pizzaCategory.pizza.price1 }}&euro;</div>
+                                                    <div class="col-xs-6 priceXs">M
+                                                      <div>{{ pizzaCategory.pizza.price1 }}&euro;</div>
                                                     </div>
                                                     <div class="col-xs-6 priceXs">L<div>{{ pizzaCategory.pizza.price2 }}&euro;</div>
                                                     </div>
@@ -77,6 +78,7 @@
                                     </div>
                                     {% for pizzaCategory in pizzaCategories %}
                                         {% if pizzaCategory.category.name == 'BASE CREME' %}
+
                                             <li class="collapse cream hidden-md hidden-lg">
                                                 <div class="row">
                                                     <div class="col-md-8 col-xs-12 pizza_title">{{ pizzaCategory.pizza.title }}</div>
