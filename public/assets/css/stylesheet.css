@@ -616,5 +616,9 @@ footer {
         text-align: center;
     }
 
+    .little-img {
+        max-width: 250px;
+    }
+
 
 
