@@ -6,32 +6,51 @@
             <div class="row">
 
                 <div class="titleCenter">
-                    <h1 class="titles"><span><img src="assets/images/chalkflag.png" class="flagChalk"></span> Nos pizzas <span>
-                        <img src="assets/images/chalkflag.png" class="flagChalk"></span></h1>
+                    <h1 class="titles">
+                        <span><img src="assets/images/chalkflag.png" class="flagChalk"></span>
+                        Nos pizzas
+                        <span>
+                            <img src="assets/images/chalkflag.png" class="flagChalk"></span></h1>
                 </div>
                 <div class="col-md-5">
-                    <ul>
+                    <ul class="paddingul">
                         <div class="container-fluid">
                             <div class="row">
                                 <div class="tomate">
                                     <div class="row">
-                                        <h3><div class="category_title col-md-9">Base tomate</div></h3>
-                                        <div class="col-md-2 summary hidden-sm hidden-xs">29cm</div>
+                                        <h3>
+                                            <div class="category_title col-md-8" data-toggle="collapse" data-target=".tomato">Base tomate
+                                            <span class="hidden-md hidden-lg"><img src="assets/images/arrowdown.png"></span></div>
+                                        </h3>
+                                        <div class="col-md-3 summary hidden-sm hidden-xs">29cm</div>
                                         <div class="col-md-1 summary hidden-sm hidden-xs">33cm</div>
                                     </div>
                                     {% for pizzaCategory in pizzaCategories %}
                                         {% if pizzaCategory.category.name == 'BASE TOMATE' %}
-                                            <li>
-                                                <div class="container-fluid">
-                                                    <div class="row">
-                                                        <div class="col-md-9 col-xs-12 pizza_title">{{ pizzaCategory.pizza.title }}</div>
-                                                        <div class="col-md-2 price hidden-xs">{{ pizzaCategory.pizza.price1 }}&euro;</div>
-                                                        <div class="col-xs-6 priceXs visible-xs">M<div>{{ pizzaCategory.pizza.price1 }}&euro;</div></div>
-                                                        <div class="col-md-1 price hidden-xs">{{ pizzaCategory.pizza.price2 }}&euro;</div>
-                                                        <div class="col-xs-6 priceXs visible-xs">L<div>{{ pizzaCategory.pizza.price2 }}&euro;</div></div>
+                                            <li class="collapse tomato hidden-md hidden-lg">
+                                                <div class="row">
+                                                    <div class="col-md-10 col-xs-12 pizza_title">{{ pizzaCategory.pizza.title }}</div>
+                                                    <div class="col-xs-6 priceXs">M
+                                                      <div>{{ pizzaCategory.pizza.price1 }}&euro;</div>
                                                     </div>
-                                                    <div class="row">
-                                                        <div class="col-md-9 ingredients_title"><small>{{ pizzaCategory.pizza.ingredients }}</small></div>
+                                                    <div class="col-xs-6 priceXs">L<div>{{ pizzaCategory.pizza.price2 }}&euro;</div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-9 ingredients_title">
+                                                        <small>{{ pizzaCategory.pizza.ingredients }}</small>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="hidden-xs hidden-sm">
+                                                <div class="row">
+                                                    <div class="col-md-8 col-xs-12 pizza_title">{{ pizzaCategory.pizza.title }}</div>
+                                                    <div class="col-md-3 price">{{ pizzaCategory.pizza.price1 }}&euro;</div>
+                                                    <div class="col-md-1 price">{{ pizzaCategory.pizza.price2 }}&euro;</div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-9 ingredients_title">
+                                                        <small>{{ pizzaCategory.pizza.ingredients }}</small>
                                                     </div>
                                                 </div>
                                             </li>
@@ -44,29 +63,45 @@
 
                 </div>
                 <div class="col-md-offset-1 col-md-5">
-                    <ul>
+                    <ul class="paddingul">
                         <div class="container-fluid">
                             <div class="row">
                                 <img src="assets/images/Base_tomate.png" class="img-responsive image_pres_creme hidden-sm hidden-xs">
                                 <div class="creme">
                                     <div class="row">
-                                        <h3><div class="category_title col-md-9">Base creme</div></h3>
-                                        <div class="col-md-2 summary hidden-xs">29cm</div>
-                                        <div class="col-md-1 summary hidden-xs">33cm</div>
+                                        <h3>
+                                            <div class="category_title col-md-8" data-toggle="collapse" data-target=".cream">Base crème
+                                                <span class="hidden-md hidden-lg"><img src="assets/images/arrowdown.png"></span></div>
+                                        </h3>
+                                        <div class="col-md-3 summary hidden-xs hidden-sm">29cm</div>
+                                        <div class="col-md-1 summary hidden-xs hidden-sm">33cm</div>
                                     </div>
                                     {% for pizzaCategory in pizzaCategories %}
                                         {% if pizzaCategory.category.name == 'BASE CREME' %}
-                                            <li>
-                                                <div class="container-fluid">
-                                                    <div class="row">
-                                                        <div class="col-md-9 pizza_title">{{ pizzaCategory.pizza.title }}</div>
-                                                        <div class="col-md-2 price hidden-xs">{{ pizzaCategory.pizza.price1 }}&euro;</div>
-                                                        <div class="col-xs-6 priceXs visible-xs">M<div>{{ pizzaCategory.pizza.price1 }}&euro;</div></div>
-                                                        <div class="col-md-1 price hidden-xs">{{ pizzaCategory.pizza.price2 }}&euro;</div>
-                                                        <div class="col-xs-6 priceXs visible-xs">L<div>{{ pizzaCategory.pizza.price2 }}&euro;</div></div>
+
+                                            <li class="collapse cream hidden-md hidden-lg">
+                                                <div class="row">
+                                                    <div class="col-md-8 col-xs-12 pizza_title">{{ pizzaCategory.pizza.title }}</div>
+                                                    <div class="col-xs-6 priceXs">M<div>{{ pizzaCategory.pizza.price1 }}&euro;</div>
                                                     </div>
-                                                    <div class="row">
-                                                        <div class="col-md-9 ingredients_title"><small>{{ pizzaCategory.pizza.ingredients }}</small></div>
+                                                    <div class="col-xs-6 priceXs">L<div>{{ pizzaCategory.pizza.price2 }}&euro;</div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-9 ingredients_title">
+                                                        <small>{{ pizzaCategory.pizza.ingredients }}</small>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="hidden-xs hidden-sm">
+                                                <div class="row">
+                                                    <div class="col-md-8 col-xs-12 pizza_title">{{ pizzaCategory.pizza.title }}</div>
+                                                    <div class="col-md-3 price">{{ pizzaCategory.pizza.price1 }}&euro;</div>
+                                                    <div class="col-md-1 price">{{ pizzaCategory.pizza.price2 }}&euro;</div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-9 ingredients_title">
+                                                        <small>{{ pizzaCategory.pizza.ingredients }}</small>
                                                     </div>
                                                 </div>
                                             </li>
@@ -83,21 +118,44 @@
             </div>
         </div>
         <div class="container-fluid carte">
-            <div class="row">
-                <div class="titleCenter"><h1 class="titles"><span><img src="assets/images/chalkflag.png" class="flagChalk"></span> Bocadillos <span><img src="assets/images/chalkflag.png" class="flagChalk"></span></h1></div>
+            <div class="row" data-toggle="collapse" data-target=".bocas">
+                <div class="titleCenter">
+                    <h1 class="titles">
+                        <span><img src="assets/images/chalkflag.png" class="flagChalk"></span>
+                        Bocadillos
+                        <span><img src="assets/images/chalkflag.png" class="flagChalk"></span></h1>
+                </div>
+                <div class="col-xs-12 carte_title hidden-md hidden-lg">
+                    <img src="assets/images/arrowdown.png">
+                </div>
             </div>
-            <ul>
+            <ul class="paddingul">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="dessert col-md-12">
                             {% for pizzaCategory in pizzaCategories %}
                                 {% if pizzaCategory.category.name == 'BOCADILLOS' %}
-                                    <li>
+                                    <li class="collapse bocas hidden-md hidden-lg">
                                         <div class="col-md-6 col-xs-12">
                                             <div class="col-md-10 col-xs-10 pizza_title">{{ pizzaCategory.pizza.title }}</div>
                                             <div class="col-md-2 col-xs-2 price">{{ pizzaCategory.pizza.price1 }}&euro;</div>
+                                            <div class="col-xs-12 price">{{ pizzaCategory.pizza.price1 }}&euro;</div>
                                             <div class="row">
-                                                <div class="col-md-12  col-xs-12 ingredients_title"><small>{{ pizzaCategory.pizza.ingredients }}</small></div>
+                                                <div class="col-xs-12 ingredients_title">
+                                                    <small>{{ pizzaCategory.pizza.ingredients }}</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="hidden-xs hidden-sm">
+                                        <div class="col-md-6 col-xs-12">
+                                            <div class="col-md-10 col-xs-10 pizza_title">{{ pizzaCategory.pizza.title }}</div>
+                                            <div class="col-md-2 col-xs-2 price">{{ pizzaCategory.pizza.price1 }}&euro;</div>
+                                            <div class="col-xs-12 price hidden-md hidden-lg">{{ pizzaCategory.pizza.price1 }}&euro;</div>
+                                            <div class="row">
+                                                <div class="col-xs-12 ingredients_title">
+                                                    <small>{{ pizzaCategory.pizza.ingredients }}</small>
+                                                </div>
                                             </div>
                                         </div>
                                     </li>
@@ -109,15 +167,29 @@
             </ul>
         </div>
         <div class="container-fluid carte">
-            <div class="row">
-                <div class="titleCenter"><h1 class="titles"><span><img src="assets/images/chalkflag.png" class="flagChalk"></span> Nos Boissons <span><img src="assets/images/chalkflag.png" class="flagChalk"></span></h1></div>
+            <div class="row" data-toggle="collapse" data-target=".drinkcoll">
+                <div class="titleCenter">
+                    <h1 class="titles">
+                        <span><img src="assets/images/chalkflag.png" class="flagChalk"></span>
+                        Boissons
+                        <span><img src="assets/images/chalkflag.png" class="flagChalk"></span></h1>
+                </div>
+                <div class="col-xs-12 carte_title hidden-md hidden-lg">
+                    <img src="assets/images/arrowdown.png">
+                </div>
             </div>
-            <ul>
+            <ul class="paddingul">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="dessert col-md-12">
                             {% for drink in drinks %}
-                                <li>
+                                <li class="collapse drinkcoll hidden-md hidden-lg">
+                                    <div class="col-md-6">
+                                        <div class="col-md-10 col-xs-10 pizza_title">{{ drink.title }}</div>
+                                        <div class="col-md-2 col-xs-2 priceXs">{{ drink.price1 }}&euro;</div>
+                                    </div>
+                                </li>
+                                <li class="hidden-xs hidden-sm">
                                     <div class="col-md-6">
                                         <div class="col-md-10 col-xs-10 pizza_title">{{ drink.title }}</div>
                                         <div class="col-md-2 col-xs-2 priceXs">{{ drink.price1 }}&euro;</div>
@@ -130,21 +202,42 @@
             </ul>
         </div>
         <div class="container-fluid carte">
-            <div class="row">
-                <div class="titleCenter"><h1 class="titles"><span><img src="assets/images/chalkflag.png" class="flagChalk"></span> Nos Desserts <span><img src="assets/images/chalkflag.png" class="flagChalk"></span></h1></div>
+            <div class="row" data-toggle="collapse" data-target=".desserts">
+                <div class="titleCenter">
+                    <h1 class="titles">
+                        <span><img src="assets/images/chalkflag.png" class="flagChalk"></span>
+                        Desserts
+                        <span><img src="assets/images/chalkflag.png" class="flagChalk"></span></h1>
+                </div>
+                <div class="col-xs-12 carte_title hidden-md hidden-lg">
+                    <img src="assets/images/arrowdown.png">
+                </div>
             </div>
-            <ul>
+            <ul class="paddingul">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="dessert col-md-12">
                             {% for pizzaCategory in pizzaCategories %}
                                 {% if pizzaCategory.category.name == 'DESSERT' %}
-                                    <li>
+                                    <li class="collapse desserts hidden-md hidden-lg">
                                         <div class="col-md-6">
                                             <div class="col-md-10 col-xs-10 pizza_title">{{ pizzaCategory.pizza.title }}</div>
-                                            <div class="col-md-1 col-xs-2 price">{{ pizzaCategory.pizza.price1 }}&euro;</div>
+                                            <div class="col-xs-12 price">{{ pizzaCategory.pizza.price1 }}&euro;</div>
                                             <div class="row">
-                                                <div class="col-md-12 col-xs-12 ingredients_title"><small>{{ pizzaCategory.pizza.ingredients }}</small></div>
+                                                <div class="col-md-12 col-xs-12 ingredients_title">
+                                                    <small>{{ pizzaCategory.pizza.ingredients }}</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="hidden-xs hidden-sm">
+                                        <div class="col-md-6">
+                                            <div class="col-md-10 col-xs-10 pizza_title">{{ pizzaCategory.pizza.title }}</div>
+                                            <div class="col-md-1 col-xs-2 price hidden-xs hidden-sm">{{ pizzaCategory.pizza.price1 }}&euro;</div>
+                                            <div class="row">
+                                                <div class="col-md-12 col-xs-12 ingredients_title">
+                                                    <small>{{ pizzaCategory.pizza.ingredients }}</small>
+                                                </div>
                                             </div>
                                         </div>
                                     </li>
@@ -157,6 +250,4 @@
         </div>
     </div>
 
-
 {% endblock %}
-
