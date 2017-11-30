@@ -32,7 +32,7 @@
 }
 
 .navbar-inverse {
-    background-color: rgba(255, 255, 255, 1);
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
 .navbar-inverse .navbar-nav>li>a {
@@ -68,7 +68,7 @@
 }
 
 .navbar-inverse .navbar-brand:focus, .navbar-inverse .navbar-brand:hover {
-    color: black;
+    color: #747475;
 }
 
 .nav>li>a {
@@ -603,7 +603,7 @@ footer {
             background: none;
             color: white;
         }
-      
+
         .events {
             margin-bottom: 40px;
         }
@@ -627,4 +627,3 @@ footer {
     .little-img {
         max-width: 250px;
     }
-
