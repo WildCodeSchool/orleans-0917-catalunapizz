@@ -167,41 +167,6 @@
             </ul>
         </div>
         <div class="container-fluid carte">
-            <div class="row" data-toggle="collapse" data-target=".drinkcoll">
-                <div class="titleCenter">
-                    <h1 class="titles">
-                        <span><img src="assets/images/chalkflag.png" class="flagChalk"></span>
-                        Boissons
-                        <span><img src="assets/images/chalkflag.png" class="flagChalk"></span></h1>
-                </div>
-                <div class="col-xs-12 carte_title hidden-md hidden-lg">
-                    <img src="assets/images/arrowdown.png">
-                </div>
-            </div>
-            <ul class="paddingul">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="dessert col-md-12">
-                            {% for drink in drinks %}
-                                <li class="collapse drinkcoll hidden-md hidden-lg">
-                                    <div class="col-md-6">
-                                        <div class="col-md-10 col-xs-10 pizza_title">{{ drink.title }}</div>
-                                        <div class="col-md-2 col-xs-2 priceXs">{{ drink.price1 }}&euro;</div>
-                                    </div>
-                                </li>
-                                <li class="hidden-xs hidden-sm">
-                                    <div class="col-md-6">
-                                        <div class="col-md-10 col-xs-10 pizza_title">{{ drink.title }}</div>
-                                        <div class="col-md-2 col-xs-2 priceXs">{{ drink.price1 }}&euro;</div>
-                                    </div>
-                                </li>
-                            {% endfor %}
-                        </div>
-                    </div>
-                </div>
-            </ul>
-        </div>
-        <div class="container-fluid carte">
             <div class="row" data-toggle="collapse" data-target=".desserts">
                 <div class="titleCenter">
                     <h1 class="titles">
@@ -247,6 +212,42 @@
                     </div>
                 </div>
             </ul>
+
+            <div class="container-fluid carte">
+                <div class="row" data-toggle="collapse" data-target=".drinkcoll">
+                    <div class="titleCenter">
+                        <h1 class="titles">
+                            <span><img src="assets/images/chalkflag.png" class="flagChalk"></span>
+                            Boissons
+                            <span><img src="assets/images/chalkflag.png" class="flagChalk"></span></h1>
+                    </div>
+                    <div class="col-xs-12 carte_title hidden-md hidden-lg">
+                        <img src="assets/images/arrowdown.png">
+                    </div>
+                </div>
+                <ul class="paddingul">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="dessert col-md-12">
+                                {% for drink in drinks %}
+                                    <li class="collapse drinkcoll hidden-md hidden-lg">
+                                        <div class="col-md-6">
+                                            <div class="col-md-10 col-xs-10 pizza_title">{{ drink.title }}</div>
+                                            <div class="col-md-2 col-xs-2 priceXs">{{ drink.price1 }}&euro;</div>
+                                        </div>
+                                    </li>
+                                    <li class="hidden-xs hidden-sm">
+                                        <div class="col-md-6">
+                                            <div class="col-md-10 col-xs-10 pizza_title">{{ drink.title }}</div>
+                                            <div class="col-md-2 col-xs-2 priceXs">{{ drink.price1 }}&euro;</div>
+                                        </div>
+                                    </li>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </ul>
+            </div>
         </div>
     </div>
 
