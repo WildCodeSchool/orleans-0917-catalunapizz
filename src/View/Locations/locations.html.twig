@@ -9,28 +9,27 @@
         </div>
         <div class="container-fluid">
             <div class="row">
-                {% for i in 0..4 %}
-                    <div class="col-md-4 {% if i == 3 %} col-md-offset-2
-                {% elseif i == 4 %} col-md-offset-0 {% endif %}col-xs-12 agendaPage">
+                {% for location in locations %}
+                    <div class="col-md-4 col-xs-12 agendaPage">
                         <div class="pageHead">
-                            <span class="planningDay">{{ locations[i].day }}</span>
+                            <span class="planningDay">{{ location.day }}</span>
                         </div>
                         <div class="pageBody">
                             <p>
                                 <div class="houram">
-                                    {{ locations[i].hour_am }}
+                                    {{ location.hour_am }}
                                 </div>
                                 <div class="locationam">
-                                    {{ locations[i].location_am|raw }}
+                                    {{ location.location_am|raw }}
                                 </div>
-                                {% if locations[i].hour_am %}
+                                {% if location.hour_am %}
                                     <br>
                                 {% endif %}
                                 <div class="hourpm">
-                                    {{ locations[i].hour_pm }}
+                                    {{ location.hour_pm }}
                                 </div>
                                 <div class="locationpm">
-                                    {{ locations[i].location_pm|raw }}
+                                    {{ location.location_pm|raw }}
                                 </div>
                             </p>
                         </div>
