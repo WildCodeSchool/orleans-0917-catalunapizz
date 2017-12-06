@@ -219,6 +219,10 @@ footer {
     border-bottom: 3px solid #D7DF01;
 }
 
+.legal-logo-wcs{
+    max-width: 50px;
+}
+
 .facebook {
     color: #fff;
     background-color: #3b5998;
