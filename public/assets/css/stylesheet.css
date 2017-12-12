@@ -113,8 +113,8 @@
 
 .titleCenter {
     text-align: center;
-    margin-top: calc(10px + 1.5vh);
-    margin-bottom: calc(10px + 1.5vh);
+    margin-top: calc(10px + 10vh);
+    margin-bottom: calc(10px + 10vh);
 }
 
 .titles {
