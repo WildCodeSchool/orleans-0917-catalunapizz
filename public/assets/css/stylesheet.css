@@ -69,7 +69,7 @@
 }
 
 .navbar-inverse .navbar-brand:focus, .navbar-inverse .navbar-brand:hover {
-    color: black;
+    color: #747475;
 }
 
 .nav>li>a {
@@ -220,6 +220,10 @@ footer {
     border-bottom: 3px solid #D7DF01;
 }
 
+.legal-logo-wcs{
+    max-width: 50px;
+}
+
 .facebook {
     color: #fff;
     background-color: #3b5998;
@@ -284,6 +288,10 @@ footer {
 }
 .Menu{
     padding-top: 100px;
+    color: white;
+    background-image: url("../images/chalkboard2.jpg");
+    background-size: contain;
+    background-repeat: repeat;
 }
 
 .paddingul {
@@ -291,10 +299,6 @@ footer {
 }
 
 .carte {
-    color: white;
-        background-image: url("../images/chalkboard2.jpg");
-    background-size: contain;
-    background-repeat: repeat;
     font-family: "Dancing Script", cursive;
     font-size: 20px;
 }
@@ -604,7 +608,7 @@ footer {
             background: none;
             color: white;
         }
-      
+
         .events {
             margin-bottom: 40px;
         }
@@ -628,4 +632,3 @@ footer {
     .little-img {
         max-width: 250px;
     }
-
