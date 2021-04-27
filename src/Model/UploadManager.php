@@ -115,8 +115,6 @@ class UploadManager extends EntityManager
         switch ($errorCode) {
             case UPLOAD_ERR_INI_SIZE:
             case UPLOAD_ERR_FORM_SIZE:
-                var_dump('coucou');
-                die;
                 $friendlyMaxSize = $this->bytesToSize1024(self::MAX_FILE_SIZE, 1);
                 $message = "Le fichier '$fileName' est trop grand il ne devrait pas dépasser $friendlyMaxSize";
                 break;
