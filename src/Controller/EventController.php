@@ -62,11 +62,12 @@ class EventController extends Controller
                     ->setPassword(MAILPASS);
 
                 $mailer = new Swift_Mailer($transport);
+                $endMessage = "Vous pouvez recontacter l'expéditeur à l'adresse suivante : " . $mail;
 
                 $message = (new Swift_Message($subject))
                     ->setFrom([$mail => $name])
                     ->setTo([MAILDESTINATION])
-                    ->setBody($message);
+                    ->setBody($theMessage . '<br><br>' . $endMessage, 'text/html');
 
                 $mailer->send($message);
 

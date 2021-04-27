@@ -48,7 +48,7 @@ class UploadManager extends EntityManager
         $fileName = $file['name'];
         $this->errorMessage = '';
 
-        if ($file['error'] === UPLOAD_ERR_OK) {
+        if ($file['error'] === 0) {
             $fileMimeType = $file['type'];
             // Vérification de l'extension du fichier
             $fileExtension = $this->isSupportedExtension($fileMimeType);
@@ -57,21 +57,12 @@ class UploadManager extends EntityManager
                 $this->errorMessage = "Le format du fichier '$fileName' n'est pas supporté ($fileMimeType).";
                 $result = false;
             } else {
-                // Vérification de la taille du ficher
-                if ($file['size'] > self::MAX_FILE_SIZE) {
-                    $friendlyFileSize = $this->bytesToSize1024($file['size'], 1);
-                    $friendlyMaxSize = $this->bytesToSize1024(self::MAX_FILE_SIZE, 1);
-
-                    $this->errorMessage = "Le fichier '$fileName' est trop grand ($friendlyFileSize), il ne devrait pas dépasser $friendlyMaxSize";
-                    $result = false;
-                } else {
                     $newFileName = 'img_' . uniqid() . '.' . $fileExtension;
                     if (!move_uploaded_file($file['tmp_name'], self::UPLOAD_DIRECTORY . $newFileName)) {
                         $this->errorMessage = "Erreur lors de l'envoi du fichier '$fileName'.";
                     } else {
                         $result = $newFileName;
                     }
-                }
             }
         } else {
             $this->errorMessage = $this->setUploadErrorMessage($file['error'], $fileName);
@@ -119,6 +110,7 @@ class UploadManager extends EntityManager
      */
     private function setUploadErrorMessage($errorCode, $fileName)
     {
+
         $message = '';
         switch ($errorCode) {
             case UPLOAD_ERR_INI_SIZE:

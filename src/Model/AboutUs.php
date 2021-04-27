@@ -116,7 +116,10 @@ class AboutUs
         return $this->news_picture;
     }
 
-
+    /**
+     * @param mixed $news_picture
+     * @return AboutUs
+     */
     public function setNewsPicture($news_picture)
     {
         $this->news_picture = $news_picture;
@@ -169,7 +172,7 @@ class AboutUs
         return $this->mail;
     }
 
-    
+
     public function setMail($mail)
     {
         $this->mail = $mail;

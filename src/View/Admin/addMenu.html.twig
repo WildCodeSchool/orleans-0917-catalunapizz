@@ -24,7 +24,9 @@
                                 <label for="category">Category</label>
                                 <select name="category" id="category" class="form-control">
                                     {% for category in categories %}
-                                        <option {{ pizza.category_id == category.id ? 'selected' }} value="{{ category.id }}">{{ category.name }}</option>
+                                        <option {{ pizza.category_id == category.id ? 'selected' }} value="{{ category.id }}">
+                                        {{ category.name }}
+                                      </option>
                                     {% endfor %}
                                 </select>
                             </fieldset>
