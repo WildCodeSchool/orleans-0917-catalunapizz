@@ -56,12 +56,25 @@
 }
 
 .navbar-brand {
-    float: left;
+    display: flex;
+    justify-content;
+    align-items: center;
     height: 100px;
     padding: 0;
     padding-left: 15px;
-    font-size: 50px;
+    /* font-size: 50px; */
     font-family: "Dancing Script", cursive;
+}
+.navbar-brand-img{
+  height: 100px;
+}
+.navbar-brand-title{
+  font-size: 50px;
+}
+.navbar-brand-phone-number{
+  font-size: 20px;
+  text-align: center;
+  margin-top: 20px;
 }
 
 .navbar-inverse .navbar-brand {
@@ -578,6 +591,15 @@ footer {
 
     .updateDays {
         font-size: 36px;
+    }
+
+    .pizza-size{
+      font-size: 20px;
+      text-align: center;
+    }
+    .pizza-size-unit{
+      font-size: 30px;
+      text-align: center;
     }
 
     @media only screen and (max-width: 990px) {

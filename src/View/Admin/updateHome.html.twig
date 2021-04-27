@@ -5,7 +5,7 @@
             <div class="row>">
                 <div class="panel panel-default">
                     <div class="panel-body">
-                        {% if errors %}
+                        {% if errors is not empty %}
                             <ul class="alert alert-danger">
                                 {% for error in errors %}
                                     <li>{{ error }}</li>
@@ -51,8 +51,12 @@
                                 <label for="nouveauté">Description de la nouveauté</label>
                                 <textarea class="form-control summernote" name="news">{{ aboutUs.News }}</textarea>
 
-                                <label for="image nouveauté">Image de la nouveauté</label>
-                                <input type="file" class="form-control" name="news_picture" id="news_picture" value="{{ aboutUs.NewsPicture }}"/>
+                                <div class="form-group">
+                                  <label for="image nouveauté">Image de la nouveauté</label>
+                                  <input type="file" class="form-control" name="news_picture" id="news_picture" value="{{ aboutUs.NewsPicture }}"/>
+                                  <img class="little-img" src="assets/images/upload/{{ aboutUs.NewsPicture }}" alt="image carrousel" />
+                                </div>
+
 
                                 <label for="mail">Mail</label>
                                 <input type="text" class="form-control" name="mail" id="mail" value="{{ aboutUs.Mail }}"/>
